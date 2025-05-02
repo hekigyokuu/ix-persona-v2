@@ -19,7 +19,7 @@ app.get("/about", (req, res) => {
 });
 
 app.use((req, res) => {
-    res.status(404).send("TUng TUng Tung TUng TUng TUng SAHUR NOT FOUND");
+    res.sendFile(path.join(__dirname, "public", "html", "not-found.html"));
 });
 
 app.listen(PORT, () => {
