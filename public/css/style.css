@@ -15,9 +15,6 @@ body {
     gap: 16px;
     margin-left: 0;
 }
-.navbar, .navigation-links {
-    margin-left: 5px;
-}
 .navigation-links a, .action-links a {
     margin-right: 15px;
     text-decoration: none;
@@ -46,6 +43,7 @@ body {
     font-weight: bold;
     font-size: 22px ;
     color: black;
+    margin-right: 10px;
 }
 .web-logo span {
     color: #2c4a3b;
