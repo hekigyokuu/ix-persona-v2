@@ -9,6 +9,11 @@ body {
     justify-content: space-between;
     padding: 0 55px;
 }
+.left-group {
+    display: flex;
+    align-items: center;
+    gap: 40px ;
+}
 .navigation-links {
     display: flex;
     align-items: center;
