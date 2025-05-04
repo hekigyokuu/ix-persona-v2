@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #e6e6fa;
+    
 }
 .navbar {
     display: flex;
@@ -48,3 +49,46 @@ body {
 .web-logo span {
     color: #2c4a3b;
 }
+
+/*Nathaniel nigs property*/
+.container {
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quote {
+    font-family: 'Potta One', cursive;
+    font-size: 2.5rem;
+    color: #2D6A4F;
+    margin-bottom: 20px;
+  }
+  
+  .quote span {
+    font-weight: bold;
+  }
+  
+  .subtext {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #111111;
+  }
+  
+  .cta-button {
+    font-family: 'Potta one', 'Preahvihear';
+    background-color: #2D6A4F;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 6px;
+    box-shadow: 3px 4px #111111;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+  }
