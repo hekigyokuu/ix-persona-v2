@@ -19,7 +19,7 @@ app.get("/about", (req, res) => {
 });
 
 app.use((req, res) => {
-    res.sendFile(path.join(__dirname, "public", "html", "not-found.html"));
+    res.statusCode(404).sendFile(path.join(__dirname, "public", "html", "not-found.html"));
 });
 
 app.listen(PORT, () => {
