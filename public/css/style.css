@@ -33,6 +33,7 @@ body {
 
 .navbar {
     position: fixed;
+    z-index: 100;
     
     display: flex;
     align-items: center;
@@ -43,6 +44,13 @@ body {
     padding: 1% 4%;
 
     background-color: #e6e6fa;
+
+    transition: all .1s ease-in-out;
+}
+
+.scrolled-navbar {
+    background-color: #f0f0fa;
+    border-bottom: 2px solid #2C2C2C;
 }
 
 .navbar .left-group {
@@ -57,11 +65,21 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #2C2C2C;
+
+    cursor: pointer;
 }
 
-.web-logo span {
+#web-logo span {
     font-family: 'Cinzel Decorative', sans-serif;
     color: #2c4a3b;
+}
+
+#web-logo:hover {
+    color: #1cb61c;
+}
+
+#web-logo:hover span {
+    color: #1cb61c;
 }
 
 .navigation-links {    
@@ -73,12 +91,32 @@ body {
     margin-left: 5%;
 }
 
+.navigation-links a:hover {
+    color: #1cb61c;
+}
+
 
 .navigation-links a, .action-links a {
     font-size: 1.2rem;
+    font-weight: 500;
     text-decoration: underline;
     color: #2C2C2C;
-    font-weight: 500;
+}
+
+.action-links a {
+    display: block;
+
+    padding: 10px 20px;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    transition: all .3s ease-in-out;
+}
+
+.action-links a:hover {
+    background-color: #CCCCCC;
 }
 
 .action-links {
