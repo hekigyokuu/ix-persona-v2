@@ -284,3 +284,53 @@ body {
 .types-large-header span {
     font-size: 6rem;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    min-height: 200px;
+    padding: 50px 45px;
+    
+    background-color: #2C2C2C;
+    
+    font-family: Preahvihear, sans-serif;
+    color: white;
+}
+
+.footer h2 {
+    padding: 5px 20px;
+}
+
+
+.ft-left {
+    flex: 1;
+    min-width: 150px;
+    margin-bottom: 20px;
+}
+
+
+.ft-columns {
+    display: flex;
+    justify-content: flex-start;
+    gap: 160px;                  
+    flex-wrap: wrap;
+
+    max-width: 800px;            
+    margin-left: auto;
+    margin-right: 70px;
+}
+
+.ft-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;                    
+    
+    min-width: 120px;
+}
+
+.ft-column a {
+    color: white;
+    text-decoration: none;
+}
