@@ -6,6 +6,26 @@
     box-sizing: border-box; 
 }
 
+::-webkit-scrollbar {
+    width: 10px;         
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-left: 1px solid #2C2C2C;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1cb61c;
+    border: 1px solid #2C2C2C;
+    border-right: none;
+}
+
 /* pagsamasamahin yung mga same property i.e. font-family, font-style */
 
 /* 
@@ -70,7 +90,7 @@ body {
 }
 
 #web-logo span {
-    font-family: 'Cinzel Decorative', sans-serif;
+    /* font-family: 'Cinzel Decorative', sans-serif; */
     color: #2c4a3b;
 }
 
@@ -113,7 +133,7 @@ body {
 
     text-decoration: none;
 
-    transition: all .3s ease-in-out;
+    transition: all .1s ease;
 }
 
 .action-links a:hover {
@@ -199,13 +219,18 @@ body {
     height: 80vh;
     padding: 2% 8%;
 
+    border-top: 2px solid #2C2C2C;
+    border-bottom: 2px solid #2C2C2C;
+
     background-color: #2C552C;
 
     color: #FFF;
 }
 
 .why-use-info h2 {
+    font-family: "Potta One", sans-serif;
     font-size: 3rem;
+    letter-spacing: 2px;
     line-height: 2;
 }
 
@@ -218,13 +243,16 @@ body {
 }
 
 .why-use-box {
-    width: 33%;
+    width: 32%;
     height: 60vh;
     padding: 3%;
     padding-left: 5%;
     
+    border: 2px solid #2C2C2C;
     border-radius: 4px;
     background-color: #2c4a3b;
+
+    overflow: hidden;
 }
 
 .why-use-box ul li {
@@ -247,9 +275,10 @@ body {
 }
 
 .types-large-header {
-    color: #2C552C;
+    font-family: "Potta One", sans-serif;
     font-size: 8rem;
     line-height: 1.4;
+    color: #2C552C;
 }
 
 .types-large-header span {
