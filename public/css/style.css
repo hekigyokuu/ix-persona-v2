@@ -295,6 +295,77 @@ body {
     font-size: 6rem;
 }
 
+/*poster section*/
+.poster-section {
+    display: flex;flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Potta One', cursive;
+
+    background-color: #183C2C;
+    color: #87C4A9;
+
+    min-height: 90vh;
+}
+  
+.container {
+    max-width: 5000px;
+    margin: 0 auto;
+}
+  
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+  
+.type-btn {
+    background-color: #87C4A9;
+    color: #111111;
+
+    padding: 30px 60px;
+    border: none;
+    border-radius: 30px;
+
+    font-weight: bold;
+    font-size: 35px;
+    font-style: 'Potta one';
+
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+  
+.type-btn:hover {
+    transform: scale(1.05);
+}
+  
+.link-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+
+    width: 100%;
+    padding-right: 40px;
+    margin-top: 20px;
+}
+  
+.explore-type {
+    font-size: 4rem;
+    font-style: 'Potta one'; 
+    text-decoration: none;
+    color: #87C4A9;
+}
+  
+.explore-type:hover {
+    text-decoration: underline;
+}
+
+/*random quote section*/
 .random-quotes {
     display: flex;
     flex-direction: column;
