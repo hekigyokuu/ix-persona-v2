@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+app.get("/test", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "html", "test.html"));
+});
+
 app.get("/types", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "html", "types.html"));
 });

@@ -70,7 +70,7 @@ body {
 
 .scrolled-navbar {
     background-color: #f0f0fa;
-    border-bottom: 2px solid #2C2C2C;
+    border-bottom: 2px solid #111;
 }
 
 .navbar .left-group {
@@ -81,7 +81,7 @@ body {
     margin-right: 4%;
 
     font-family: 'Mansalva', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
     line-height: 1.5;
     color: #2C2C2C;
@@ -219,8 +219,8 @@ body {
     height: 80vh;
     padding: 2% 8%;
 
-    border-top: 2px solid #2C2C2C;
-    border-bottom: 2px solid #2C2C2C;
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
 
     background-color: #2C552C;
 
@@ -248,9 +248,9 @@ body {
     padding: 3%;
     padding-left: 5%;
     
-    border: 2px solid #2C2C2C;
+    border: 2px solid #111;
     border-radius: 4px;
-    background-color: #2c4a3b;
+    background-color: #2C4A3B;
 
     overflow: hidden;
 }
@@ -293,7 +293,8 @@ body {
     min-height: 200px;
     padding: 50px 45px;
     
-    background-color: #2C2C2C;
+    border-top: 2px solid #111;
+    background-color: #2C4A3B;
     
     font-family: Preahvihear, sans-serif;
     color: white;
@@ -314,7 +315,7 @@ body {
 .ft-columns {
     display: flex;
     justify-content: flex-start;
-    gap: 160px;                  
+    gap: 100px;                  
     flex-wrap: wrap;
 
     max-width: 800px;            
