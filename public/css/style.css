@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Mansalva&family=Potta+One&family=Preahvihear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     padding: 0;
@@ -69,7 +70,7 @@ body {
 }
 
 .scrolled-navbar {
-    background-color: #f0f0fa;
+    background-color: #F5F5F5;
     border-bottom: 2px solid #111;
 }
 
@@ -161,11 +162,11 @@ body {
 .cta-button {
     padding: 15px 30px;
     
-    border: none;
+    border: 2px solid #2C2C2C;
     border-radius: 4px;
     box-shadow: 4px 4px 0px #2C2C2C;
     
-    font-family: 'Potta one', sans-serif;
+    font-family: 'Potta One', sans-serif;
     font-size: 1rem;
     
     cursor: pointer;
@@ -188,13 +189,13 @@ body {
     width: 100%;
     height: 100vh;
 
-    background-color: #e6e6fa;
+    background-color: #E6E6FA;
 
     text-align: center;
 }
   
 .quote {
-    font-family: 'Potta One', cursive;
+    font-family: 'Poppins', cursive;
     font-size: 3.5rem;
     color: #2D6A4F;
     line-height: 2;
@@ -205,7 +206,7 @@ body {
 }
   
 .hero-section .subtext {
-    font-family: Preahvihear, sans-serif;
+    font-family: 'Preahvihear', sans-serif;
     font-size: 1.6rem;
     line-height: 3;
     color: #2C2C2C;
@@ -232,13 +233,13 @@ body {
     border-top: 2px solid #111;
     border-bottom: 2px solid #111;
 
-    background-color: #2C552C;
+    background: #2D6A4F;
 
-    color: #FFF;
-}
+    color: #E6E6FA;
+} 
 
 .why-use-info h2 {
-    font-family: "Potta One", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     letter-spacing: 2px;
     line-height: 2;
@@ -250,42 +251,66 @@ body {
     align-items: center;
 
     height: 70vh;
+    max-width: 2000px;
 }
 
 .why-use-box {
     width: 32%;
     height: 60vh;
     padding: 3%;
-    padding-left: 5%;
     
     border: 2px solid #111;
     border-radius: 4px;
-    background-color: #2C4A3B;
 
-    overflow: hidden;
+    background: #87C4A9;
+
+    color: #2D6A4F;
+
+    overflow: auto;
+    cursor: pointer;
+
+    transition: all .2s ease;
 }
 
-.why-use-box ul li {
-    font-size: 1.8rem;
+.why-use-box::-webkit-scrollbar {
+    display: none;         
+}
+
+.why-use-box h4 {
+    font-size: 1.5rem;
     line-height: 2;
-    list-style: square;
 }
 
 .why-use-box p {
-    font-size: 1.1rem;
-    line-height: 3;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+.why-use-box hr {
+    border: 1px dashed #2D6A4F;
+    margin: 4% 0 8% 0;
+}
+
+.why-use-box:hover {
+    color: #111;
+    box-shadow: 8px 8px 0px #111;
+    transform: translate(-1%,-1%);
+}
+
+.why-use-box:hover hr {
+    border: 2px dashed #111;
 }
 
 .types-poster {
     width: 100%;
-    height: 180vh;
+    height: 140vh;
     padding: 7%;
 
     background-color: #87C4A9;
 }
 
 .types-large-header {
-    font-family: "Potta One", sans-serif;
+    font-family: 'Potta One', sans-serif;
     font-size: 8rem;
     line-height: 1.4;
     color: #2D6A4F;
@@ -296,73 +321,76 @@ body {
 }
 
 /*poster section*/
-.poster-section {
-    display: flex;flex-direction: column;
+.types-poster-personalities {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    font-family: 'Potta One', cursive;
+    min-height: 90vh;
+    
+    background-color: #2D6A4F;
+    border-top: 2px solid #111;
 
-    background-color: #183C2C;
+    font-family: 'Potta One', cursive;
     color: #87C4A9;
 
-    min-height: 90vh;
 }
   
-.container {
-    max-width: 5000px;
-    margin: 0 auto;
+.types-poster-container {
+    width: 100%;
+    max-width: 2000px;
+    padding: 0 8%;
 }
   
-.grid {
+.types-poster-grid {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 50px;
     justify-content: center;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+    
+    margin-bottom: 5%;
 }
   
-.type-btn {
+.poster-type-btn {
+    height: 10vh;
+    padding: 15px 30px;
+    
+    border: 2px solid #111;
+    border-radius: 4px;
+    
+    font-family: 'Potta One', sans-serif;
+    font-size: 1.5rem;
+    
     background-color: #87C4A9;
-    color: #111111;
-
-    padding: 30px 60px;
-    border: none;
-    border-radius: 30px;
-
-    font-weight: bold;
-    font-size: 35px;
-    font-style: 'Potta one';
+    color: #2D6A4F;
 
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
 }
   
-.type-btn:hover {
-    transform: scale(1.05);
+.poster-type-btn:hover {
+    color: #111;
+    box-shadow: 4px 4px 0px #111;
+    transform: translate(-1%,-1%);
 }
   
-.link-wrapper {
+.types-poster-navigation {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-end;
-
-    width: 100%;
-    padding-right: 40px;
-    margin-top: 20px;
+    justify-content: flex-end;
 }
   
-.explore-type {
-    font-size: 4rem;
-    font-style: 'Potta one'; 
+.types-poster-explore-type {
+    font-size: 4rem; 
     text-decoration: none;
     color: #87C4A9;
+
+    transition: all .2s ease;
 }
   
-.explore-type:hover {
-    text-decoration: underline;
+.types-poster-explore-type:hover {
+    text-shadow: 6px 6px 0px #111;
+    transform: translateX(4%);
 }
 
 /*random quote section*/
@@ -378,10 +406,10 @@ body {
     
     border-top: 2px solid #111;
     border-bottom: 2px solid #111;
-    background-color: #2C552C;
+    background-color: #2C2C2C;
 
     font-size: 2rem;
-    color: #fff;
+    color: #F5F5F5;
 }
 
 .random-quotes .author {
@@ -401,7 +429,7 @@ body {
 }
 
 .self-discovery-quote {
-    font-family: 'Potta One', cursive;
+    font-family: 'Poppins', cursive;
     font-size: 3.5rem;
     color: #2D6A4F;
     line-height: 2;
@@ -441,14 +469,14 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     
-    min-height: 200px;
+    min-height: 60vh;
     padding: 50px 45px;
     
     border-top: 2px solid #111;
-    background-color: #2C4A3B;
+    background-color: #2C2C2C;
     
     font-family: Preahvihear, sans-serif;
-    color: white;
+    color: #F5F5F5;
 }
 
 .footer h2 {
@@ -483,6 +511,6 @@ body {
 }
 
 .ft-column a {
-    color: white;
+    color: #F5F5F5;
     text-decoration: none;
 }
