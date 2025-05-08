@@ -389,7 +389,7 @@ body {
 }
   
 .types-poster-explore-type:hover {
-    text-shadow: 6px 6px 0px #111;
+    color: #111;
     transform: translateX(4%);
 }
 
@@ -431,7 +431,7 @@ body {
 .self-discovery-quote {
     font-family: 'Poppins', cursive;
     font-size: 3.5rem;
-    color: #2D6A4F;
+    color: #2C2C2C;
     line-height: 2;
 }
 
