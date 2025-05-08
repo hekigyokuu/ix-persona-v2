@@ -341,7 +341,7 @@ body {
   width: 180px;
   height: 180px;
   margin: 40px auto 0;
-  background-image: url('your-star-graphic.svg'); /* replace as needed */
+  background-image: url("#"); /* here po di q alam link */
   background-size: contain;
   background-repeat: no-repeat;
   }
