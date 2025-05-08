@@ -285,6 +285,67 @@ body {
     font-size: 6rem;
 }
 
+.quoteAndAnotherTest-section {
+    background-color: #9bd1b4;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+  }
+  
+  .quote2 {
+    background-color: #2b5731;
+    color: #ffff;
+    padding: 20px;
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+  
+  .quote .author {
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .main-content {
+    padding: 40px 20px 0;
+  }
+  
+  .main-content h1 {
+    font-family: 'Potta One', cursive;
+    font-size: 3.5rem;
+    color: #0e2c1f;
+    margin-bottom: 20px;
+  }
+  
+  .subtext {
+    font-size: 1.75rem;
+    color: #0e2c1f;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .cta-button {
+    background-color: #163d2c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .cta-button:hover {
+    background-color: #0e2c1f;
+  }
+
+  .graphic-placeholder {
+  width: 180px;
+  height: 180px;
+  margin: 40px auto 0;
+  background-image: url('your-star-graphic.svg'); /* replace as needed */
+  background-size: contain;
+  background-repeat: no-repeat;
+  }
+
 .footer {
     display: flex;
     justify-content: space-between;
