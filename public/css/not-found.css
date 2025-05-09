@@ -1,0 +1,81 @@
+:root {
+    /* Greens */
+    --green-primary:       #1CB61C;
+    --green-dark:          #2C4A3B;
+    --green-darker:        #275E47;
+    --green-darker-alpha:  #275E47AA;
+    --green-light:         #87C4A9;
+    --green-light-alpha:   #87C4A9AA;
+
+    /* Grays */
+    --gray-light:          #F5F5F5;
+    --gray-medium:         #CCCCCC;
+    --gray-dark:           #888;
+    --gray-darker:         #2C2C2C;
+
+    /* Neutrals */
+    --white-smoke:         #F1F1F1;
+    --black:               #111;
+
+    /* Special Tones */
+    --lavender-light:      #F0F0FF;
+}
+
+body {
+    font-family: 'Poppins', cursive;
+    background-color: var(--lavender-light);
+    color: var(--gray-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: var(--green-light);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-box {
+    background-color: var(--white-smoke);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid var(--green-dark);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+    font: 'Preahvihear', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.subtext {
+    font-family: 'Poppins', cursive;
+    font-size: 1.2rem;
+    color: var(--green-dark);
+}
+
+.home-link {
+    text-decoration: none;
+    color: var(--green-dark);
+    font-size: 1.2rem;
+}
+
+.home-link:hover {
+    color: var(--green-primary);
+    cursor: pointer;
+}
