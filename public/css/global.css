@@ -1,0 +1,282 @@
+/* 
+  CSS PROPERTY PRECEDENCE (in order of priority):
+
+  1.  Display                 → display
+  2.  Visibility & Opacity    → visibility, opacity
+  3.  Positioning             → position, z-index
+  4.  Layout Models           → flex, grid
+  5.  Box Model Dimensions    → width, height, margin, padding
+  6.  Box Appearance          → border, box-shadow, background
+  7.  Typography & Text       → color, font, text-align
+  8.  Effects & Motion        → transition, transform, animation
+*/
+
+:root {
+    /* Greens */
+    --green-primary:       #1CB61C;
+    --green-dark:          #2C4A3B;
+    --green-darker:        #2D6A4F;
+    --green-darker-alpha:  #2D6A4FAA;
+    --green-light:         #87C4A9;
+    --green-light-alpha:   #87C4A9AA;
+  
+    /* Grays */
+    --gray-light:          #F5F5F5;
+    --gray-medium:         #CCCCCC;
+    --gray-dark:           #888;
+    --gray-darker:         #2C2C2C;
+  
+    /* Neutrals */
+    --white-smoke:         #F1F1F1;
+    --black:               #111;
+  
+    /* Special Tones */
+    --lavender-light:      #E6E6FA;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 400;
+    src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 700;
+    src: url('/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Preahvihear';
+    font-weight: 400;
+    src: url('/fonts/Preahvihear-Regular.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'Preahvihear';
+    font-weight: 700;
+    src: url('/fonts/Preahvihear-Bold.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'Potta One';
+    font-weight: 400;
+    src: url('/fonts/PottaOne-Regular.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'Mansalva';
+    font-weight: 400;
+    src: url('/fonts/Mansalva-Regular.ttf') format('truetype');
+}
+  
+/* RESET AND SCROLLBAR STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--white-smoke);
+    border-left: 1px solid var(--gray-darker);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--gray-dark);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: var(--green-primary);
+    border: 1px solid var(--gray-darker);
+    border-right: none;
+}
+  
+/* BODY */
+body {
+    height: 100vh;
+    font-family: 'Preahvihear', sans-serif;
+}
+  
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    z-index: 100;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    width: 100%;
+    height: 90px;
+    padding: 1% 4%;
+  
+    background-color: var(--lavender-light);
+  
+    transition: all .1s ease-in-out;
+}
+  
+/* NAV SCRIPT CLASS */
+.scrolled-navbar {
+    background-color: var(--gray-light);
+    border-bottom: 2px solid var(--black);
+}
+  
+/* LEFT GROUP */
+  .navbar .left-group {
+    display: flex;
+}
+  
+/* LOGO */
+.web-logo {
+    margin-right: 4%;
+  
+    font-family: 'Mansalva', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--gray-darker);
+  
+    cursor: pointer;
+}
+  
+#web-logo span {
+    color: var(--green-dark);
+}
+  
+#web-logo:hover {
+    color: var(--green-primary);
+}
+  
+#web-logo:hover span {
+    color: var(--green-primary);
+}
+  
+/* NAVIGATION LINKS */
+.navigation-links {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+  
+    width: 50vw;
+    margin-left: 5%;
+}
+  
+.navigation-links a,
+.action-links a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    color: var(--gray-darker);
+}
+
+.navigation-links .active {
+    color: var(--green-primary);
+}
+  
+.navigation-links a:hover {
+    color: var(--green-primary);
+}
+  
+/* ACTION LINKS */
+.action-links {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+  
+.action-links a {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all .1s ease;
+}
+  
+.action-links a:hover {
+    background-color: var(--gray-medium);
+}
+  
+.action-links .nav-button {
+    background-color: var(--green-light);
+    color: var(--green-darker);
+}
+  
+.action-links .nav-button:hover {
+    background-color: var(--green-light-alpha);
+    color: var(--green-darker-alpha);
+}
+  
+/* UNIVERSAL CTA BUTTON */
+.cta-button {
+    padding: 15px 30px;
+  
+    border: 2px solid var(--gray-darker);
+    border-radius: 4px;
+    box-shadow: 4px 4px 0px var(--gray-darker);
+  
+    font-family: 'Potta One', sans-serif;
+    font-size: 1rem;
+  
+    cursor: pointer;
+    transition: all .2s ease;
+}
+  
+.cta-button:hover {
+    transform: scale(1.1);
+}
+  
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  
+    min-height: 60vh;
+    padding: 50px 45px;
+  
+    border-top: 2px solid var(--black);
+    background-color: var(--gray-darker);
+  
+    font-family: Preahvihear, sans-serif;
+    color: var(--gray-light);
+}
+  
+.footer h2 {
+    padding: 5px 20px;
+}
+  
+.ft-left {
+    flex: 1;
+    min-width: 150px;
+    margin-bottom: 20px;
+}
+  
+.ft-columns {
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+    flex-wrap: wrap;
+  
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: 70px;
+}
+  
+.ft-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    min-width: 120px;
+}
+  
+.ft-column a {
+    color: var(--gray-light);
+    text-decoration: none;
+}

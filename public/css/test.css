@@ -1,0 +1,90 @@
+:root {
+    /* Greens */
+    --green-primary:       #1CB61C;
+    --green-dark:          #2C4A3B;
+    --green-darker:        #275E47;
+    --green-darker-alpha:  #275E47AA;
+    --green-light:         #87C4A9;
+    --green-light-alpha:   #87C4A9AA;
+
+    /* Grays */
+    --gray-light:          #F5F5F5;
+    --gray-medium:         #CCCCCC;
+    --gray-dark:           #888;
+    --gray-darker:         #2C2C2C;
+
+    /* Neutrals */
+    --white-smoke:         #F1F1F1;
+    --black:               #111;
+
+    /* Special Tones */
+    --lavender-light:      #F0F0FF;
+}
+
+.enneagram-test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    padding: 4% 8%;
+
+    background-color: var(--green-darker);
+    
+    color: var(--green-light);
+    text-align: center;
+}
+
+.enneagram-test-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3vh;
+
+    width: 100%;
+    height: 90vh;
+    margin-top: 20vh;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.enneagram-test-container .btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+
+    margin-top: 5vh;
+}
+
+.enneagram-test-container h2 {
+    font-size: 2.5rem;
+    text-shadow: 0px 4px 0px var(--black);
+}
+
+.enneagram-test-container button {
+    width: 30%;
+    padding: 15px 30px;
+  
+    border: 2px solid var(--gray-darker);
+    
+    border-radius: 4px;
+  
+    background-color: var(--green-light);
+    color: var(--green-darker);
+
+    font-family: 'Potta One', sans-serif;
+    font-size: 1rem;
+  
+    cursor: pointer;
+    transition: all .2s ease;
+}
+  
+.enneagram-test-container button:hover {
+    color: var(--black);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 0px var(--black);
+}
