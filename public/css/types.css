@@ -1,66 +1,87 @@
+:root {
+    /* Greens */
+    --green-primary: #1cb61c;
+    --green-dark: #2c4a3b;
+    --green-darker: #275e47;
+    --green-darker-alpha: #275e47aa;
+    --green-darker-darker: #183c2c;
+    --green-light: #87c4a9;
+    --green-light-alpha: #87c4a9aa;
+
+    /* Grays */
+    --gray-light: #f5f5f5;
+    --gray-medium: #cccccc;
+    --gray-dark: #888;
+    --gray-darker: #2c2c2c;
+
+    /* Neutrals */
+    --white-smoke: #f1f1f1;
+    --black: #111;
+
+    /* Special Tones */
+    --lavender-light: #f0f0ff;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #183C2C;
-  }
+    background-color: #183c2c;
+}
 
-  .header {
+.header {
     text-align: left;
     padding: 40px 20px 10px;
     margin: 90px 20px;
-    
+
     font-family: 'Potta One', cursive;
     font-size: 85px;
     font-weight: bold;
 
-    background: #183C2C;
-    color: #87C4A9;
-  }
+    background: #183c2c;
+    color: #87c4a9;
+}
 
-  .header h2 {
+.header h2 {
     margin: 0;
-  }
+}
 
-
-  .divider-1 {
+.divider-1 {
     background-color: #3f7a60;
     height: 60px;
-  }
-  
-  .divider-2{
-    background-color: #87C4A9;
+}
+
+.divider-2 {
+    background-color: #87c4a9;
     height: 60px;
-  }
+}
 
-  .content1 {
-    background-color: #2C552C;
+.content1 {
+    background-color: #2c552c;
     padding: 40px;
     text-align: left;
-  }
+}
 
-  .content2 {
-    
+.content2 {
     padding: 40px;
     text-align: left;
-  }
+}
 
-  .content h3 {
+.content h3 {
     color: #f8982b;
     font-family: 'Preahvihear', sans-serif;
     font-size: 1.5rem;
-  }
+}
 
-  .card-container {
+.card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
     gap: 40px;
     margin-top: 20px;
-    
-  }
+}
 
-  .card {
+.card {
     background-color: #5b7b4f;
     border: 3px solid #eee;
     border-radius: 10px;
@@ -68,7 +89,5 @@ body {
     width: 200px;
     height: 250px;
     color: #fff;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  }
-
-  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
