@@ -21,61 +21,50 @@
     --lavender-light: #f0f0ff;
 }
 
-body {
-    font-family: 'Poppins', cursive;
-    background-color: var(--lavender-light);
-    color: var(--gray-dark);
+.not-found-container {
     display: flex;
     justify-content: center;
     align-items: center;
+
     height: 100vh;
-    text-align: center;
-}
-
-.error-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
     width: 100%;
-    background: var(--green-light);
+
+    background: var(--green-darker);
+
+    font-family: 'Mansalva', cursive;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.text-box {
-    background-color: var(--white-smoke);
-    padding: 40px;
-    border-radius: 10px;
+.not-found-text-box {
     width: 100%;
-    max-width: 600px;
-    border: 2px solid var(--green-dark);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    padding: 40px;
 }
 
-.error-message {
-    font: 'Preahvihear', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--green-dark);
+.not-found-message {
     margin-bottom: 20px;
+
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--green-light);
     line-height: 1.4;
 }
 
-.subtext {
-    font-family: 'Poppins', cursive;
+.not-found-subtext {
+    font-family: 'Preahvihear', cursive;
     font-size: 1.2rem;
-    color: var(--green-dark);
+    color: var(--green-light);
 }
 
-.home-link {
+.not-found-home-link {
+    font-size: 1.2rem;
+    color: var(--green-light);
     text-decoration: none;
-    color: var(--green-dark);
-    font-size: 1.2rem;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.home-link:hover {
+.not-found-home-link:hover {
     color: var(--green-primary);
-    cursor: pointer;
 }

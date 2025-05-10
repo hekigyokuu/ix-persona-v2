@@ -281,3 +281,87 @@ body {
     color: var(--gray-light);
     text-decoration: none;
 }
+
+/* HAHAHAHHAHAHAH */
+#popupAd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #000d;
+    color: var(--gray-light);
+}
+
+#popupAdContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 60vh;
+    width: 50%;
+    padding: 20px;
+
+    background: var(--green-darker-darker);
+    border: 2px solid var(--gray-light);
+    border-radius: 4px;
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--gray-light);
+    text-align: center;
+}
+
+#popupAdContent h2 {
+    font-size: 3em;
+    color: #ffff55;
+}
+
+#popupAdContent p {
+    font-size: 1.5em;
+    color: #ffff00;
+}
+
+#skipAdBtn {
+    width: 20%;
+    height: auto;
+    margin-top: 15px;
+    padding: 8px 16px;
+
+    background-color: var(--gray-darker);
+    border: 2px solid var(--black);
+    border-radius: 4px;
+
+    font-weight: 800;
+    color: var(--gray-light);
+
+    cursor: not-allowed;
+}
+
+#skipAdBtn.enabled {
+    background-color: var(--green-light);
+
+    color: var(--green-darker-darker);
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#skipAdBtn.enabled:hover {
+    background-color: var(--green-light-alpha);
+    box-shadow: 0px 6px 0px var(--black);
+
+    transform: scale(1.1);
+}
+
+body.lock-scroll {
+    overflow: hidden;
+}
