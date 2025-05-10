@@ -22,72 +22,290 @@
     --lavender-light: #f0f0ff;
 }
 
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #183c2c;
+.types-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+    height: auto;
 }
 
-.header {
+.types-section-middle-div {
+    width: 100%;
+    height: 2vh;
+
+    background-color: var(--green-light);
+    border-top: 2px solid var(--black);
+}
+
+.types-container-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 94vh;
+    width: 100%;
+
+    padding: 8%;
+
+    background: var(--green-darker-darker);
+    border-bottom: 2px solid var(--black);
+
+    color: var(--green-light);
+}
+
+.types-container-header h2 {
+    display: block;
+
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    margin-top: 10vh;
+
+    font-family: 'Potta One', sans-serif;
+    font-size: 5rem;
     text-align: left;
-    padding: 40px 20px 10px;
-    margin: 90px 20px;
-
-    font-family: 'Potta One', cursive;
-    font-size: 85px;
-    font-weight: bold;
-
-    background: #183c2c;
-    color: #87c4a9;
 }
 
-.header h2 {
-    margin: 0;
-}
-
-.divider-1 {
+.types-container-divider-one {
+    width: 100%;
+    height: 3vh;
     background-color: #3f7a60;
-    height: 60px;
 }
 
-.divider-2 {
-    background-color: #87c4a9;
-    height: 60px;
+.types-container-divider-two {
+    width: 100%;
+    height: 3vh;
+
+    background-color: var(--green-light);
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
 }
 
-.content1 {
-    background-color: #2c552c;
-    padding: 40px;
-    text-align: left;
+.types-container-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+
+    padding: 8%;
+
+    background: var(--green-darker);
+    color: var(--green-light);
 }
 
-.content2 {
-    padding: 40px;
-    text-align: left;
+.types-container-text-box {
+    width: 100%;
+    max-width: 1920px;
+    height: 80vh;
+    padding: 5%;
+
+    background-color: var(--green-darker-darker);
+    border: 2px solid var(--black);
+    box-shadow: inset 4px 4px 0px var(--black);
 }
 
-.content h3 {
-    color: #f8982b;
+.types-container-text-box h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    line-height: 2;
+}
+
+.types-container-text-box p {
     font-family: 'Preahvihear', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    line-height: 2.5;
+}
+
+.types-container-personality-types-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 30vh;
+
+    background-color: var(--green-darker-darker);
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+
+    font-family: 'Potta One', sans-serif;
+    font-size: 2.5rem;
+    color: var(--green-light);
+}
+
+.types-container-personalities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20vh;
+
+    width: 100%;
+    height: auto;
+    padding: 10% 8%;
+
+    background-color: var(--green-darker);
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1920px;
+}
+
+.type h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 15vh;
+
+    background-color: var(--green-light);
+    border: 4px solid var(--black);
+
+    font-family: 'Potta One', sans-serif;
+    font-size: 2.5rem;
+    color: var(--green-darker-darker);
 }
 
 .card-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
 
-    gap: 40px;
-    margin-top: 20px;
+    width: 96%;
+    height: 60vh;
+    padding: 1%;
+
+    background-color: var(--gray-darker);
+    border-left: 4px solid var(--black);
+    border-right: 4px solid var(--black);
+    box-shadow: inset 0 4px 6px var(--black), inset 0 -4px 6px var(--black);
 }
 
 .card {
-    background-color: #5b7b4f;
-    border: 3px solid #eee;
-    border-radius: 10px;
-    padding: 20px;
-    width: 200px;
-    height: 250px;
-    color: #fff;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    perspective: 1000px;
+    width: 26%;
+    height: 54vh;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+
+    background-color: var(--gray-dark);
+    border: 2px solid var(--black);
+    border-radius: 4px;
+
+    backface-visibility: hidden;
+}
+
+.card-front {
+    transition: all 0.2s ease;
+}
+
+.card-name {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+
+    width: 100%;
+    height: 6vh;
+    padding: 0 3%;
+
+    border: 2px solid var(--black);
+}
+
+.card-img {
+    position: relative;
+
+    width: 100%;
+    height: 30vh;
+
+    border: 2px solid var(--black);
+}
+
+.card-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 4vh;
+    aspect-ratio: 1/1;
+
+    border: 2px solid var(--black);
+    border-radius: 4px;
+}
+
+.card-brief-description {
+    padding: 2%;
+
+    border: 2px solid var(--black);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+
+    transition: all 0.2s ease;
+}
+
+.card-full-description {
+    height: 100%;
+    padding: 2%;
+
+    border: 2px solid var(--black);
+}
+
+.card-front:hover {
+    box-shadow: 0px 8px 0px var(--black);
+    transform: translateY(-2vh);
+}
+.card-back:hover {
+    box-shadow: 0px 8px 0px var(--black);
+    transform: translateY(-2vh) rotateY(180deg);
+}
+
+.type-bottom {
+    width: 100%;
+    height: 5vh;
+
+    background-color: var(--green-light);
+    border: 4px solid var(--black);
 }

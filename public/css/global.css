@@ -244,11 +244,12 @@ body {
     border-top: 2px solid var(--black);
     background-color: var(--green-darker-darker);
 
-    font-family: Preahvihear, sans-serif;
+    font-family: 'Preahvihear', sans-serif;
     color: var(--gray-light);
 }
 
 .footer h2 {
+    font-family: 'Poppins', sans-serif;
     padding: 5px 20px;
 }
 
@@ -275,6 +276,8 @@ body {
     gap: 10px;
 
     min-width: 120px;
+
+    font-family: 'Poppins', sans-serif;
 }
 
 .ft-column a {
