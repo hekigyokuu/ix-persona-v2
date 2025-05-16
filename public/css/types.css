@@ -319,7 +319,7 @@
     height: 100vh;
     padding: 5% 8%;
 
-    background-color: var(--green-light);
+    background-color: var(--green-darker-darker);
     border-top: 2px solid var(--black);
 }
 
@@ -333,7 +333,7 @@
 
     font-family: 'Poppins', cursive;
     font-size: 3rem;
-    color: var(--gray-darker);
+    color: var(--white-smoke);
     line-height: 1.8;
 }
 
@@ -341,7 +341,7 @@
     font-family: Preahvihear, sans-serif;
     font-size: 1.4rem;
     line-height: 2;
-    color: var(--gray-darker);
+    color: var(--white-smoke);
 }
 
 .self-discovery-button {
@@ -349,13 +349,14 @@
     padding: 12px;
     margin-top: 2%;
 
+    border: 2px solid var(--black);
     border-radius: 4px;
-    background-color: var(--green-darker);
+    background-color: var(--green-light);
 
-    color: var(--lavender-light);
+    color: var(--green-darker-darker);
     text-align: center;
 }
 
 .self-discovery-button:hover {
-    background-color: var(--green-darker-alpha);
+    background-color: var(--green-light-alpha);
 }
