@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const loggedInUser = localStorage.getItem('loggedInUser');
+
+    if (!loggedInUser) {
+        window.location.href = '/login';
+    }
+});
+
 const popupInstruction = document.getElementById('popup-instruction');
 const skipInstruction = document.getElementById('skip-instruction');
 let timeLeft = 3;
