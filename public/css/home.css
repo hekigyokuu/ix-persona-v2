@@ -314,6 +314,8 @@ html {
 }
 
 .self-discovery {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -323,9 +325,14 @@ html {
     padding: 5% 8%;
 
     background-color: var(--green-light);
+
+    overflow: hidden;
 }
 
 .self-discovery-container {
+    position: relative;
+    z-index: 1;
+
     width: 100%;
     max-width: 1920px;
 }
@@ -360,4 +367,23 @@ html {
 
 .self-discovery-button:hover {
     background-color: var(--green-darker-alpha);
+}
+
+.enneagram-svg {
+    position: absolute;
+    bottom: -40vh;
+    right: -15vw;
+    z-index: -1;
+
+    width: 60vw;
+
+    overflow: hidden;
+    color: var(--green-darker);
+    filter: drop-shadow(6px 6px 0px var(--gray-darker));
+}
+
+.responsive-svg {
+    width: 100%;
+    height: auto;
+    display: block;
 }

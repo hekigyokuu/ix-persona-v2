@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctaButtons = document.querySelectorAll('.cta-button');
     const takeTest = document.getElementById('take-test-nav');
 
-    if (user && user.isLoggedIn) takeTest.href = '/enneagram-test';
-    else takeTest.href = '/login';
+    takeTest.href = user && user.isLoggedIn ? '/enneagram-test' : '/login';
 
     ctaButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
@@ -33,6 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     setupTypeButton('btn-to-seven', 'type-seven');
     setupTypeButton('btn-to-eight', 'type-eight');
     setupTypeButton('btn-to-nine', 'type-nine');
+
+    setTimeout(() => {
+        const hash = window.location.hash;
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'bottom',
+                });
+            }
+        }
+    }, 100);
 
     const toggleBtn = document.getElementById('toggle-profile-btn');
     const profileDiv = document.getElementById('personal-profile');

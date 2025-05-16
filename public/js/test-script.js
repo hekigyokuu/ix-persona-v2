@@ -201,11 +201,11 @@ const showQuestion = (index) => {
             <h2>${question.text}</h2>
         </div>
         <div class="btn-group">
-            <button onclick="handleAnswer(4)">Strongly Agree</button>
-            <button onclick="handleAnswer(3)">Agree</button>
-            <button onclick="handleAnswer(2)">Neutral</button>
-            <button onclick="handleAnswer(1)">Disagree</button>
-            <button onclick="handleAnswer(0)">Strongly Disagree</button>
+            <button onclick="handleAnswer(4)" id="answer-five">Strongly Agree</button>
+            <button onclick="handleAnswer(3)" id="answer-four">Agree</button>
+            <button onclick="handleAnswer(2)" id="answer-three">Neutral</button>
+            <button onclick="handleAnswer(1)" id="answer-two">Disagree</button>
+            <button onclick="handleAnswer(0)" id="answer-one">Strongly Disagree</button>
         </div>
     `;
 

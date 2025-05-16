@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 logOutPopup.style.alignItems = 'center';
 
                 logOutPopup.style.width = '50%';
+                logOutPopup.style.maxWidth = '1920px';
                 logOutPopup.style.height = '50vh';
                 logOutPopup.style.padding = '20px';
 
@@ -208,6 +209,7 @@ const handleSignup = () => {
         signUpPopup.style.alignItems = 'center';
 
         signUpPopup.style.width = '50%';
+        signUpPopup.style.maxWidth = '1920px';
         signUpPopup.style.height = '50vh';
         signUpPopup.style.padding = '20px';
 
@@ -255,6 +257,7 @@ const handleSignup = () => {
     signUpPopup.style.alignItems = 'center';
 
     signUpPopup.style.width = '50%';
+    signUpPopup.style.maxWidth = '1920px';
     signUpPopup.style.height = '50vh';
     signUpPopup.style.padding = '20px';
 
@@ -311,6 +314,7 @@ const handleLogin = () => {
     loginPopup.style.alignItems = 'center';
 
     loginPopup.style.width = '50%';
+    loginPopup.style.maxWidth = '1920px';
     loginPopup.style.height = '50vh';
     loginPopup.style.padding = '20px';
 

@@ -2,26 +2,28 @@ const types = [
     {
         id: 'type-one',
         title: 'Type 1: The Reformer',
+        titleDesc:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
         cards: [
             {
                 type: 'SP',
-                name: 'Name of Card',
+                name: 'Worrier',
                 briefDesc:
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SO',
+                name: 'Activist',
                 briefDesc:
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SX',
+                name: 'Zealot',
                 briefDesc:
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
                 fullDesc:
@@ -32,6 +34,8 @@ const types = [
     {
         id: 'type-two',
         title: 'Type 2: The Helper',
+        titleDesc:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
         cards: [
             {
                 type: 'SP',
@@ -62,6 +66,8 @@ const types = [
     {
         id: 'type-three',
         title: 'Type 3: The Achiever',
+        titleDesc:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
         cards: [
             {
                 type: 'SP',
@@ -92,6 +98,8 @@ const types = [
     {
         id: 'type-four',
         title: 'Type 4: The Individualist',
+        titleDesc:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
         cards: [
             {
                 type: 'SP',
@@ -122,6 +130,8 @@ const types = [
     {
         id: 'type-five',
         title: 'Type 5: The Investigator',
+        titleDesc:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
         cards: [
             {
                 type: 'SP',
@@ -152,6 +162,8 @@ const types = [
     {
         id: 'type-six',
         title: 'Type 6: The Loyalist',
+        titleDesc:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
         cards: [
             {
                 type: 'SP',
@@ -182,6 +194,8 @@ const types = [
     {
         id: 'type-seven',
         title: 'Type 7: The Enthusiast',
+        titleDesc:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
         cards: [
             {
                 type: 'SP',
@@ -212,6 +226,8 @@ const types = [
     {
         id: 'type-eight',
         title: 'Type 8: The Challenger',
+        titleDesc:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
         cards: [
             {
                 type: 'SP',
@@ -242,6 +258,8 @@ const types = [
     {
         id: 'type-nine',
         title: 'Type 9: The Peacemaker',
+        titleDesc:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
         cards: [
             {
                 type: 'SP',
@@ -301,6 +319,14 @@ function createType(typeData) {
     const heading = document.createElement('h3');
     heading.textContent = typeData.title;
     typeDiv.appendChild(heading);
+
+    const infoDiv = document.createElement('div');
+    infoDiv.className = 'title-description-container';
+    typeDiv.append(infoDiv);
+
+    const infoForDiv = document.createElement('p');
+    infoForDiv.textContent = typeData.titleDesc;
+    infoDiv.append(infoForDiv);
 
     const cardContainer = document.createElement('div');
     cardContainer.className = 'card-container';
