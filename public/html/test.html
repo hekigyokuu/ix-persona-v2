@@ -15,6 +15,26 @@
         <script defer src="../js/test-script.js"></script>
     </head>
     <body>
+        <div id="personal-profile" class="hidden">
+            <button class="close-personal-profile">✖</button>
+            <h2>
+                <strong><span id="profile-username"></span></strong>
+            </h2>
+            <p>
+                <span id="profile-personality"></span>
+            </p>
+            <br /><br />
+            <div class="personal-details">
+                <p>
+                    <strong>Name:</strong>
+                    <span id="profile-name"></span>
+                </p>
+                <p><strong>Age:</strong> <span id="profile-age"></span></p>
+                <p>
+                    <strong>Gender:</strong> <span id="profile-gender"></span>
+                </p>
+            </div>
+        </div>
         <nav class="navbar scrolled-navbar">
             <div class="left-group">
                 <div class="web-logo">
@@ -31,6 +51,21 @@
             <div class="action-links">
                 <a href="/login" id="auth-link">Login</a>
                 <button class="nav-button cta-button">Take the Test</button>
+                <button id="toggle-profile-btn" aria-label="Toggle Profile">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        style="vertical-align: middle; margin-right: 6px"
+                    >
+                        <circle cx="12" cy="8" r="4" />
+                        <path
+                            d="M12 14c-5 0-9 2.5-9 5v1h18v-1c0-2.5-4-5-9-5z"
+                        />
+                    </svg>
+                </button>
             </div>
         </nav>
 

@@ -123,7 +123,11 @@ const getCurrentUsername = () => localStorage.getItem(LOGGED_IN_USER_KEY);
 
 const getCurrentUser = () => {
     const username = getCurrentUsername();
-    return getUsers().find((user) => user.username === username) || null;
+    if (!username) return null;
+
+    const users = getUsers();
+    const user = users.find((u) => u.username === username);
+    return user ? { ...user, isLoggedIn: true } : null;
 };
 
 const isUserLoggedIn = () => Boolean(getCurrentUsername());
@@ -173,14 +177,18 @@ const login = (username, password) => {
 };
 
 const logout = () => {
-    const users = getUsers();
     const username = getCurrentUsername();
+    if (!username) return;
 
-    const user = users.find((user) => user.username === username);
-    if (user) user.isLoggedIn = false;
+    const users = getUsers();
+    const userIndex = users.findIndex((u) => u.username === username);
 
-    localStorage.removeItem(LOGGED_IN_USER_KEY);
-    saveUsers(users);
+    if (userIndex !== -1) {
+        users[userIndex].isLoggedIn = false;
+        saveUsers(users);
+    }
+
+    localStorage.removeItem('loggedInUser');
 };
 
 const handleSignup = () => {

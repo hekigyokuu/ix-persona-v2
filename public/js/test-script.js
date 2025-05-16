@@ -228,6 +228,18 @@ const showResult = () => {
     const topType = Object.keys(scores).reduce(checkTopType);
 
     testResContainer.innerHTML = `Your dominant Enneagram type is: <br>${enneagramTypes[topType]} – ${topType}`;
+
+    const username = localStorage.getItem('loggedInUser');
+    if (username) {
+        const users = JSON.parse(localStorage.getItem('users') || '[]');
+        const userIndex = users.findIndex((u) => u.username === username);
+
+        if (userIndex !== -1) {
+            users[userIndex].personality = topType;
+            users[userIndex].isLoggedIn = true;
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+    }
 };
 
 showQuestion(currentQuestion);
