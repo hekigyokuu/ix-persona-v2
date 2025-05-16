@@ -284,3 +284,7 @@ body {
     color: var(--gray-light);
     text-decoration: none;
 }
+
+.log-out-button:hover {
+    transform: scale(1.1);
+}
