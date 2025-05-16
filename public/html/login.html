@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>IXpersona - Login</title>
+
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/login.css" />
+
+        <script defer src="../js/auth-script.js"></script>
+        <script defer src="../js/button-script.js"></script>
+    </head>
+    <body>
+        <div class="login-container">
+            <div class="new-here-container">
+                <div class="new-here-box-container">
+                    <h2>New here?</h2>
+                    <p>Just signup here and the test is ready to go!</p>
+                    <div class="login-anchoring">
+                        <a href="/">Go Back</a>
+                        <a href="/signup" class="go-now-anchor">Go Now ➜</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-form-container">
+                <form action="" id="login-form" class="form-container">
+                    <h2>Already have a profile?</h2>
+                    <input
+                        type="text"
+                        name="username"
+                        id="login-username"
+                        placeholder="username"
+                        required
+                    />
+                    <input
+                        type="password"
+                        name="password"
+                        id="login-password"
+                        placeholder="********"
+                        required
+                    />
+                    <button id="login-button" type="submit">Log in</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

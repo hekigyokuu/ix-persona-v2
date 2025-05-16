@@ -309,3 +309,53 @@
     background-color: var(--green-light);
     border: 4px solid var(--black);
 }
+
+.self-discovery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    padding: 5% 8%;
+
+    background-color: var(--green-light);
+    border-top: 2px solid var(--black);
+}
+
+.self-discovery-container {
+    width: 100%;
+    max-width: 1920px;
+}
+
+.self-discovery-quote {
+    margin-bottom: 2rem;
+
+    font-family: 'Poppins', cursive;
+    font-size: 3rem;
+    color: var(--gray-darker);
+    line-height: 1.8;
+}
+
+.self-discovery-subtext {
+    font-family: Preahvihear, sans-serif;
+    font-size: 1.4rem;
+    line-height: 2;
+    color: var(--gray-darker);
+}
+
+.self-discovery-button {
+    width: 30%;
+    padding: 12px;
+    margin-top: 2%;
+
+    border-radius: 4px;
+    background-color: var(--green-darker);
+
+    color: var(--lavender-light);
+    text-align: center;
+}
+
+.self-discovery-button:hover {
+    background-color: var(--green-darker-alpha);
+}

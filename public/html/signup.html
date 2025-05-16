@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>IXpersona - Signup</title>
+
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/signup.css" />
+
+        <script defer src="../js/auth-script.js"></script>
+        <script defer src="../js/button-script.js"></script>
+    </head>
+    <body>
+        <div class="signup-container">
+            <div class="signup-form-container">
+                <form action="" id="signup-form" class="form-container">
+                    <h2>Create Account</h2>
+                    <hr />
+                    <br />
+                    <label for="name">Name</label>
+                    <br />
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Juan Dela Cruz"
+                        required
+                    />
+                    <br /><br />
+                    <label for="usern">Username</label>
+                    <br />
+                    <input
+                        type="text"
+                        name="username"
+                        id="signup-username"
+                        placeholder="username"
+                        required
+                    />
+                    <br /><br />
+                    <label for="password">Password</label>
+                    <br />
+                    <input
+                        type="password"
+                        id="signup-password"
+                        name="password"
+                        class="styled-input"
+                        placeholder="********"
+                        required
+                    />
+                    <br /><br />
+                    <select name="age" id="age" class="styled-input" required>
+                        <option value="" disabled selected>Age</option>
+                    </select>
+                    <br /><br />
+                    <select
+                        id="gender"
+                        name="gender"
+                        class="styled-input"
+                        required
+                    >
+                        <option value="" disabled selected>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <br /><br />
+                    <hr />
+                    <a href="/login">Go Back</a
+                    ><button id="signup-button" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -67,8 +67,9 @@ html {
     margin-top: 2%;
 
     background-color: var(--green-darker);
-    color: var(--lavender-light);
     border-radius: 4px;
+
+    color: var(--lavender-light);
     text-align: center;
 }
 

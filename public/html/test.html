@@ -3,11 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>IXpersona - Test</title>
 
         <link rel="stylesheet" href="../css/global.css" />
         <link rel="stylesheet" href="../css/test.css" />
+
         <script defer src="../js/navbar-script.js"></script>
+        <script defer src="../js/auth-script.js"></script>
         <script defer src="../js/button-script.js"></script>
         <script defer src="../js/test-script.js"></script>
     </head>
@@ -18,13 +21,15 @@
                     <h1 id="web-logo"><span>IX</span>persona</h1>
                 </div>
                 <div class="navigation-links">
-                    <a href="/test" class="active">Enneagram Test</a>
+                    <a href="#" id="take-test-nav" class="active"
+                        >Enneagram Test</a
+                    >
                     <a href="/types">Explore Types</a>
                     <a href="/about">About us</a>
                 </div>
             </div>
             <div class="action-links">
-                <a href="#">Login</a>
+                <a href="/login" id="auth-link">Login</a>
                 <button class="nav-button cta-button">Take the Test</button>
             </div>
         </nav>
