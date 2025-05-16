@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctaButtons = document.querySelectorAll('.cta-button');
     const takeTest = document.getElementById('take-test-nav');
 
-    if (user && user.isLoggedIn) takeTest.href = '/test';
+    if (user && user.isLoggedIn) takeTest.href = '/enneagram-test';
     else takeTest.href = '/login';
 
     ctaButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
-            if (user && user.isLoggedIn) window.location.href = '/test';
+            if (user && user.isLoggedIn)
+                window.location.href = '/enneagram-test';
             else window.location.href = '/login';
         });
     });
@@ -25,38 +26,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnToNine = document.getElementById('btn-to-nine');
 
     btnToOne.addEventListener('click', () => {
-        window.location.href = '/types#type-one';
+        window.location.href = '/enneagram-types#type-one';
     });
 
     btnToTwo.addEventListener('click', () => {
-        window.location.href = '/types#type-two';
+        window.location.href = '/enneagram-types#type-two';
     });
 
     btnToThree.addEventListener('click', () => {
-        window.location.href = '/types#type-three';
+        window.location.href = '/enneagram-types#type-three';
     });
 
     btnToFour.addEventListener('click', () => {
-        window.location.href = '/types#type-four';
+        window.location.href = '/enneagram-types#type-four';
     });
 
     btnToFive.addEventListener('click', () => {
-        window.location.href = '/types#type-five';
+        window.location.href = '/enneagram-types#type-five';
     });
 
     btnToSix.addEventListener('click', () => {
-        window.location.href = '/types#type-six';
+        window.location.href = '/enneagram-types#type-six';
     });
 
     btnToSeven.addEventListener('click', () => {
-        window.location.href = '/types#type-seven';
+        window.location.href = '/enneagram-types#type-seven';
     });
 
     btnToEight.addEventListener('click', () => {
-        window.location.href = '/types#type-eight';
+        window.location.href = '/enneagram-types#type-eight';
     });
 
     btnToNine.addEventListener('click', () => {
-        window.location.href = '/types#type-nine';
+        window.location.href = '/enneagram-types#type-nine';
     });
 });

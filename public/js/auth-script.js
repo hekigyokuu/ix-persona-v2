@@ -121,15 +121,100 @@ const handleSignup = () => {
     const password = document.getElementById('signup-password').value.trim();
 
     if (!username || !password) {
-        alert('Please enter both username and password.');
+        const signUpPopup = document.createElement('div');
+        signUpPopup.style.position = 'fixed';
+        signUpPopup.style.top = '50%';
+        signUpPopup.style.left = '50%';
+        signUpPopup.style.transform = 'translate(-50%, -50%)';
+        signUpPopup.style.zIndex = '9999';
+
+        signUpPopup.style.display = 'flex';
+        signUpPopup.style.justifyContent = 'center';
+        signUpPopup.style.alignItems = 'center';
+
+        signUpPopup.style.width = '50%';
+        signUpPopup.style.height = '50vh';
+        signUpPopup.style.padding = '20px';
+
+        signUpPopup.style.backgroundColor = '#87c4a9';
+        signUpPopup.style.border = '2px solid #111';
+        signUpPopup.style.borderRadius = '4px';
+        signUpPopup.style.boxShadow = '6px 6px 0px #111';
+
+        const closeBtn = document.createElement('button');
+        closeBtn.textContent = '✖';
+        closeBtn.style.position = 'absolute';
+        closeBtn.style.top = '5px';
+        closeBtn.style.right = '10px';
+        closeBtn.style.border = 'none';
+        closeBtn.style.background = 'transparent';
+        closeBtn.style.fontSize = '16px';
+        closeBtn.style.cursor = 'pointer';
+
+        closeBtn.addEventListener('click', () => {
+            signUpPopup.remove();
+        });
+
+        const message = document.createElement('p');
+        message.textContent = 'Please enter both username and password.';
+        message.style.fontSize = '1.5rem';
+
+        signUpPopup.append(closeBtn);
+        signUpPopup.append(message);
+
+        document.body.append(signUpPopup);
         return;
     }
 
     const result = signup(username, password);
 
-    alert(result.message);
+    const signUpPopup = document.createElement('div');
+    signUpPopup.style.position = 'fixed';
+    signUpPopup.style.top = '50%';
+    signUpPopup.style.left = '50%';
+    signUpPopup.style.transform = 'translate(-50%, -50%)';
+    signUpPopup.style.zIndex = '9999';
+
+    signUpPopup.style.display = 'flex';
+    signUpPopup.style.justifyContent = 'center';
+    signUpPopup.style.alignItems = 'center';
+
+    signUpPopup.style.width = '50%';
+    signUpPopup.style.height = '50vh';
+    signUpPopup.style.padding = '20px';
+
+    signUpPopup.style.backgroundColor = '#87c4a9';
+    signUpPopup.style.border = '2px solid #111';
+    signUpPopup.style.borderRadius = '4px';
+    signUpPopup.style.boxShadow = '6px 6px 0px #111';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = '✖';
+    closeBtn.style.position = 'absolute';
+    closeBtn.style.top = '5px';
+    closeBtn.style.right = '10px';
+    closeBtn.style.border = 'none';
+    closeBtn.style.background = 'transparent';
+    closeBtn.style.fontSize = '16px';
+    closeBtn.style.cursor = 'pointer';
+
+    closeBtn.addEventListener('click', () => {
+        signUpPopup.remove();
+    });
+
+    const message = document.createElement('p');
+    message.textContent = result.message;
+    message.style.fontSize = '1.5rem';
+
+    signUpPopup.append(closeBtn);
+    signUpPopup.append(message);
+
+    document.body.append(signUpPopup);
+
     if (result.success) {
-        window.location.href = '/login';
+        setTimeout(() => {
+            window.location.href = '/login';
+        }, 1000);
     }
 };
 
@@ -139,8 +224,52 @@ const handleLogin = () => {
 
     const result = login(username, password);
 
-    alert(result.message);
+    const loginPopup = document.createElement('div');
+    loginPopup.style.position = 'fixed';
+    loginPopup.style.top = '50%';
+    loginPopup.style.left = '50%';
+    loginPopup.style.transform = 'translate(-50%, -50%)';
+    loginPopup.style.zIndex = '9999';
+
+    loginPopup.style.display = 'flex';
+    loginPopup.style.justifyContent = 'center';
+    loginPopup.style.alignItems = 'center';
+
+    loginPopup.style.width = '50%';
+    loginPopup.style.height = '50vh';
+    loginPopup.style.padding = '20px';
+
+    loginPopup.style.backgroundColor = '#87c4a9';
+    loginPopup.style.border = '2px solid #111';
+    loginPopup.style.borderRadius = '4px';
+    loginPopup.style.boxShadow = '6px 6px 0px #111';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = '✖';
+    closeBtn.style.position = 'absolute';
+    closeBtn.style.top = '5px';
+    closeBtn.style.right = '10px';
+    closeBtn.style.border = 'none';
+    closeBtn.style.background = 'transparent';
+    closeBtn.style.fontSize = '16px';
+    closeBtn.style.cursor = 'pointer';
+
+    closeBtn.addEventListener('click', () => {
+        loginPopup.remove();
+    });
+
+    const message = document.createElement('p');
+    message.textContent = result.message;
+    message.style.fontSize = '1.5rem';
+
+    loginPopup.append(closeBtn);
+    loginPopup.append(message);
+
+    document.body.append(loginPopup);
+
     if (result.success) {
-        window.location.href = '/test';
+        setTimeout(() => {
+            window.location.href = '/enneagram-test';
+        }, 1000);
     }
 };

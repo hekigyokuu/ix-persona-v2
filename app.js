@@ -14,19 +14,19 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'login.html'));
 });
 
-app.get('/signup', (req, res) => {
+app.get('/create-account', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'signup.html'));
 });
 
-app.get('/test', (req, res) => {
+app.get('/enneagram-test', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'test.html'));
 });
 
-app.get('/types', (req, res) => {
+app.get('/enneagram-types', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'types.html'));
 });
 
-app.get('/about', (req, res) => {
+app.get('/about-us', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'about.html'));
 });
 
