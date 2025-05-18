@@ -7,25 +7,25 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Worrier',
+                name: 'Worry',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be correct/right with their families, their health, their finances, and their homes. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
                 type: 'SO',
-                name: 'Activist',
+                name: 'Non-Adaptable',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be correct/right with their groups and communities. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
                 type: 'SX',
-                name: 'Zealot',
+                name: 'Zeal(countertype)',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be correct/right with their intimate connections. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
@@ -39,25 +39,25 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Name of Card',
+                name: 'Privilege(countertype)',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be charming in order to have their physical needs met. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SO',
+                name: 'Ambition',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be charming with their groups and communities. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SX',
+                name: 'Seduction-Aggression',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be charming with their intimate connections. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
@@ -71,25 +71,25 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Name of Card',
+                name: 'Security(countertype)',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be valuable/admired in order to have their physical needs met. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SO',
+                name: 'Prestige',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses On:  The need to be valuable/admired in their groups and communities. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SX',
+                name: 'Charisma',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be valuable/admired by their intimate connections. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
@@ -103,25 +103,25 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Name of Card',
+                name: 'Tenacity(countertype)',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be themselves in order to have their physical needs met. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SO',
+                name: 'Shame',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be themselves with their groups and communities. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SX',
+                name: 'Competition',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be themselves with their intimate connections. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
@@ -135,25 +135,25 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Name of Card',
+                name: 'Castle',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be competent with their families, health, finances, and home. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SO',
+                name: 'Totem',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be competent with their groups and communities. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SX',
+                name: 'Confidence(countertype)',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be competent with their intimate connections. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
@@ -167,25 +167,25 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Name of Card',
+                name: 'Warmth',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be secure/supported within their families, health, finances, and home. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SO',
+                name: 'Duty',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be secure/supported with their groups and communities. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SX',
+                name: 'Strength/Beauty(countertype)',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be secure/supported with their intimate connections. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
@@ -199,25 +199,25 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Name of Card',
+                name: 'Keepers of the Castle',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be satisfied in their families, health, finances, and home. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SO',
+                name: 'Sacrifice(countertype)',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be satisfied with their groups and communities. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SX',
+                name: 'Suggestibility',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be satisfied with their intimate connections. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
@@ -231,25 +231,25 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Name of Card',
+                name: 'Satisfaction',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be protective of their families, health, finances, and home. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SO',
+                name: 'Solidarity(countertype)',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be protective of their groups and communities. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SX',
+                name: 'Possession',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be protective of their intimate connections. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
@@ -263,25 +263,25 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Name of Card',
+                name: 'Appetite',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be at peace with their families, health, finances, and home. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SO',
+                name: 'Participation(countertype)',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses on the need to be at peace with their groups and communities. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
             {
-                type: 'SP',
-                name: 'Name of Card',
+                type: 'SX',
+                name: 'Fusion',
                 briefDesc:
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+                    'Focuses On:  The need to be at peace with their intimate connections. Flip card for full details.',
                 fullDesc:
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
             },
