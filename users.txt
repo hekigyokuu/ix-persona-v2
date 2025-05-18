@@ -16,5 +16,14 @@
     "age": 120,
     "gender": "Male",
     "createdAt": "2025-05-18T19:19:46.246Z"
+  },
+  {
+    "id": "1747569396082",
+    "username": "Nachie",
+    "password": "$2b$10$TwnFZL7T2/OGdTp7y.L.8.XHXilAufAU1KSq3lgQCWELC2LcnP13W",
+    "name": "Jonash",
+    "age": 19,
+    "gender": "Male",
+    "createdAt": "2025-05-18T19:56:36.082Z"
   }
 ]

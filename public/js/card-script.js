@@ -3,7 +3,7 @@ const types = [
         id: 'type-one',
         title: 'Type 1: The Reformer',
         titleDesc:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+            'The Rational, Idealistic Type: Principled, Purposeful, Self-Controlled, and Perfectionistic.',
         cards: [
             {
                 type: 'SP',
@@ -35,7 +35,7 @@ const types = [
         id: 'type-two',
         title: 'Type 2: The Helper',
         titleDesc:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+            'The Caring, Interpersonal Type: Demonstrative, Generous, People-Pleasing, and Possessive',
         cards: [
             {
                 type: 'SP',
@@ -67,7 +67,7 @@ const types = [
         id: 'type-three',
         title: 'Type 3: The Achiever',
         titleDesc:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+            'The Success-Oriented, Pragmatic Type: Adaptive, Excelling, Driven, and Image- Conscious',
         cards: [
             {
                 type: 'SP',
@@ -99,7 +99,7 @@ const types = [
         id: 'type-four',
         title: 'Type 4: The Individualist',
         titleDesc:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+            'The Sensitive,	Withdrawn Type: Expressive,	Dramatic, Self-Absorbed, and Temperamental',
         cards: [
             {
                 type: 'SP',
@@ -131,7 +131,7 @@ const types = [
         id: 'type-five',
         title: 'Type 5: The Investigator',
         titleDesc:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+            'The Intense, Cerebral Type: Perceptive, Innovative, Secretive, and Isolated',
         cards: [
             {
                 type: 'SP',
@@ -163,7 +163,7 @@ const types = [
         id: 'type-six',
         title: 'Type 6: The Loyalist',
         titleDesc:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+            'The Committed, Security-Oriented Type: Engaging, Responsible, Anxious, and Suspicious',
         cards: [
             {
                 type: 'SP',
@@ -195,7 +195,7 @@ const types = [
         id: 'type-seven',
         title: 'Type 7: The Enthusiast',
         titleDesc:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+            'The Busy, Fun-Loving Type: Spontaneous, Versatile, Distractible, and Scattered',
         cards: [
             {
                 type: 'SP',
@@ -227,7 +227,7 @@ const types = [
         id: 'type-eight',
         title: 'Type 8: The Challenger',
         titleDesc:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+            'The Powerful, Dominating Type: Self-Confident,	Decisive, Willful, and Confrontational',
         cards: [
             {
                 type: 'SP',
@@ -259,7 +259,7 @@ const types = [
         id: 'type-nine',
         title: 'Type 9: The Peacemaker',
         titleDesc:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Flip card for full details.',
+            'The Easygoing, Self-Effacing Type: Receptive, Reassuring, Agreeable, and Complacent',
         cards: [
             {
                 type: 'SP',
