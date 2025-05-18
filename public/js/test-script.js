@@ -1,11 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const loggedInUser = localStorage.getItem('loggedInUser');
-
-    if (!loggedInUser) {
-        window.location.href = '/login';
-    }
-});
-
 const popupInstruction = document.getElementById('popup-instruction');
 const skipInstruction = document.getElementById('skip-instruction');
 let timeLeft = 3;
@@ -247,23 +239,23 @@ showQuestion(currentQuestion);
 //answer test using keyboard
 function keyboardOption() {
     const options = {
-      "1": "answer-one",
-      "2": "answer-two",
-      "3": "answer-three",
-      "4": "answer-four",
-      "5": "answer-five"
+        1: 'answer-one',
+        2: 'answer-two',
+        3: 'answer-three',
+        4: 'answer-four',
+        5: 'answer-five',
     };
 
-    const result = document.getElementById("result");
+    const result = document.getElementById('result');
 
-    document.addEventListener("keyup", function (event) {
-      if (options[event.key]) {
-        const btn = document.getElementById(options[event.key]);
-        if (btn) {
-          btn.click();
+    document.addEventListener('keyup', function (event) {
+        if (options[event.key]) {
+            const btn = document.getElementById(options[event.key]);
+            if (btn) {
+                btn.click();
+            }
         }
-      }
     });
-  }
+}
 
-  keyboardOption();
+keyboardOption();

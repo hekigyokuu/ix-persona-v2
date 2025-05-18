@@ -338,7 +338,7 @@ body {
     letter-spacing: 2px;
 }
 
-.personal-details {
+.profile-options {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -365,28 +365,4 @@ body {
 
 .hidden {
     display: none !important;
-}
-
-.close-personal-profile {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-
-    background-color: transparent;
-    border: none;
-
-    font-size: 2rem;
-
-    cursor: pointer;
-}
-
-.image {
-    position: relative;
-}
-
-.star-shape {
-    position: absolute;
-    right: -56px;
-    top: -180px;
-    height: 470px;
 }

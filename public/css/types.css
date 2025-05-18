@@ -271,7 +271,7 @@
     gap: 5%;
 
     width: 100%;
-    height: 6vh;
+    height: 7vh;
     padding: 0 3%;
 
     border: 2px solid var(--black);
@@ -405,12 +405,146 @@
 .card-full-description {
     background-color: #87a96b;
     border: 2px solid #2e5a1c;
+    box-shadow: inset 1px 1px 0px var(--black);
 }
 
 .card-type {
     background-color: #2e5a1c;
-    border: none;
+    border: 2px solid var(--black);
     color: #87a96b;
+}
+
+#type-one .card-front,
+#type-one .card-back {
+    color: #1b0024;
+}
+#type-one .card-name,
+#type-one .card-brief-description,
+#type-one .card-img,
+#type-one .card-full-description {
+    border: 2px solid #1b0024;
+}
+#type-one .card-type {
+    background-color: #1b0024;
+}
+/* Type 2 - The Helper */
+#type-two .card-front,
+#type-two .card-back {
+    color: #3a001a;
+}
+#type-two .card-name,
+#type-two .card-brief-description,
+#type-two .card-img,
+#type-two .card-full-description {
+    border: 2px solid #3a001a;
+}
+#type-two .card-type {
+    background-color: #3a001a;
+}
+
+/* Type 3 - The Achiever */
+#type-three .card-front,
+#type-three .card-back {
+    color: #241b00;
+}
+#type-three .card-name,
+#type-three .card-brief-description,
+#type-three .card-img,
+#type-three .card-full-description {
+    border: 2px solid #241b00;
+}
+#type-three .card-type {
+    background-color: #241b00;
+}
+
+/* Type 4 - The Individualist */
+#type-four .card-front,
+#type-four .card-back {
+    color: #002747;
+}
+#type-four .card-name,
+#type-four .card-brief-description,
+#type-four .card-img,
+#type-four .card-full-description {
+    border: 2px solid #002747;
+}
+#type-four .card-type {
+    background-color: #002747;
+}
+
+/* Type 5 - The Investigator */
+#type-five .card-front,
+#type-five .card-back {
+    color: #002c1d;
+}
+#type-five .card-name,
+#type-five .card-brief-description,
+#type-five .card-img,
+#type-five .card-full-description {
+    border: 2px solid #002c1d;
+}
+#type-five .card-type {
+    background-color: #002c1d;
+}
+
+/* Type 6 - The Loyalist */
+#type-six .card-front,
+#type-six .card-back {
+    color: #303000;
+}
+#type-six .card-name,
+#type-six .card-brief-description,
+#type-six .card-img,
+#type-six .card-full-description {
+    border: 2px solid #303000;
+}
+#type-six .card-type {
+    background-color: #303000;
+}
+
+/* Type 7 - The Enthusiast */
+#type-seven .card-front,
+#type-seven .card-back {
+    color: #381300;
+}
+#type-seven .card-name,
+#type-seven .card-brief-description,
+#type-seven .card-img,
+#type-seven .card-full-description {
+    border: 2px solid #381300;
+}
+#type-seven .card-type {
+    background-color: #381300;
+}
+
+/* Type 8 - The Challenger */
+#type-eight .card-front,
+#type-eight .card-back {
+    color: #350000;
+}
+#type-eight .card-name,
+#type-eight .card-brief-description,
+#type-eight .card-img,
+#type-eight .card-full-description {
+    border: 2px solid #350000;
+}
+#type-eight .card-type {
+    background-color: #350000;
+}
+
+/* Type 9 - The Peacemaker */
+#type-nine .card-front,
+#type-nine .card-back {
+    color: #00331f;
+}
+#type-nine .card-name,
+#type-nine .card-brief-description,
+#type-nine .card-img,
+#type-nine .card-full-description {
+    border: 2px solid #00331f;
+}
+#type-nine .card-type {
+    background-color: #00331f;
 }
 
 .enneagram-svg {

@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="../css/global.css" />
         <link rel="stylesheet" href="../css/signup.css" />
 
-        <script defer src="../js/auth-script.js"></script>
+        <script defer src="../js/popup-script.js"></script>
+        <script defer src="../js/authentication.js"></script>
         <script defer src="../js/button-script.js"></script>
     </head>
     <body>
@@ -43,6 +44,16 @@
                         type="password"
                         id="signup-password"
                         name="password"
+                        class="styled-input"
+                        placeholder="********"
+                    />
+                    <br /><br />
+                    <label for="password">Confirm Password</label>
+                    <br />
+                    <input
+                        type="password"
+                        id="confirm-signup-password"
+                        name="confirm-password"
                         class="styled-input"
                         placeholder="********"
                     />

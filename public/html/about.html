@@ -9,31 +9,13 @@
         <link rel="stylesheet" href="../css/global.css" />
         <link rel="stylesheet" href="../css/about.css" />
 
+        <script defer src="../js/popup-script.js"></script>
         <script defer src="../js/navbar-script.js"></script>
-        <script defer src="../js/auth-script.js"></script>
+        <script defer src="../js/authentication.js"></script>
         <script defer src="../js/button-script.js"></script>
     </head>
     <body>
-        <div id="personal-profile" class="hidden">
-            <button class="close-personal-profile">✖</button>
-            <h2>
-                <strong><span id="profile-username"></span></strong>
-            </h2>
-            <p>
-                <span id="profile-personality"></span>
-            </p>
-            <br /><br />
-            <div class="personal-details">
-                <p>
-                    <strong>Name:</strong>
-                    <span id="profile-name"></span>
-                </p>
-                <p><strong>Age:</strong> <span id="profile-age"></span></p>
-                <p>
-                    <strong>Gender:</strong> <span id="profile-gender"></span>
-                </p>
-            </div>
-        </div>
+        <div id="profile-options" class="hidden"></div>
         <nav class="navbar scrolled-navbar">
             <div class="left-group">
                 <div class="web-logo">
