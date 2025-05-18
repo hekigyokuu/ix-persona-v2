@@ -23,21 +23,29 @@
                 </div>
                 <div class="navigation-links">
                     <a href="#" id="take-test-nav">Enneagram Test</a>
-                    <a href="/enneagram-types" class="active">Explore Types</a>
+                    <a href="/enneagram-types">Explore Types</a>
                     <a href="/about-us">About us</a>
                 </div>
             </div>
             <div class="action-links">
                 <a href="/login" id="auth-link">Login</a>
                 <button class="nav-button cta-button">Take the Test</button>
-                <button id="toggle-profile-btn" aria-label="Toggle Profile">
+                <button
+                    id="toggle-profile-btn"
+                    style="background-color: #1cb61c; width: 7vh"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
                         fill="currentColor"
                         viewBox="0 0 24 24"
-                        style="vertical-align: middle; margin-right: 6px"
+                        style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #f1f1f1;
+                        "
                     >
                         <circle cx="12" cy="8" r="4" />
                         <path
@@ -50,33 +58,19 @@
         <section class="profile-section">
             <div class="profile-container">
                 <div class="profile-left">
-                    <div class="profile-field">
-                        <label>Name:</label>
-                        <span id="profile-name">Loading...</span>
-                    </div>
-                    <div class="profile-field">
-                        <label>Username:</label>
-                        <span id="profile-username">Loading...</span>
-                    </div>
-                    <div class="profile-field">
-                        <label>Age:</label>
-                        <span id="profile-age">Loading...</span>
-                    </div>
-                    <div class="profile-field">
-                        <label>Gender:</label>
-                        <span id="profile-gender">Loading...</span>
-                    </div>
-                    <div class="profile-field">
-                        <label>Personality Type:</label>
-                        <span id="profile-personality">Loading...</span>
-                    </div>
+                    <div class="profile-image"></div>
+                    <h2 id="profile-username">Loading...</h2>
+                    <h3 id="profile-personality">Loading...</h3>
+                    <hr />
+                    <p id="profile-name">Loading...</p>
+                    <p id="profile-age">Loading...</p>
+                    <p id="profile-gender">Loading...</p>
+                    <hr />
+                    <button id="profile-retake-test">Retake Test</button>
+                    <br />
+                    <button id="profile-logout">Logout</button>
                 </div>
-                <div class="profile-right">
-                    <button id="retake-test" class="cta-button">
-                        Retake Test
-                    </button>
-                    <button id="logout" class="secondary-button">Logout</button>
-                </div>
+                <div class="profile-right"></div>
             </div>
         </section>
         <footer class="footer">
