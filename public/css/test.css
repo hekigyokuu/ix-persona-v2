@@ -309,6 +309,77 @@ body.lock-scroll {
     transition: all 0.2s ease;
 }
 
+.glowing {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.inset-glowing {
+    animation: inset-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px var(--glow-color);
+    }
+    to {
+        box-shadow: 0 0 50px var(--glow-color);
+    }
+}
+
+@keyframes inset-glow {
+    from {
+        box-shadow: inset 0 0 10px var(--glow-color);
+    }
+    to {
+        box-shadow: inset 0 0 20px var(--glow-color);
+    }
+}
+
+/* Type 1 - The Reformer */
+.glowing-one {
+    --glow-color: #b41fff;
+}
+
+/* Type 2 - The Helper */
+.glowing-two {
+    --glow-color: #ff2797;
+}
+
+/* Type 3 - The Achiever */
+.glowing-three {
+    --glow-color: #ffcb20;
+}
+
+/* Type 4 - The Individualist */
+.glowing-four {
+    --glow-color: #20a6ff;
+}
+
+/* Type 5 - The Investigator */
+.glowing-five {
+    --glow-color: #1dfdab;
+}
+
+/* Type 6 - The Loyalist */
+.glowing-six {
+    --glow-color: #ffff20;
+}
+
+/* Type 7 - The Enthusiast */
+.glowing-seven {
+    --glow-color: #ff6e21;
+}
+
+/* Type 8 - The Challenger */
+.glowing-eight {
+    --glow-color: #ff1d1d;
+}
+
+/* Type 9 - The Peacemaker */
+.glowing-nine {
+    --glow-color: #20ffa6;
+}
+
 .spinning {
     animation: smoothSpin 4s cubic-bezier(0.2, 0.5, 0.8, 1) forwards;
 }
@@ -329,15 +400,16 @@ body.lock-scroll {
 .card-name {
     display: flex;
     align-items: center;
-    gap: 5%;
+    gap: 3%;
 
     width: 100%;
-    height: 7vh;
-    padding: 0 2%;
+    height: 9vh;
+    padding: 1% 3%;
 
     border: 4px solid var(--black);
 
     font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
     font-weight: 800;
 }
 
@@ -363,7 +435,7 @@ body.lock-scroll {
 }
 
 .card-brief-description {
-    padding: 2%;
+    padding: 3% 3%;
     width: 100%;
     height: 30vh;
 
@@ -386,13 +458,26 @@ body.lock-scroll {
     box-shadow: inset 4px 4px 0px var(--black), inset -2px -2px 0px var(--black);
 }
 
-.card-brief-description a {
-    font-weight: 800;
-    text-decoration: none;
-    color: #1d3514;
-}
-
 .card-type {
     background-color: #2e5a1c;
     color: #87a96b;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: visible;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
 }

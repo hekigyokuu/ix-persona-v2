@@ -232,20 +232,33 @@ const showResult = () => {
     const card = document.getElementById('card');
     const cardBack = document.getElementById('card-result');
 
-    testContainer.style.display = 'none';
+    testContainer.style.display = 'block';
     testResContainer.style.position = 'absolute';
     testResContainer.style.zIndex = '999999';
     testResContainer.style.top = '0';
     testResContainer.style.height = '100vh';
     testResContainer.style.width = '100%';
     testResContainer.style.backgroundColor = 'var(--green-darker-darker)';
+    testResContainer.classList.add('fade-in');
 
     container.classList.remove('hidden');
 
-    card.addEventListener('click', () => {
-        card.classList.add('spinning');
+    const continueText = document.createElement('p');
+    continueText.textContent = 'Tap the card to reveal personality...';
+    continueText.style.position = 'absolute';
+    continueText.style.bottom = '1%';
+    continueText.style.left = '1%';
+    continueText.style.textAlign = 'center';
+    continueText.style.fontFamily = '"Preahvihear", sans-serif';
+    continueText.style.fontSize = '1.6rem';
+    testResContainer.append(continueText);
 
-        cardBack.innerHTML = `
+    card.addEventListener(
+        'click',
+        () => {
+            card.classList.add('spinning');
+
+            cardBack.innerHTML = `
     <div class="card-name">
           <div class="card-type">??</div>
         </div>
@@ -253,20 +266,102 @@ const showResult = () => {
         <div class="card-brief-description"></div>
   `;
 
-        setTimeout(() => {
-            card.classList.remove('spinning');
-            cardBack.innerHTML = `
+            setTimeout(() => {
+                card.classList.remove('spinning');
+                cardBack.innerHTML = `
     <div class="card-name">
           <div class="card-type">??</div>
           ${resultText}
         </div>
         <div class="card-img"></div>
-        <div class="card-brief-description">lalagyan dito description dynamically based sa makukuhang types sa test and there will be anchor tag that will navigate to its type like this: <a href="/enneagram-types">Explore Types</a></div>
+        <div class="card-brief-description">lalagyan dito description dynamically based sa makukuhang types sa test and there will be anchor tag that will navigate to its type like this: KUMALALA SAVESTA</div>
   `;
-            card.classList.add('flipped');
-            cardBack.style.display = 'flex';
-        }, 3100);
-    });
+                card.classList.add('flipped');
+
+                switch (topType) {
+                    case 'The Reformer':
+                        card.classList.add('glowing', 'glowing-one');
+                        testResContainer.classList.add(
+                            'inset-glowing',
+                            'glowing-one'
+                        );
+                        break;
+                    case 'The Helper':
+                        card.classList.add('glowing', 'glowing-two');
+                        testResContainer.classList.add(
+                            'inset-glowing',
+                            'glowing-two'
+                        );
+                        break;
+                    case 'The Achiever':
+                        card.classList.add('glowing', 'glowing-three');
+                        testResContainer.classList.add(
+                            'inset-glowing',
+                            'glowing-three'
+                        );
+                        break;
+                    case 'The Individualist':
+                        card.classList.add('glowing', 'glowing-four');
+                        testResContainer.classList.add(
+                            'inset-glowing',
+                            'glowing-four'
+                        );
+                        break;
+                    case 'The Investigator':
+                        card.classList.add('glowing', 'glowing-five');
+                        testResContainer.classList.add(
+                            'inset-glowing',
+                            'glowing-five'
+                        );
+                        break;
+                    case 'The Loyalist':
+                        card.classList.add('glowing', 'glowing-six');
+                        testResContainer.classList.add(
+                            'inset-glowing',
+                            'glowing-six'
+                        );
+                        break;
+                    case 'The Enthusiast':
+                        card.classList.add('glowing', 'glowing-seven');
+                        testResContainer.classList.add(
+                            'inset-glowing',
+                            'glowing-seven'
+                        );
+                        break;
+                    case 'The Challenger':
+                        card.classList.add('glowing', 'glowing-eight');
+                        testResContainer.classList.add(
+                            'inset-glowing',
+                            'glowing-eight'
+                        );
+                        break;
+                    case 'The Peacemaker':
+                        card.classList.add('glowing', 'glowing-nine');
+                        testResContainer.classList.add(
+                            'inset-glowing',
+                            'glowing-nine'
+                        );
+                        break;
+                    default:
+                        console.warn('Unknown type:', topType);
+                }
+
+                cardBack.style.display = 'flex';
+                setTimeout(() => {
+                    continueText.classList.add('fade-in');
+                    continueText.textContent = 'Tap the continue...';
+                    testResContainer.style.cursor = 'pointer';
+
+                    testResContainer.addEventListener('click', () => {
+                        continueText.classList.remove('fade-in');
+                        testResContainer.classList.remove('fade-in');
+                        window.location.href = '/enneagram-types';
+                    });
+                }, 2000);
+            }, 3100);
+        },
+        { once: true }
+    );
 };
 
 showQuestion(currentQuestion);
