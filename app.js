@@ -151,7 +151,7 @@ app.post('/logout', (req, res) => {
     });
 });
 
-app.get('/enneagram-test', (req, res) => {
+app.get('/enneagram-test', mandatoryLogin, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'test.html'));
 });
 
