@@ -36,7 +36,7 @@ app.get('/session', (req, res) => {
             name: req.session.user.name,
         });
     } else {
-        console.error('Session check failed', err);
+        console.error('Session check failed');
         res.json({ loggedIn: false });
     }
 });
