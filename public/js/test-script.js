@@ -171,12 +171,14 @@ let scores = {
     'The Peacemaker': 0,
 };
 
-const testContainer = document.getElementById('test');
+const testContainer = document.getElementById('test-questionnaire-container');
+const optionsContainer = document.getElementById('test-options-container');
 const testResContainer = document.getElementById('test-res');
 let currentQuestion = 0;
 
 const showQuestion = (index) => {
     testContainer.innerHTML = '';
+    optionsContainer.innerHTML = '';
 
     if (index >= testQuestions.length) {
         showResult();
@@ -184,14 +186,22 @@ const showQuestion = (index) => {
     }
 
     const question = testQuestions[index];
-    const div = document.createElement('div');
-    div.className = 'test-question';
 
-    div.innerHTML = `
-       <div>
+    // Left side: question
+    const questionDiv = document.createElement('div');
+    questionDiv.className = 'test-question';
+    questionDiv.innerHTML = `
+        <div class="question">
             <strong>Question ${index + 1} of ${testQuestions.length}:</strong>
             <h2>${question.text}</h2>
         </div>
+    `;
+    testContainer.appendChild(questionDiv);
+
+    // Right side: options
+    const optionsDiv = document.createElement('div');
+    optionsDiv.className = 'test-options';
+    optionsDiv.innerHTML = `
         <div class="btn-group">
             <button onclick="handleAnswer(4)" id="answer-five">Strongly Agree</button>
             <button onclick="handleAnswer(3)" id="answer-four">Agree</button>
@@ -200,8 +210,7 @@ const showQuestion = (index) => {
             <button onclick="handleAnswer(0)" id="answer-one">Strongly Disagree</button>
         </div>
     `;
-
-    testContainer.append(div);
+    optionsContainer.appendChild(optionsDiv);
 };
 
 const handleAnswer = (weight) => {
@@ -214,24 +223,50 @@ const handleAnswer = (weight) => {
 };
 
 const showResult = () => {
-    const checkTopType = (initialType, nextType) => {
-        return scores[initialType] > scores[nextType] ? initialType : nextType;
-    };
-    const topType = Object.keys(scores).reduce(checkTopType);
+    const topType = Object.keys(scores).reduce((a, b) =>
+        scores[a] > scores[b] ? a : b
+    );
 
-    testResContainer.innerHTML = `Your dominant Enneagram type is: <br>${enneagramTypes[topType]} – ${topType}`;
+    const resultText = `${enneagramTypes[topType]} – ${topType}`;
+    const container = document.getElementById('card-container');
+    const card = document.getElementById('card');
+    const cardBack = document.getElementById('card-result');
 
-    const username = localStorage.getItem('loggedInUser');
-    if (username) {
-        const users = JSON.parse(localStorage.getItem('users') || '[]');
-        const userIndex = users.findIndex((u) => u.username === username);
+    testContainer.style.display = 'none';
+    testResContainer.style.position = 'absolute';
+    testResContainer.style.zIndex = '999999';
+    testResContainer.style.top = '0';
+    testResContainer.style.height = '100vh';
+    testResContainer.style.width = '100%';
+    testResContainer.style.backgroundColor = 'var(--green-darker-darker)';
 
-        if (userIndex !== -1) {
-            users[userIndex].personality = topType;
-            users[userIndex].isLoggedIn = true;
-            localStorage.setItem('users', JSON.stringify(users));
-        }
-    }
+    container.classList.remove('hidden');
+
+    card.addEventListener('click', () => {
+        card.classList.add('spinning');
+
+        cardBack.innerHTML = `
+    <div class="card-name">
+          <div class="card-type">??</div>
+        </div>
+        <div class="card-img"></div>
+        <div class="card-brief-description"></div>
+  `;
+
+        setTimeout(() => {
+            card.classList.remove('spinning');
+            cardBack.innerHTML = `
+    <div class="card-name">
+          <div class="card-type">??</div>
+          ${resultText}
+        </div>
+        <div class="card-img"></div>
+        <div class="card-brief-description">lalagyan dito description dynamically based sa makukuhang types sa test and there will be anchor tag that will navigate to its type like this: <a href="/enneagram-types">Explore Types</a></div>
+  `;
+            card.classList.add('flipped');
+            cardBack.style.display = 'flex';
+        }, 3100);
+    });
 };
 
 showQuestion(currentQuestion);

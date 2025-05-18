@@ -52,21 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }, 100);
-
-    const toggleBtn = document.getElementById('toggle-profile-btn');
-    const profileOptions = document.getElementById('profile-options');
-
-    if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-            if (!checkSession()) {
-                window.location.href = '/login';
-                return;
-            }
-
-            profileOptions.classList.toggle('hidden');
-            if (!profileOptions.classList.contains('hidden')) {
-                displayProfile();
-            }
-        });
-    }
 });
