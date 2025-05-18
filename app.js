@@ -3,6 +3,26 @@ const session = require('express-session');
 const bcrypt = require('bcrypt');
 const path = require('path');
 
+const fs = require('fs');
+
+const USERS_FILE = path.join(__dirname, 'users.txt');
+
+function ensureUsersFileExists() {
+    if (!fs.existsSync(USERS_FILE)) {
+        fs.writeFileSync(USERS_FILE, '[]');
+    }
+}
+
+function loadUsers() {
+    ensureUsersFileExists();
+    const data = fs.readFileSync(USERS_FILE, 'utf-8');
+    return JSON.parse(data || '[]');
+}
+
+function saveUsers(users) {
+    fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
+}
+
 const app = express();
 const PORT = 5000;
 
@@ -16,9 +36,6 @@ app.use(
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
-
-// array only for now storage
-const users = [];
 
 const mandatoryLogin = (req, res, next) => {
     if (!req.session.user) {
@@ -55,6 +72,7 @@ app.get('/login', (req, res) => {
 app.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
+        const users = loadUsers();
         const user = users.find((u) => u.username === username);
 
         console.log('>> User is Logging In...');
@@ -99,6 +117,7 @@ app.post('/create-account', async (req, res) => {
             gender = 'Not Stated',
         } = req.body;
 
+        const users = loadUsers();
         if (users.some((u) => u.username === username)) {
             return res
                 .status(400)
@@ -119,6 +138,7 @@ app.post('/create-account', async (req, res) => {
         console.log(`>> Created At: ${newUser.createdAt}`);
 
         users.push(newUser);
+        saveUsers(users);
         res.json({
             success: true,
             redirect: '/login',
