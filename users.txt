@@ -6,13 +6,14 @@
     "name": "???",
     "age": 19,
     "gender": "Male",
-    "createdAt": "2025-05-18T13:43:07.486Z"
+    "createdAt": "2025-05-18T13:43:07.486Z",
+    "personality": "Type 7 – The Enthusiast"
   },
   {
-    "id": "1747567186206",
-    "username": "Para C. Tamol",
-    "password": "$2b$10$Ac1cIj4NRqKzFgYCe6zaaOUZlPuNQbT96nIAOariGOE7nLdS1zfVm",
-    "name": "Juan Dela Rosa Bato",
+    "id": "1747571352688",
+    "username": "admin",
+    "password": "$2b$10$MdV1uN4mzWvpdD6NsgqVAOAZTYhRC7lcLVeuzK2fgY/etiXcs33hy",
+    "name": "Anonymous",
     "age": 120,
     "gender": "Male",
     "createdAt": "2025-05-18T19:19:46.246Z"

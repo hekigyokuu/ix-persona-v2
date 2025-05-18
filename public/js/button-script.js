@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const profileButton = document.getElementById('toggle-profile-btn');
+    profileButton.addEventListener('click', () => {
+        window.location.href = '/profile';
+    });
+
     setupTypeButton('btn-to-one', 'type-one');
     setupTypeButton('btn-to-two', 'type-two');
     setupTypeButton('btn-to-three', 'type-three');

@@ -118,6 +118,9 @@ app.post('/login', async (req, res) => {
             id: user.id,
             username: user.username,
             name: user.name,
+            age: user.age,
+            gender: user.gender,
+            personality: user.personality || 'Not Set',
         };
 
         console.log('>> User Succesfully Login...');
@@ -206,6 +209,54 @@ app.get('/enneagram-types', (req, res) => {
 
 app.get('/about-us', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'about.html'));
+});
+
+app.get('/profile', mandatoryLogin, (req, res) => {
+    const username = req.session.user.username;
+    res.redirect(`/profile/${username}`);
+});
+
+app.get('/profile/:username', mandatoryLogin, (req, res) => {
+    const username = req.params.username;
+    if (req.session.user.username !== username)
+        return res.status(403).send('Access denied');
+    console.log(username);
+    res.sendFile(path.join(__dirname, 'public', 'html', 'profile.html'));
+});
+
+app.get('/api/profile', mandatoryLogin, (req, res) => {
+    res.json({
+        id: req.session.user.id,
+        username: req.session.user.username,
+        name: req.session.user.name,
+        age: req.session.user.age,
+        gender: req.session.user.gender,
+        personality: req.session.user.personality || 'Not Set',
+    });
+});
+
+app.post('/save-test-result', mandatoryLogin, (req, res) => {
+    const { personality } = req.body;
+
+    if (!personality) {
+        return res.status(400).json({
+            success: false,
+            message: 'Personality result is required',
+        });
+    }
+
+    req.session.user.personality = personality;
+
+    const users = loadUsers();
+    const userIndex = users.findIndex((u) => u.id === req.session.user.id);
+
+    if (userIndex !== -1) {
+        users[userIndex].personality = personality;
+        saveUsers(users);
+        return res.json({ success: true });
+    }
+
+    return res.status(404).json({ success: false, message: 'User not found' });
 });
 
 app.use((req, res) => {

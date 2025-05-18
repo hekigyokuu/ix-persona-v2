@@ -255,106 +255,63 @@ const showResult = () => {
 
     card.addEventListener(
         'click',
-        () => {
+        async () => {
             card.classList.add('spinning');
+            testResContainer.classList.remove('fade-in');
 
             cardBack.innerHTML = `
-    <div class="card-name">
-          <div class="card-type">??</div>
-        </div>
-        <div class="card-img"></div>
-        <div class="card-brief-description"></div>
-  `;
+                <div class="card-name">
+                    <div class="card-type">??</div>
+                </div>
+                <div class="card-img"></div>
+                <div class="card-brief-description"></div>
+            `;
 
-            setTimeout(() => {
+            setTimeout(async () => {
+                const typeNumber = enneagramTypes[topType].split(' ')[1];
                 card.classList.remove('spinning');
                 cardBack.innerHTML = `
-    <div class="card-name">
-          <div class="card-type">??</div>
-          ${resultText}
-        </div>
-        <div class="card-img"></div>
-        <div class="card-brief-description">lalagyan dito description dynamically based sa makukuhang types sa test and there will be anchor tag that will navigate to its type like this: KUMALALA SAVESTA</div>
-  `;
+                    <div class="card-name">
+                        <div class="card-type">${typeNumber}</div>
+                        ${topType}
+                    </div>
+                    <div class="card-img"></div>
+                    <div class="card-brief-description">${getTypeDescription(
+                        topType
+                    )}</div>
+                `;
                 card.classList.add('flipped');
 
-                switch (topType) {
-                    case 'The Reformer':
-                        card.classList.add('glowing', 'glowing-one');
-                        testResContainer.classList.add(
-                            'inset-glowing',
-                            'glowing-one'
-                        );
-                        break;
-                    case 'The Helper':
-                        card.classList.add('glowing', 'glowing-two');
-                        testResContainer.classList.add(
-                            'inset-glowing',
-                            'glowing-two'
-                        );
-                        break;
-                    case 'The Achiever':
-                        card.classList.add('glowing', 'glowing-three');
-                        testResContainer.classList.add(
-                            'inset-glowing',
-                            'glowing-three'
-                        );
-                        break;
-                    case 'The Individualist':
-                        card.classList.add('glowing', 'glowing-four');
-                        testResContainer.classList.add(
-                            'inset-glowing',
-                            'glowing-four'
-                        );
-                        break;
-                    case 'The Investigator':
-                        card.classList.add('glowing', 'glowing-five');
-                        testResContainer.classList.add(
-                            'inset-glowing',
-                            'glowing-five'
-                        );
-                        break;
-                    case 'The Loyalist':
-                        card.classList.add('glowing', 'glowing-six');
-                        testResContainer.classList.add(
-                            'inset-glowing',
-                            'glowing-six'
-                        );
-                        break;
-                    case 'The Enthusiast':
-                        card.classList.add('glowing', 'glowing-seven');
-                        testResContainer.classList.add(
-                            'inset-glowing',
-                            'glowing-seven'
-                        );
-                        break;
-                    case 'The Challenger':
-                        card.classList.add('glowing', 'glowing-eight');
-                        testResContainer.classList.add(
-                            'inset-glowing',
-                            'glowing-eight'
-                        );
-                        break;
-                    case 'The Peacemaker':
-                        card.classList.add('glowing', 'glowing-nine');
-                        testResContainer.classList.add(
-                            'inset-glowing',
-                            'glowing-nine'
-                        );
-                        break;
-                    default:
-                        console.warn('Unknown type:', topType);
+                card.classList.add('glowing', `glowing-${typeNumber}`);
+                testResContainer.classList.add(
+                    'inset-glowing',
+                    `glowing-${typeNumber}`
+                );
+
+                try {
+                    const response = await fetch('/save-test-result', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ personality: resultText }),
+                    });
+
+                    const data = await response.json();
+                    if (!data.success) {
+                        console.error('Failed to save test result');
+                    }
+                } catch (error) {
+                    console.error('Error saving test result:', error);
                 }
 
-                cardBack.style.display = 'flex';
                 setTimeout(() => {
                     continueText.classList.add('fade-in');
-                    continueText.textContent = 'Tap the continue...';
+                    continueText.textContent = 'Tap to continue...';
                     testResContainer.style.cursor = 'pointer';
 
                     testResContainer.addEventListener('click', () => {
                         continueText.classList.remove('fade-in');
-                        testResContainer.classList.remove('fade-in');
                         window.location.href = '/enneagram-types';
                     });
                 }, 2000);
@@ -364,7 +321,27 @@ const showResult = () => {
     );
 };
 
-showQuestion(currentQuestion);
+function getTypeDescription(type) {
+    const descriptions = {
+        'The Reformer':
+            'Rational and idealistic, principled, purposeful, self-controlled, and perfectionistic.',
+        'The Helper':
+            'Caring, generous, people-pleasing, possessive, and demonstrative.',
+        'The Achiever':
+            'Success-oriented, pragmatic, adaptive, excelling, driven, and image-conscious.',
+        'The Individualist':
+            'Expressive, dramatic, self-absorbed, and temperamental.',
+        'The Investigator':
+            'Intense, cerebral, perceptive, innovative, secretive, and isolated.',
+        'The Loyalist': 'Engaging, responsible, anxious, and suspicious.',
+        'The Enthusiast':
+            'Spontaneous, versatile, distractible, and scattered.',
+        'The Challenger':
+            'Self-confident, decisive, willful, and confrontational.',
+        'The Peacemaker': 'Receptive, reassuring, agreeable, and complacent.',
+    };
+    return descriptions[type] || 'Discover more about your personality type.';
+}
 
 //answer test using keyboard
 function keyboardOption() {
@@ -376,8 +353,6 @@ function keyboardOption() {
         5: 'answer-five',
     };
 
-    const result = document.getElementById('result');
-
     document.addEventListener('keyup', function (event) {
         if (options[event.key]) {
             const btn = document.getElementById(options[event.key]);
@@ -388,4 +363,5 @@ function keyboardOption() {
     });
 }
 
+showQuestion(currentQuestion);
 keyboardOption();
