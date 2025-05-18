@@ -9,6 +9,7 @@ const USERS_FILE = path.join(__dirname, 'users.txt');
 
 function ensureUsersFileExists() {
     if (!fs.existsSync(USERS_FILE)) {
+        console.log('>> Writing New File Named: users.txt');
         fs.writeFileSync(USERS_FILE, '[]');
     }
 }
@@ -16,10 +17,12 @@ function ensureUsersFileExists() {
 function loadUsers() {
     ensureUsersFileExists();
     const data = fs.readFileSync(USERS_FILE, 'utf-8');
+    console.log('>> Successfully Load: users.txt');
     return JSON.parse(data || '[]');
 }
 
 function saveUsers(users) {
+    console.log('>> Successfully Save at: users.txt');
     fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
 }
 
@@ -46,14 +49,36 @@ const mandatoryLogin = (req, res, next) => {
 
 app.get('/session', (req, res) => {
     if (req.session && req.session.user) {
-        console.log('>> User is logged...');
+        console.log(
+            `>> Check Logged at ${new Date().toLocaleString('en-PH', {
+                timeZone: 'Asia/Manila',
+                hour12: false,
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+            })}...`
+        );
         res.json({
             loggedIn: true,
             username: req.session.user.username,
             name: req.session.user.name,
         });
     } else {
-        console.error('Session check failed');
+        console.error(
+            `>> No Logged at ${new Date().toLocaleString('en-PH', {
+                timeZone: 'Asia/Manila',
+                hour12: false,
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+            })}...`
+        );
         res.json({ loggedIn: false });
     }
 });
@@ -162,7 +187,7 @@ app.post('/logout', (req, res) => {
                 message: 'Logout failed',
             });
         }
-
+        console.log('>> User Successfully Logged Out...');
         res.clearCookie('connect.sid');
         res.json({
             success: true,

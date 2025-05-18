@@ -1,0 +1,11 @@
+[
+  {
+    "id": "1747546987486",
+    "username": "hekigyokuu",
+    "password": "$2b$10$vnlRRMYRgy43vukjclOsbOTKLIg3s8Rm8tgeot7iTF9x1bX11cOJ.",
+    "name": "???",
+    "age": 19,
+    "gender": "Male",
+    "createdAt": "2025-05-18T13:43:07.486Z"
+  }
+]
