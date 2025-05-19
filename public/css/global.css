@@ -220,7 +220,7 @@ body {
 
     border: 2px solid var(--gray-darker);
     border-radius: 4px;
-    box-shadow: 4px 4px 0px var(--gray-darker);
+    box-shadow: 4px 4px 0px var(--black);
 
     font-family: 'Potta One', sans-serif;
     font-size: 1rem;

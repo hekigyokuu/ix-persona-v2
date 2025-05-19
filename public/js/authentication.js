@@ -2,24 +2,28 @@ const loginForm = document.getElementById('login-form');
 const signupForm = document.getElementById('signup-form');
 const authLink = document.getElementById('auth-link');
 
-window.addEventListener('DOMContentLoaded', async function checkSession() {
-    try {
-        const res = await fetch('/session', { credentials: 'include' });
-        if (res.ok) {
-            const session = await res.json();
-
-            if (session.loggedIn) {
-                authLink.textContent = 'Logout';
-                authLink.href = '#';
-                authLink.classList.add('logout');
-
-                return session.loggedIn;
-            }
-        }
-    } catch (err) {
-        console.error('Session check failed', err);
+window.addEventListener('DOMContentLoaded', async () => {
+    const { loggedIn } = await checkSession();
+    if (loggedIn && authLink) {
+        authLink.textContent = 'Logout';
+        authLink.href = '#';
+        authLink.classList.add('logout');
     }
 });
+
+const checkSession = async () => {
+    try {
+        const res = await fetch('/check-session', { credentials: 'include' });
+        if (res.ok) {
+            const session = await res.json();
+            return session;
+        }
+        return { loggedIn: false };
+    } catch (err) {
+        console.error('Session check failed', err);
+        return { loggedIn: false };
+    }
+};
 
 if (loginForm) {
     loginForm.addEventListener('submit', async (e) => {
@@ -37,7 +41,7 @@ if (loginForm) {
             loginSubmitButton.disabled = true;
             loginSubmitButton.textContent = 'Processing...';
 
-            const response = await fetch('/login', {
+            const response = await fetch('/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
@@ -149,7 +153,7 @@ if (signupForm) {
             signupSubmitButton.disabled = true;
             signupSubmitButton.textContent = 'Processing...';
 
-            const response = await fetch('/create-account', {
+            const response = await fetch('/auth/create-account', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
@@ -184,7 +188,7 @@ if (signupForm) {
 
 const logout = async () => {
     try {
-        const response = await fetch('/logout', {
+        const response = await fetch('/auth/logout', {
             method: 'POST',
             credentials: 'include',
         });
@@ -195,11 +199,11 @@ const logout = async () => {
 
         if (authLink) {
             authLink.textContent = 'Login';
-            authLink.href = '/login';
+            authLink.href = '/auth/login';
             authLink.classList.remove('logout');
         }
 
-        window.location.href = '/login';
+        window.location.href = '/auth/login';
     } catch (err) {
         console.error('Logout error:', err);
         displayPopup('Failed to logout. Please try again.', {

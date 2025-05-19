@@ -110,7 +110,7 @@ const logoutDisplay = () => {
     logOutBtn.addEventListener('click', async () => {
         await logout();
         console.log('>> User Logout...');
-        window.location.href = '/login';
+        window.location.href = '/auth/login';
     });
 
     const closeBtn = document.createElement('button');

@@ -9,25 +9,25 @@ const types = [
                 type: 'SP',
                 name: 'Worry',
                 briefDesc:
-                    'Focuses on the need to be correct/right with their families, their health, their finances, and their homes. Flip card for full details.',
+                    'Focuses on the need to be correct/right with their families, health, finance, ...',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Channels frustration into self-discipline and personal improvement, striving for perfection in daily tasks. They often feel responsible for doing things “the right way” and can become anxious about mistakes.',
             },
             {
                 type: 'SO',
                 name: 'Non-Adaptable',
                 briefDesc:
-                    'Focuses on the need to be correct/right with their groups and communities. Flip card for full details.',
+                    'Focuses on the need to be correct/right with their groups and communities.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Focused on improving society by upholding high standards and being a moral example to others. They often resist compromising values, even when it isolates them socially.',
             },
             {
                 type: 'SX',
-                name: 'Zeal(countertype)',
+                name: 'CT - Zeal',
                 briefDesc:
-                    'Focuses on the need to be correct/right with their intimate connections. Flip card for full details.',
+                    'Focuses on the need to be correct/right with their intimate connections.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    ' Expresses passionate idealism in close relationships and aims to reform others. Their intensity can come off as rigid or controlling but stems from deep conviction.',
             },
         ],
     },
@@ -39,11 +39,11 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Privilege(countertype)',
+                name: 'CT - Privilege',
                 briefDesc:
                     'Focuses on the need to be charming in order to have their physical needs met. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Wants to be loved for who they are and may act childlike or charming to attract nurturing. They tend to avoid showing how much they actually need others.',
             },
             {
                 type: 'SO',
@@ -51,7 +51,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be charming with their groups and communities. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Seeks admiration and influence in social groups through strategic helpfulness. They may present a polished persona to rise in status while hiding their deeper emotional needs.',
             },
             {
                 type: 'SX',
@@ -59,7 +59,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be charming with their intimate connections. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Uses emotional intensity to bond deeply with specific individuals, aiming to feel needed and powerful. Their desire to be irreplaceable can become possessive.',
             },
         ],
     },
@@ -71,11 +71,11 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Security(countertype)',
+                name: 'CT - Security',
                 briefDesc:
                     'Focuses on the need to be valuable/admired in order to have their physical needs met. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Strives for success quietly, focusing more on inner efficiency and productivity than external praise. They may downplay accomplishments while still deeply identifying with performance.',
             },
             {
                 type: 'SO',
@@ -83,7 +83,7 @@ const types = [
                 briefDesc:
                     'Focuses On:  The need to be valuable/admired in their groups and communities. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Wants to be admired for their image, competence, and social value, often tailoring themselves to fit public ideals. They excel in roles that allow visibility and validation.',
             },
             {
                 type: 'SX',
@@ -91,7 +91,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be valuable/admired by their intimate connections. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Focuses on being attractive and inspiring in one-on-one relationships, using charm to win others over. They may struggle with authenticity when adapting to different expectations.',
             },
         ],
     },
@@ -103,11 +103,11 @@ const types = [
         cards: [
             {
                 type: 'SP',
-                name: 'Tenacity(countertype)',
+                name: 'CT - Tenacity',
                 briefDesc:
                     'Focuses on the need to be themselves in order to have their physical needs met. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Appears emotionally restrained while enduring deep feelings beneath the surface. They try to prove strength by being self-sufficient despite inner sensitivity.',
             },
             {
                 type: 'SO',
@@ -115,7 +115,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be themselves with their groups and communities. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Feels socially different or flawed and may externalize their suffering to gain understanding and connection. Their emotional vulnerability can become a source of identity.',
             },
             {
                 type: 'SX',
@@ -123,7 +123,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be themselves with their intimate connections. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Pursues deep, emotionally intense relationships with a strong desire to be special or irreplaceable. They may compare themselves constantly and feel driven to stand out.',
             },
         ],
     },
@@ -139,7 +139,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be competent with their families, health, finances, and home. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Withdraws into a private space to conserve energy and avoid being dependent. They minimize needs and emotions, often preferring solitude to connection.',
             },
             {
                 type: 'SO',
@@ -147,15 +147,15 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be competent with their groups and communities. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Seeks belonging through shared intellectual interests, often becoming a valued expert within a group. They value knowledge as a means to gain safety and respect.',
             },
             {
                 type: 'SX',
-                name: 'Confidence(countertype)',
+                name: 'CT - Confidence',
                 briefDesc:
                     'Focuses on the need to be competent with their intimate connections. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Desires deep, meaningful one-on-one bonds but fears emotional overwhelm. They may show surprising boldness in intimate settings while remaining guarded elsewhere.',
             },
         ],
     },
@@ -171,7 +171,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be secure/supported within their families, health, finances, and home. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Seeks safety in trusted relationships and prefers caution over risk. They can appear friendly and reliable while struggling with inner anxiety.',
             },
             {
                 type: 'SO',
@@ -179,15 +179,15 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be secure/supported with their groups and communities. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Follows rules and aligns with authority to reduce uncertainty and doubt. They find comfort in contributing to structured systems and group values.',
             },
             {
                 type: 'SX',
-                name: 'Strength/Beauty(countertype)',
+                name: 'CT - Strength/Beauty',
                 briefDesc:
                     'Focuses on the need to be secure/supported with their intimate connections. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Faces fear head-on by appearing strong, assertive, or even intimidating. They often rely only on themselves and distrust external structures.',
             },
         ],
     },
@@ -203,15 +203,15 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be satisfied in their families, health, finances, and home. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Seeks comfort and enjoyment through planning and accumulating experiences or resources. They’re often practical yet optimistic, using alliances to secure pleasure.',
             },
             {
                 type: 'SO',
-                name: 'Sacrifice(countertype)',
+                name: 'CT - Sacrifice',
                 briefDesc:
                     'Focuses on the need to be satisfied with their groups and communities. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Prioritizes group needs and aims to be of service, often downplaying their personal desires. They may feel conflicted between helping others and pursuing their own freedom.',
             },
             {
                 type: 'SX',
@@ -219,7 +219,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be satisfied with their intimate connections. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Chases intense relationships and idealizes romantic partners as a source of joy and excitement. They are highly imaginative and can lose touch with reality in pursuit of pleasure.',
             },
         ],
     },
@@ -235,15 +235,15 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be protective of their families, health, finances, and home. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Protects their territory and loved ones through control and self-reliance, aiming for material security. They often hide vulnerability behind a strong and quiet exterior.',
             },
             {
                 type: 'SO',
-                name: 'Solidarity(countertype)',
+                name: 'CT - Solidarity',
                 briefDesc:
                     'Focuses on the need to be protective of their groups and communities. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Leads by defending others and fighting for justice, focusing on fairness over domination. They may soften their power in favor of serving the group.',
             },
             {
                 type: 'SX',
@@ -251,7 +251,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be protective of their intimate connections. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Forms intense, powerful bonds and seeks control within close relationships. Their passion often expresses as dominance and deep emotional attachment.',
             },
         ],
     },
@@ -267,15 +267,15 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be at peace with their families, health, finances, and home. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Seeks comfort in routine and familiar pleasures, avoiding stress by staying in their safe zone. They may procrastinate or disengage to maintain peace.',
             },
             {
                 type: 'SO',
-                name: 'Participation(countertype)',
+                name: 'CT - Participation',
                 briefDesc:
                     'Focuses on the need to be at peace with their groups and communities. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Engages actively in groups to create harmony, often forgetting personal priorities. They may appear outgoing while repressing inner conflict.',
             },
             {
                 type: 'SX',
@@ -283,7 +283,7 @@ const types = [
                 briefDesc:
                     'Focuses On:  The need to be at peace with their intimate connections. Flip card for full details.',
                 fullDesc:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique saepe quos reprehenderit dicta nemo magni fugit, ducimus voluptatum illum fugiat tempore consequuntur adipisci, maiores recusandae molestias officia incidunt eaque.',
+                    'Merges with partners to maintain connection, often losing their own sense of identity. They avoid conflict by aligning completely with others desires or feelings.',
             },
         ],
     },

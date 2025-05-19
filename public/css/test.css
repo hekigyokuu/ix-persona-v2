@@ -64,7 +64,7 @@
 
     background-color: var(--green-darker-darker);
     border: 2px solid var(--black);
-    box-shadow: 10px 10px 0px var(--black);
+    box-shadow: 8px 8px 0px var(--black);
 
     font-size: 1.8rem;
 }
@@ -97,7 +97,7 @@
 
     background-color: var(--green-dark);
     border: 2px solid var(--black);
-    box-shadow: inset 10px 10px 0px var(--black);
+    box-shadow: inset 8px 8px 0px var(--black);
 
     font-size: 1.8rem;
 }
@@ -174,9 +174,8 @@
     padding: 2%;
 
     background: var(--green-darker-darker);
-    border: 2px solid var(--black);
+    border: 4px solid var(--black);
     border-radius: 4px;
-    box-shadow: 6px 6px 0px var(--black);
 
     font-family: 'Poppins', sans-serif;
     color: var(--gray-light);
@@ -336,47 +335,47 @@ body.lock-scroll {
 }
 
 /* Type 1 - The Reformer */
-.glowing-one {
+.glowing-1 {
     --glow-color: #b41fff;
 }
 
 /* Type 2 - The Helper */
-.glowing-two {
+.glowing-2 {
     --glow-color: #ff2797;
 }
 
 /* Type 3 - The Achiever */
-.glowing-three {
+.glowing-3 {
     --glow-color: #ffcb20;
 }
 
 /* Type 4 - The Individualist */
-.glowing-four {
+.glowing-4 {
     --glow-color: #20a6ff;
 }
 
 /* Type 5 - The Investigator */
-.glowing-five {
+.glowing-5 {
     --glow-color: #1dfdab;
 }
 
 /* Type 6 - The Loyalist */
-.glowing-six {
+.glowing-6 {
     --glow-color: #ffff20;
 }
 
 /* Type 7 - The Enthusiast */
-.glowing-seven {
+.glowing-7 {
     --glow-color: #ff6e21;
 }
 
 /* Type 8 - The Challenger */
-.glowing-eight {
+.glowing-8 {
     --glow-color: #ff1d1d;
 }
 
 /* Type 9 - The Peacemaker */
-.glowing-nine {
+.glowing-9 {
     --glow-color: #20ffa6;
 }
 

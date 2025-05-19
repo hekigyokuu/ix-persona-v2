@@ -283,19 +283,19 @@ const showResult = () => {
                 card.classList.add('flipped');
 
                 card.classList.add('glowing', `glowing-${typeNumber}`);
-                testResContainer.classList.add(
-                    'inset-glowing',
-                    `glowing-${typeNumber}`
-                );
+                void card.offsetWidth;
 
                 try {
-                    const response = await fetch('/save-test-result', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({ personality: resultText }),
-                    });
+                    const response = await fetch(
+                        '/enneagram-test/save-test-result',
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ personality: resultText }),
+                        }
+                    );
 
                     const data = await response.json();
                     if (!data.success) {

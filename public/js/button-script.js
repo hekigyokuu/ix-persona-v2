@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ctaButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
-            window.location.href = '/login';
+            window.location.href = '/auth/login';
         });
     });
 

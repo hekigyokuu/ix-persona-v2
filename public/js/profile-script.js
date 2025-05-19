@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('/api/profile');
+        const response = await fetch('/profile/api/profile');
         const data = await response.json();
 
         document.getElementById('profile-username').textContent = data.username;
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     } catch (err) {
         console.error('Error fetching profile:', err);
-        window.location.href = '/login';
+        window.location.href = '/auth/login';
         return;
     }
 
