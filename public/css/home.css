@@ -185,6 +185,8 @@ html {
 }
 
 .types-poster {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,18 +195,35 @@ html {
     padding: 8%;
 
     background-color: var(--green-light);
+
+    overflow: hidden;
 }
 
 .types-large-header-container {
+    position: relative;
+
     width: 100%;
     max-width: 1920px;
 }
 
 .types-large-header {
+    position: relative;
+    z-index: 1;
+
     font-family: 'Potta One', sans-serif;
     font-size: 8rem;
     line-height: 1.2;
     color: var(--green-darker-darker);
+}
+
+.types-poster-reformer {
+    position: absolute;
+    right: -15vw;
+    bottom: -50vh;
+    z-index: 0;
+
+    width: 70%;
+    max-width: 900px;
 }
 
 .types-large-header span {
@@ -219,7 +238,6 @@ html {
 
     min-height: 90vh;
 
-    border-top: 2px solid var(--black);
     background-color: var(--green-darker-darker);
 
     font-family: 'Potta One', cursive;

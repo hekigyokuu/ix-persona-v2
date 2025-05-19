@@ -271,18 +271,23 @@ const showResult = () => {
                 const typeNumber = enneagramTypes[topType].split(' ')[1];
                 card.classList.remove('spinning');
                 cardBack.innerHTML = `
-                    <div class="card-name">
-                        <div class="card-type">${typeNumber}</div>
-                        ${topType}
-                    </div>
-                    <div class="card-img"></div>
-                    <div class="card-brief-description">${getTypeDescription(
-                        topType
-                    )}</div>
-                `;
+    <div class="card-name">
+        <div class="card-type">${typeNumber}</div>
+        ${topType}
+    </div>
+    <div class="card-img" id="card-img-container"></div>
+    <div class="card-brief-description">${getTypeDescription(topType)}</div>
+`;
+                const cardImgContainer =
+                    document.getElementById('card-img-container');
+                cardImgContainer.innerHTML = getTypeSVG(topType);
                 card.classList.add('flipped');
 
                 card.classList.add('glowing', `glowing-${typeNumber}`);
+                cardImgContainer.classList.add(
+                    'inset-glowing',
+                    `glowing-${typeNumber}`
+                );
                 void card.offsetWidth;
 
                 try {
@@ -341,6 +346,38 @@ function getTypeDescription(type) {
         'The Peacemaker': 'Receptive, reassuring, agreeable, and complacent.',
     };
     return descriptions[type] || 'Discover more about your personality type.';
+}
+
+function getTypeSVG(topType) {
+    const svgMap = {
+        'The Reformer': svgReformer,
+        'The Helper': `
+            
+        `,
+        'The Achiever': `
+            
+        `,
+        'The Individualist': `
+            
+        `,
+        'The Investigator': `
+            
+        `,
+        'The Loyalist': `
+            
+        `,
+        'The Enthusiast': `
+            
+        `,
+        'The Challenger': `
+           
+        `,
+        'The Peacemaker': `
+            
+        `,
+    };
+
+    return svgMap[topType] || '';
 }
 
 //answer test using keyboard

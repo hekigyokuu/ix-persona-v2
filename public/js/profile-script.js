@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         ).textContent = `Gender: ${data.gender}`;
 
         const typeColors = {
-            1: '#b41fff',
+            1: '#7c7a7a',
             2: '#ff2797',
             3: '#ffcb20',
             4: '#20a6ff',
@@ -26,19 +26,27 @@ document.addEventListener('DOMContentLoaded', async () => {
             9: '#20ffa6',
         };
 
+        const svgMap = {
+            1: svgReformer,
+            2: ``,
+            3: ``,
+            4: ``,
+            5: ``,
+            6: ``,
+            7: ``,
+            8: ``,
+            9: ``,
+        };
+
         const typeMatch = data.personality.match(/Type\s(\d+)/);
 
         if (typeMatch) {
             const typeNumber = typeMatch[1];
             const profileImage = document.querySelector('.profile-image');
+            profileImage.innerHTML = svgMap[typeNumber];
 
             const color = typeColors[typeNumber];
-            profileImage.style.setProperty('--glow-color', color);
-
-            profileImage.style.color = '#111';
-            profileImage.style.fontWeight = 'bold';
-
-            profileImage.classList.add('glow-animated');
+            profileImage.style.backgroundColor = color;
         }
     } catch (err) {
         console.error('Error fetching profile:', err);

@@ -57,11 +57,19 @@
 }
 
 .profile-image {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
     width: 100%;
     aspect-ratio: 1/1;
 
     background-color: var(--black);
     border: 2px solid var(--black);
+    box-shadow: inset 8px 8px 0px var(--black);
+
+    overflow: hidden;
 }
 
 #profile-username {
@@ -142,4 +150,13 @@
 
 .glow-animated {
     animation: glow-text 1.5s infinite ease-in-out;
+}
+
+.profile-image .card-svg {
+    position: absolute;
+    top: 20%;
+
+    width: 140%;
+
+    filter: drop-shadow(8px 8px 0px #111);
 }
