@@ -317,20 +317,14 @@ body.lock-scroll {
 }
 
 @keyframes glow {
-    from {
-        box-shadow: 0 0 10px var(--glow-color);
+    0% {
+        box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
     }
-    to {
-        box-shadow: 0 0 50px var(--glow-color);
+    50% {
+        box-shadow: 0 0 25px var(--glow-color), 0 0 40px var(--glow-color);
     }
-}
-
-@keyframes inset-glow {
-    from {
-        box-shadow: inset 0 0 10px var(--glow-color);
-    }
-    to {
-        box-shadow: inset 0 0 20px var(--glow-color);
+    100% {
+        box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
     }
 }
 

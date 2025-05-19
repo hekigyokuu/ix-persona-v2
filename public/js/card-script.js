@@ -41,7 +41,7 @@ const types = [
                 type: 'SP',
                 name: 'CT - Privilege',
                 briefDesc:
-                    'Focuses on the need to be charming in order to have their physical needs met. Flip card for full details.',
+                    'Focuses on the need to be charming in order to have their physical needs met. ',
                 fullDesc:
                     'Wants to be loved for who they are and may act childlike or charming to attract nurturing. They tend to avoid showing how much they actually need others.',
             },
@@ -49,7 +49,7 @@ const types = [
                 type: 'SO',
                 name: 'Ambition',
                 briefDesc:
-                    'Focuses on the need to be charming with their groups and communities. Flip card for full details.',
+                    'Focuses on the need to be charming with their groups and communities.',
                 fullDesc:
                     'Seeks admiration and influence in social groups through strategic helpfulness. They may present a polished persona to rise in status while hiding their deeper emotional needs.',
             },
@@ -57,7 +57,7 @@ const types = [
                 type: 'SX',
                 name: 'Seduction-Aggression',
                 briefDesc:
-                    'Focuses on the need to be charming with their intimate connections. Flip card for full details.',
+                    'Focuses on the need to be charming with their intimate connections.',
                 fullDesc:
                     'Uses emotional intensity to bond deeply with specific individuals, aiming to feel needed and powerful. Their desire to be irreplaceable can become possessive.',
             },
@@ -73,7 +73,7 @@ const types = [
                 type: 'SP',
                 name: 'CT - Security',
                 briefDesc:
-                    'Focuses on the need to be valuable/admired in order to have their physical needs met. Flip card for full details.',
+                    'Focuses on the need to be valuable/admired to have their physical needs met.',
                 fullDesc:
                     'Strives for success quietly, focusing more on inner efficiency and productivity than external praise. They may downplay accomplishments while still deeply identifying with performance.',
             },
@@ -81,7 +81,7 @@ const types = [
                 type: 'SO',
                 name: 'Prestige',
                 briefDesc:
-                    'Focuses On:  The need to be valuable/admired in their groups and communities. Flip card for full details.',
+                    'Focuses on the need to be valuable/admired in their groups and communities.',
                 fullDesc:
                     'Wants to be admired for their image, competence, and social value, often tailoring themselves to fit public ideals. They excel in roles that allow visibility and validation.',
             },
@@ -89,7 +89,7 @@ const types = [
                 type: 'SX',
                 name: 'Charisma',
                 briefDesc:
-                    'Focuses on the need to be valuable/admired by their intimate connections. Flip card for full details.',
+                    'Focuses on the need to be valuable/admired by their intimate connections.',
                 fullDesc:
                     'Focuses on being attractive and inspiring in one-on-one relationships, using charm to win others over. They may struggle with authenticity when adapting to different expectations.',
             },
@@ -105,7 +105,7 @@ const types = [
                 type: 'SP',
                 name: 'CT - Tenacity',
                 briefDesc:
-                    'Focuses on the need to be themselves in order to have their physical needs met. Flip card for full details.',
+                    'Focuses on the need to be themselves in order to have their physical needs met.',
                 fullDesc:
                     'Appears emotionally restrained while enduring deep feelings beneath the surface. They try to prove strength by being self-sufficient despite inner sensitivity.',
             },
@@ -113,7 +113,7 @@ const types = [
                 type: 'SO',
                 name: 'Shame',
                 briefDesc:
-                    'Focuses on the need to be themselves with their groups and communities. Flip card for full details.',
+                    'Focuses on the need to be themselves with their groups and communities.',
                 fullDesc:
                     'Feels socially different or flawed and may externalize their suffering to gain understanding and connection. Their emotional vulnerability can become a source of identity.',
             },
@@ -121,7 +121,7 @@ const types = [
                 type: 'SX',
                 name: 'Competition',
                 briefDesc:
-                    'Focuses on the need to be themselves with their intimate connections. Flip card for full details.',
+                    'Focuses on the need to be themselves with their intimate connections.',
                 fullDesc:
                     'Pursues deep, emotionally intense relationships with a strong desire to be special or irreplaceable. They may compare themselves constantly and feel driven to stand out.',
             },
@@ -137,7 +137,7 @@ const types = [
                 type: 'SP',
                 name: 'Castle',
                 briefDesc:
-                    'Focuses on the need to be competent with their families, health, finances, and home. Flip card for full details.',
+                    'Focuses on the need to be competent with their families, health, finances, ...',
                 fullDesc:
                     'Withdraws into a private space to conserve energy and avoid being dependent. They minimize needs and emotions, often preferring solitude to connection.',
             },
@@ -145,7 +145,7 @@ const types = [
                 type: 'SO',
                 name: 'Totem',
                 briefDesc:
-                    'Focuses on the need to be competent with their groups and communities. Flip card for full details.',
+                    'Focuses on the need to be competent with their groups and communities.',
                 fullDesc:
                     'Seeks belonging through shared intellectual interests, often becoming a valued expert within a group. They value knowledge as a means to gain safety and respect.',
             },
@@ -153,7 +153,7 @@ const types = [
                 type: 'SX',
                 name: 'CT - Confidence',
                 briefDesc:
-                    'Focuses on the need to be competent with their intimate connections. Flip card for full details.',
+                    'Focuses on the need to be competent with their intimate connections.',
                 fullDesc:
                     'Desires deep, meaningful one-on-one bonds but fears emotional overwhelm. They may show surprising boldness in intimate settings while remaining guarded elsewhere.',
             },
@@ -169,7 +169,7 @@ const types = [
                 type: 'SP',
                 name: 'Warmth',
                 briefDesc:
-                    'Focuses on the need to be secure/supported within their families, health, finances, and home. Flip card for full details.',
+                    'Focuses on the need to be secure/supported within their families, health, ...',
                 fullDesc:
                     'Seeks safety in trusted relationships and prefers caution over risk. They can appear friendly and reliable while struggling with inner anxiety.',
             },
@@ -177,7 +177,7 @@ const types = [
                 type: 'SO',
                 name: 'Duty',
                 briefDesc:
-                    'Focuses on the need to be secure/supported with their groups and communities. Flip card for full details.',
+                    'Focuses on the need to be secure/supported with their groups and communities.',
                 fullDesc:
                     'Follows rules and aligns with authority to reduce uncertainty and doubt. They find comfort in contributing to structured systems and group values.',
             },
@@ -185,7 +185,7 @@ const types = [
                 type: 'SX',
                 name: 'CT - Strength/Beauty',
                 briefDesc:
-                    'Focuses on the need to be secure/supported with their intimate connections. Flip card for full details.',
+                    'Focuses on the need to be secure/supported with their intimate connections.',
                 fullDesc:
                     'Faces fear head-on by appearing strong, assertive, or even intimidating. They often rely only on themselves and distrust external structures.',
             },
@@ -201,7 +201,7 @@ const types = [
                 type: 'SP',
                 name: 'Keepers of the Castle',
                 briefDesc:
-                    'Focuses on the need to be satisfied in their families, health, finances, and home. Flip card for full details.',
+                    'Focuses on the need to be satisfied in their families, health, finances, and home.',
                 fullDesc:
                     'Seeks comfort and enjoyment through planning and accumulating experiences or resources. They’re often practical yet optimistic, using alliances to secure pleasure.',
             },
@@ -209,7 +209,7 @@ const types = [
                 type: 'SO',
                 name: 'CT - Sacrifice',
                 briefDesc:
-                    'Focuses on the need to be satisfied with their groups and communities. Flip card for full details.',
+                    'Focuses on the need to be satisfied with their groups and communities.',
                 fullDesc:
                     'Prioritizes group needs and aims to be of service, often downplaying their personal desires. They may feel conflicted between helping others and pursuing their own freedom.',
             },
@@ -217,7 +217,7 @@ const types = [
                 type: 'SX',
                 name: 'Suggestibility',
                 briefDesc:
-                    'Focuses on the need to be satisfied with their intimate connections. Flip card for full details.',
+                    'Focuses on the need to be satisfied with their intimate connections.',
                 fullDesc:
                     'Chases intense relationships and idealizes romantic partners as a source of joy and excitement. They are highly imaginative and can lose touch with reality in pursuit of pleasure.',
             },
@@ -233,7 +233,7 @@ const types = [
                 type: 'SP',
                 name: 'Satisfaction',
                 briefDesc:
-                    'Focuses on the need to be protective of their families, health, finances, and home. Flip card for full details.',
+                    'Focuses on the need to be protective of their families, health, finances, and home.',
                 fullDesc:
                     'Protects their territory and loved ones through control and self-reliance, aiming for material security. They often hide vulnerability behind a strong and quiet exterior.',
             },
@@ -241,7 +241,7 @@ const types = [
                 type: 'SO',
                 name: 'CT - Solidarity',
                 briefDesc:
-                    'Focuses on the need to be protective of their groups and communities. Flip card for full details.',
+                    'Focuses on the need to be protective of their groups and communities.',
                 fullDesc:
                     'Leads by defending others and fighting for justice, focusing on fairness over domination. They may soften their power in favor of serving the group.',
             },
@@ -249,7 +249,7 @@ const types = [
                 type: 'SX',
                 name: 'Possession',
                 briefDesc:
-                    'Focuses on the need to be protective of their intimate connections. Flip card for full details.',
+                    'Focuses on the need to be protective of their intimate connections.',
                 fullDesc:
                     'Forms intense, powerful bonds and seeks control within close relationships. Their passion often expresses as dominance and deep emotional attachment.',
             },
@@ -265,7 +265,7 @@ const types = [
                 type: 'SP',
                 name: 'Appetite',
                 briefDesc:
-                    'Focuses on the need to be at peace with their families, health, finances, and home. Flip card for full details.',
+                    'Focuses on the need to be at peace with their families, health, finances, and home.',
                 fullDesc:
                     'Seeks comfort in routine and familiar pleasures, avoiding stress by staying in their safe zone. They may procrastinate or disengage to maintain peace.',
             },
@@ -273,7 +273,7 @@ const types = [
                 type: 'SO',
                 name: 'CT - Participation',
                 briefDesc:
-                    'Focuses on the need to be at peace with their groups and communities. Flip card for full details.',
+                    'Focuses on the need to be at peace with their groups and communities.',
                 fullDesc:
                     'Engages actively in groups to create harmony, often forgetting personal priorities. They may appear outgoing while repressing inner conflict.',
             },
@@ -281,7 +281,7 @@ const types = [
                 type: 'SX',
                 name: 'Fusion',
                 briefDesc:
-                    'Focuses On:  The need to be at peace with their intimate connections. Flip card for full details.',
+                    'Focuses On:  The need to be at peace with their intimate connections.',
                 fullDesc:
                     'Merges with partners to maintain connection, often losing their own sense of identity. They avoid conflict by aligning completely with others desires or feelings.',
             },

@@ -308,61 +308,11 @@ body {
     transform: scale(1.1);
 }
 
-#personal-profile {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1000;
-
-    width: 95%;
-    height: 95%;
-    padding: 4%;
-
-    background: var(--white-smoke);
-    border: 2px solid var(--black);
-    border-radius: 4px;
-    box-shadow: 6px 6px 0px var(--black);
-
-    font-family: 'Poppins', sans-serif;
-
-    transform: translate(-50%, -50%);
+.profile-btn-toggled,
+#toggle-profile-btn:hover {
+    background-color: var(--green-primary);
+    color: var(--white-smoke);
 }
-
-#personal-profile h2 {
-    font-size: 2.5rem;
-}
-
-#profile-personality {
-    font-family: 'Preahvihear', sans-serif;
-    font-size: 1.3rem;
-    letter-spacing: 2px;
-}
-
-.profile-options {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    width: 100%;
-    height: 50vh;
-    padding: 5%;
-
-    border: 2px dashed var(--black);
-
-    font-family: 'Preahvihear', sans-serif;
-
-    overflow-y: auto;
-}
-
-.personal-details::-webkit-scrollbar {
-    display: none;
-}
-
-.personal-details p {
-    font-size: 1.5rem;
-}
-
 .hidden {
     display: none !important;
 }
