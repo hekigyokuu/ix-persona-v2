@@ -408,6 +408,22 @@
     box-shadow: inset 1px 1px 0px var(--black);
 }
 
+.card-img {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #4a6b3a;
+    box-shadow: inset 10px 10px 0px #87a96b;
+
+    overflow: hidden;
+}
+
+.card-img .card-svg {
+    width: 110%;
+}
+
 .card-type {
     background-color: #2e5a1c;
     border: 2px solid var(--black);
@@ -416,16 +432,28 @@
 
 #type-one .card-front,
 #type-one .card-back {
-    color: #1b0024;
+    color: #292929;
 }
 #type-one .card-name,
 #type-one .card-brief-description,
 #type-one .card-img,
 #type-one .card-full-description {
-    border: 2px solid #1b0024;
+    border: 2px solid #292929;
 }
 #type-one .card-type {
-    background-color: #1b0024;
+    background-color: #292929;
+}
+#type-one #card-svg-reformer {
+    position: absolute;
+    filter: drop-shadow(5px 5px 0px #292929);
+}
+#type-one #card-svg-reformer path {
+    fill: #87a96b;
+    stroke: #292929;
+}
+#type-one #card-svg-reformer circle {
+    fill: #87a96b;
+    stroke: #292929;
 }
 /* Type 2 - The Helper */
 #type-two .card-front,
@@ -440,6 +468,18 @@
 }
 #type-two .card-type {
     background-color: #3a001a;
+}
+#type-two #card-svg-reformer {
+    position: absolute;
+    filter: drop-shadow(5px 5px 0px #3a001a);
+}
+#type-two #card-svg-reformer path {
+    fill: #87a96b;
+    stroke: #3a001a;
+}
+#type-two #card-svg-reformer circle {
+    fill: #87a96b;
+    stroke: #3a001a;
 }
 
 /* Type 3 - The Achiever */
@@ -456,6 +496,18 @@
 #type-three .card-type {
     background-color: #241b00;
 }
+#type-three #card-svg-reformer {
+    position: absolute;
+    filter: drop-shadow(5px 5px 0px #241b00);
+}
+#type-three #card-svg-reformer path {
+    fill: #87a96b;
+    stroke: #241b00;
+}
+#type-three #card-svg-reformer circle {
+    fill: #87a96b;
+    stroke: #241b00;
+}
 
 /* Type 4 - The Individualist */
 #type-four .card-front,
@@ -470,6 +522,18 @@
 }
 #type-four .card-type {
     background-color: #002747;
+}
+#type-four #card-svg-reformer {
+    position: absolute;
+    filter: drop-shadow(5px 5px 0px #002747);
+}
+#type-four #card-svg-reformer path {
+    fill: #87a96b;
+    stroke: #002747;
+}
+#type-four #card-svg-reformer circle {
+    fill: #87a96b;
+    stroke: #002747;
 }
 
 /* Type 5 - The Investigator */
@@ -486,6 +550,18 @@
 #type-five .card-type {
     background-color: #002c1d;
 }
+#type-five #card-svg-reformer {
+    position: absolute;
+    filter: drop-shadow(5px 5px 0px #002c1d);
+}
+#type-five #card-svg-reformer path {
+    fill: #87a96b;
+    stroke: #002c1d;
+}
+#type-five #card-svg-reformer circle {
+    fill: #87a96b;
+    stroke: #002c1d;
+}
 
 /* Type 6 - The Loyalist */
 #type-six .card-front,
@@ -500,6 +576,18 @@
 }
 #type-six .card-type {
     background-color: #303000;
+}
+#type-six #card-svg-reformer {
+    position: absolute;
+    filter: drop-shadow(5px 5px 0px #303000);
+}
+#type-six #card-svg-reformer path {
+    fill: #87a96b;
+    stroke: #303000;
+}
+#type-six #card-svg-reformer circle {
+    fill: #87a96b;
+    stroke: #303000;
 }
 
 /* Type 7 - The Enthusiast */
@@ -516,6 +604,18 @@
 #type-seven .card-type {
     background-color: #381300;
 }
+#type-seven #card-svg-reformer {
+    position: absolute;
+    filter: drop-shadow(5px 5px 0px #381300);
+}
+#type-seven #card-svg-reformer path {
+    fill: #87a96b;
+    stroke: #381300;
+}
+#type-seven #card-svg-reformer circle {
+    fill: #87a96b;
+    stroke: #381300;
+}
 
 /* Type 8 - The Challenger */
 #type-eight .card-front,
@@ -531,6 +631,18 @@
 #type-eight .card-type {
     background-color: #350000;
 }
+#type-eight #card-svg-reformer {
+    position: absolute;
+    filter: drop-shadow(5px 5px 0px #350000);
+}
+#type-eight #card-svg-reformer path {
+    fill: #87a96b;
+    stroke: #350000;
+}
+#type-eight #card-svg-reformer circle {
+    fill: #87a96b;
+    stroke: #350000;
+}
 
 /* Type 9 - The Peacemaker */
 #type-nine .card-front,
@@ -545,6 +657,18 @@
 }
 #type-nine .card-type {
     background-color: #00331f;
+}
+#type-nine #card-svg-reformer {
+    position: absolute;
+    filter: drop-shadow(5px 5px 0px #00331f);
+}
+#type-nine #card-svg-reformer path {
+    fill: #87a96b;
+    stroke: #00331f;
+}
+#type-nine #card-svg-reformer circle {
+    fill: #87a96b;
+    stroke: #00331f;
 }
 
 .enneagram-svg {

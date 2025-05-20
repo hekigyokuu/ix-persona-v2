@@ -8,6 +8,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Worry',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be correct/right with their families, health, finance, ...',
                 fullDesc:
@@ -16,6 +17,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Non-Adaptable',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be correct/right with their groups and communities.',
                 fullDesc:
@@ -24,6 +26,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'CT - Zeal',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be correct/right with their intimate connections.',
                 fullDesc:
@@ -40,6 +43,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'CT - Privilege',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be charming in order to have their physical needs met. ',
                 fullDesc:
@@ -48,6 +52,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Ambition',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be charming with their groups and communities.',
                 fullDesc:
@@ -56,6 +61,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Seduction-Aggression',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be charming with their intimate connections.',
                 fullDesc:
@@ -72,6 +78,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'CT - Security',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be valuable/admired to have their physical needs met.',
                 fullDesc:
@@ -80,6 +87,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Prestige',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be valuable/admired in their groups and communities.',
                 fullDesc:
@@ -88,6 +96,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Charisma',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be valuable/admired by their intimate connections.',
                 fullDesc:
@@ -104,6 +113,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'CT - Tenacity',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be themselves in order to have their physical needs met.',
                 fullDesc:
@@ -112,6 +122,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Shame',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be themselves with their groups and communities.',
                 fullDesc:
@@ -120,6 +131,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Competition',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be themselves with their intimate connections.',
                 fullDesc:
@@ -136,6 +148,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Castle',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be competent with their families, health, finances, ...',
                 fullDesc:
@@ -144,6 +157,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Totem',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be competent with their groups and communities.',
                 fullDesc:
@@ -152,6 +166,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'CT - Confidence',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be competent with their intimate connections.',
                 fullDesc:
@@ -168,6 +183,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Warmth',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be secure/supported within their families, health, ...',
                 fullDesc:
@@ -176,6 +192,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Duty',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be secure/supported with their groups and communities.',
                 fullDesc:
@@ -184,6 +201,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'CT - Strength/Beauty',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be secure/supported with their intimate connections.',
                 fullDesc:
@@ -200,6 +218,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Keepers of the Castle',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be satisfied in their families, health, finances, and home.',
                 fullDesc:
@@ -208,6 +227,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'CT - Sacrifice',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be satisfied with their groups and communities.',
                 fullDesc:
@@ -216,6 +236,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Suggestibility',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be satisfied with their intimate connections.',
                 fullDesc:
@@ -232,6 +253,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Satisfaction',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be protective of their families, health, finances, and home.',
                 fullDesc:
@@ -240,6 +262,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'CT - Solidarity',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be protective of their groups and communities.',
                 fullDesc:
@@ -248,6 +271,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Possession',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be protective of their intimate connections.',
                 fullDesc:
@@ -264,6 +288,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Appetite',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be at peace with their families, health, finances, and home.',
                 fullDesc:
@@ -272,6 +297,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'CT - Participation',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be at peace with their groups and communities.',
                 fullDesc:
@@ -280,6 +306,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Fusion',
+                svg: svgReformer,
                 briefDesc:
                     'Focuses On:  The need to be at peace with their intimate connections.',
                 fullDesc:
@@ -300,7 +327,7 @@ function createCard(cardData) {
           <div class="card-type">${cardData.type}</div>
           ${cardData.name}
         </div>
-        <div class="card-img"></div>
+        <div class="card-img">${cardData.svg}</div>
         <div class="card-brief-description">${cardData.briefDesc}</div>
       </div>
       <div class="card-back">

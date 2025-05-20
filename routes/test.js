@@ -7,6 +7,7 @@ const User = require('../models/User');
 router.use(mandatoryLogin);
 
 router.get('/', (req, res) => {
+    console.log('\x1b[34m>> Status Code: 200 - GET /enneagram-test');
     res.sendFile(path.join(__dirname, '..', 'public', 'html', 'test.html'));
 });
 
@@ -37,7 +38,7 @@ router.post('/save-test-result', async (req, res) => {
 
         res.json({ success: true });
     } catch (err) {
-        console.error('Error saving test result:', err);
+        console.log('\x1b[31mError saving test result:', err);
         res.status(500).json({ success: false, message: 'Server error' });
     }
 });

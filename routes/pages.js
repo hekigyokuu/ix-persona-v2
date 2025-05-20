@@ -3,13 +3,14 @@ const router = express.Router();
 const path = require('path');
 
 router.get('/', (req, res) => {
+    console.log('\x1b[34m>> Status Code: 200 - GET /');
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
 router.get('/check-session', (req, res) => {
     if (req.session && req.session.user) {
         console.log(
-            `>> Check Logged at ${new Date().toLocaleString('en-PH', {
+            `\x1b[32m>> Check Logged at ${new Date().toLocaleString('en-PH', {
                 timeZone: 'Asia/Manila',
                 hour12: false,
                 year: 'numeric',
@@ -26,8 +27,8 @@ router.get('/check-session', (req, res) => {
             name: req.session.user.name,
         });
     } else {
-        console.error(
-            `>> No Logged at ${new Date().toLocaleString('en-PH', {
+        console.log(
+            `\x1b[31m>> No Logged at ${new Date().toLocaleString('en-PH', {
                 timeZone: 'Asia/Manila',
                 hour12: false,
                 year: 'numeric',
@@ -43,10 +44,12 @@ router.get('/check-session', (req, res) => {
 });
 
 router.get('/about-us', (req, res) => {
+    console.log('\x1b[34m>> Status Code: 200 - GET /about-us');
     res.sendFile(path.join(__dirname, '..', 'public', 'html', 'about.html'));
 });
 
 router.get('/enneagram-types', (req, res) => {
+    console.log('\x1b[34m>> Status Code: 200 - GET /enneagram-types');
     res.sendFile(path.join(__dirname, '..', 'public', 'html', 'types.html'));
 });
 

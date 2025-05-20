@@ -12,11 +12,13 @@ router.get('/', (req, res) => {
 
 router.get('/:username', (req, res) => {
     const username = req.params.username;
-    if (req.session.user.username !== username)
+    if (req.session.user.username !== username) {
+        console.log('\x1b[31m>> Access Denied!');
         return res
             .status(403)
             .json({ success: 'false', message: 'Access denied' });
-    console.log(`>> ${username} Openned The Profile Page...`);
+    }
+    console.log(`\x1b[34m>> Status Code: 200 - GET /profile/${username}`);
     res.sendFile(path.join(__dirname, '..', 'public', 'html', 'profile.html'));
 });
 

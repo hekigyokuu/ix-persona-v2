@@ -6,8 +6,10 @@ const User = require('../models/User');
 
 router.get('/login', (req, res) => {
     if (req.session.user) {
+        console.log('\x1b[34m>> Status Code: 200 - GET /enneagram-test');
         return res.redirect('/enneagram-test');
     }
+    console.log('\x1b[34m>> Status Code: 200 - GET /auth/login');
     res.sendFile(path.join(__dirname, '..', 'public', 'html', 'login.html'));
 });
 
@@ -16,7 +18,7 @@ router.post('/login', async (req, res) => {
         const { username, password } = req.body;
         const user = await User.findOne({ username });
 
-        console.log('>> User is Logging In...');
+        console.log('\x1b[33m>> User is Logging In...');
         if (!user) {
             return res
                 .status(401)
@@ -39,15 +41,16 @@ router.post('/login', async (req, res) => {
             personality: user.personality || 'Not Set',
         };
 
-        console.log('>> User Succesfully Login...');
+        console.log('\x1b[32m>> User Succesfully Login...');
         res.status(200).json({ success: true, redirect: '/enneagram-test' });
     } catch (err) {
-        console.error('Login error:', err);
+        console.error('\x1b[31mLogin error:', err);
         res.status(500).json({ success: false, message: 'Server error' });
     }
 });
 
 router.get('/create-account', (req, res) => {
+    console.log('\x1b[34m>> Status Code: 200 - GET /auth/create-account');
     res.sendFile(path.join(__dirname, '..', 'public', 'html', 'signup.html'));
 });
 
@@ -79,9 +82,9 @@ router.post('/create-account', async (req, res) => {
             createdAt: new Date(new Date().getTime() + 8 * 60 * 60 * 1000),
         });
 
-        console.log('>> New Account Created...');
+        console.log('\x1b[32m>> New Account Created...');
         console.log(
-            `>> Username: ${newUser.username}; Created At: ${newUser.createdAt}`
+            `\x1b[32m>> Username: ${newUser.username}; Created At: ${newUser.createdAt}`
         );
 
         await newUser.save();
@@ -97,6 +100,7 @@ router.post('/create-account', async (req, res) => {
             },
         });
     } catch (err) {
+        console.log('\x1b[31m>> Signup Error:' + err);
         res.status(500).json({ success: false, message: 'Server error' });
     }
 });
@@ -104,12 +108,13 @@ router.post('/create-account', async (req, res) => {
 router.post('/logout', (req, res) => {
     req.session.destroy((err) => {
         if (err) {
+            console.log('\x1b[31m>> User Failed To Logged Out...');
             return res.status(500).json({
                 success: false,
                 message: 'Logout failed',
             });
         }
-        console.log('>> User Successfully Logged Out...');
+        console.log('\x1b[32m>> User Successfully Logged Out...');
         res.clearCookie('connect.sid');
         res.status(200).json({
             success: true,

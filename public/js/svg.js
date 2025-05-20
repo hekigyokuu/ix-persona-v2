@@ -241,6 +241,7 @@ viewBox="0 0 613 732"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     class="card-svg"
+                    id="card-svg-reformer"
                 >
                     <!-- face -->
                     <path

@@ -13,7 +13,7 @@ const uri = 'mongodb://localhost:27017/';
 async function connectDB() {
     try {
         await mongoose.connect(uri);
-        console.log('>> Successfully Connected to MongoDB');
+        console.log('\x1b[32m>> SUCCESSFULLY CONNECTED TO MONGODB...');
     } catch (err) {
         console.log('>> MongoDB Error:', err);
     }
@@ -35,16 +35,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 
 app.use((req, res) => {
-    console.log('>> Status Code: 404');
+    console.log('\x1b[31m>> Status Code: 404 - GET /undefined');
     res.status(404).sendFile(
         path.join(__dirname, 'public', 'html', 'not-found.html')
     );
 });
 
 app.listen(PORT, (err) => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`\n\n\x1b[32mSERVER RUNNING ON http://localhost:${PORT}`);
     if (err) {
-        console.log('>> What happen :0?');
-        console.log('>> Error: ' + err);
+        console.log('\x1b[31m>> What happen :0?');
+        console.log('\x1b[31m>> Error: ' + err);
     }
 });
