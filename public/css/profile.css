@@ -160,3 +160,13 @@
 
     filter: drop-shadow(8px 8px 0px #111);
 }
+
+.profile-image #card-svg-helper {
+    position: absolute;
+    left: 0;
+}
+
+.profile-image #card-svg-investigator {
+    position: absolute;
+    left: 10%;
+}

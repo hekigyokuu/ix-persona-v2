@@ -1,3 +1,9 @@
+const svgTypesPosterContainer = document.getElementById(
+    'svg-types-poster-container'
+);
+
+svgTypesPosterContainer.innerHTML += svgTypesPoster;
+
 const types = [
     {
         id: 'type-one',
@@ -43,7 +49,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'CT - Privilege',
-                svg: svgReformer,
+                svg: svgHelper,
                 briefDesc:
                     'Focuses on the need to be charming in order to have their physical needs met. ',
                 fullDesc:
@@ -52,7 +58,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Ambition',
-                svg: svgReformer,
+                svg: svgHelper,
                 briefDesc:
                     'Focuses on the need to be charming with their groups and communities.',
                 fullDesc:
@@ -61,7 +67,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Seduction-Aggression',
-                svg: svgReformer,
+                svg: svgHelper,
                 briefDesc:
                     'Focuses on the need to be charming with their intimate connections.',
                 fullDesc:
@@ -148,7 +154,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Castle',
-                svg: svgReformer,
+                svg: svgInvestigator,
                 briefDesc:
                     'Focuses on the need to be competent with their families, health, finances, ...',
                 fullDesc:
@@ -157,7 +163,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Totem',
-                svg: svgReformer,
+                svg: svgInvestigator,
                 briefDesc:
                     'Focuses on the need to be competent with their groups and communities.',
                 fullDesc:
@@ -166,7 +172,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'CT - Confidence',
-                svg: svgReformer,
+                svg: svgInvestigator,
                 briefDesc:
                     'Focuses on the need to be competent with their intimate connections.',
                 fullDesc:
