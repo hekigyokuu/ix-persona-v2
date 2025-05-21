@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             2: '#ff2797',
             3: '#ffcb20',
             4: '#20a6ff',
-            5: '#1dfdab',
+            5: '#8d67a3',
             6: '#ffff20',
             7: '#ff6e21',
             8: '#ff1d1d',
@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const svgMap = {
             1: svgReformer,
-            2: ``,
+            2: svgHelper,
             3: ``,
             4: ``,
-            5: ``,
+            5: svgInvestigator,
             6: ``,
             7: ``,
             8: ``,

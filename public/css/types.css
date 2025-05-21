@@ -104,6 +104,8 @@
 }
 
 .types-container-text-box {
+    position: relative;
+
     width: 100%;
     max-width: 1920px;
     height: 80vh;
@@ -111,19 +113,36 @@
 
     background-color: var(--green-darker-darker);
     border: 2px solid var(--black);
-    box-shadow: inset 4px 4px 0px var(--black);
+    box-shadow: inset 15px 8px 0px var(--black);
+
+    overflow: hidden;
 }
 
 .types-container-text-box h3 {
+    display: inline-block;
+    width: 70%;
+
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     line-height: 2;
 }
 
 .types-container-text-box p {
+    display: inline-block;
+    width: 70%;
+
     font-family: 'Preahvihear', sans-serif;
     font-size: 2rem;
     line-height: 2.5;
+}
+
+.types-container-text-box #svg-types-poster {
+    position: absolute;
+    top: 0;
+
+    height: 100vh;
+
+    filter: drop-shadow(20px 8px 0px #111);
 }
 
 .types-container-personality-types-header {
@@ -469,15 +488,16 @@
 #type-two .card-type {
     background-color: #3a001a;
 }
-#type-two #card-svg-reformer {
+#type-two #card-svg-helper {
     position: absolute;
+    left: 7%;
     filter: drop-shadow(5px 5px 0px #3a001a);
 }
-#type-two #card-svg-reformer path {
+#type-two #card-svg-helper path {
     fill: #87a96b;
     stroke: #3a001a;
 }
-#type-two #card-svg-reformer circle {
+#type-two #card-svg-helper circle {
     fill: #87a96b;
     stroke: #3a001a;
 }
@@ -539,28 +559,30 @@
 /* Type 5 - The Investigator */
 #type-five .card-front,
 #type-five .card-back {
-    color: #002c1d;
+    color: #190041;
 }
 #type-five .card-name,
 #type-five .card-brief-description,
 #type-five .card-img,
 #type-five .card-full-description {
-    border: 2px solid #002c1d;
+    border: 2px solid #190041;
 }
 #type-five .card-type {
-    background-color: #002c1d;
+    background-color: #190041;
 }
-#type-five #card-svg-reformer {
+#type-five #card-svg-investigator {
     position: absolute;
-    filter: drop-shadow(5px 5px 0px #002c1d);
+    top: 10%;
+    left: 20%;
+    filter: drop-shadow(5px 5px 0px #190041);
 }
-#type-five #card-svg-reformer path {
+#type-five #card-svg-investigator path {
     fill: #87a96b;
-    stroke: #002c1d;
+    stroke: #190041;
 }
-#type-five #card-svg-reformer circle {
+#type-five #card-svg-investigator circle {
     fill: #87a96b;
-    stroke: #002c1d;
+    stroke: #190041;
 }
 
 /* Type 6 - The Loyalist */

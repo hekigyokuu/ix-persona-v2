@@ -347,6 +347,10 @@ body.lock-scroll {
     }
 }
 
+.card-svg {
+    filter: drop-shadow(8px 8px 0px #111);
+}
+
 /* Type 1 - The Reformer */
 .glowing-1 {
     --glow-color: #7c7a7a;
@@ -369,7 +373,7 @@ body.lock-scroll {
 
 /* Type 5 - The Investigator */
 .glowing-5 {
-    --glow-color: #1dfdab;
+    --glow-color: #8d67a3;
 }
 
 /* Type 6 - The Loyalist */
@@ -498,6 +502,14 @@ body.lock-scroll {
     }
 }
 
-.card-svg {
-    filter: drop-shadow(8px 8px 0px #111);
+.card-img #card-svg-helper {
+    position: absolute;
+    left: 8%;
+}
+
+.card-img #card-svg-investigator {
+    position: absolute;
+    width: 110%;
+    top: 4vh;
+    left: 16%;
 }

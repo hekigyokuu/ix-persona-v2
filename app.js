@@ -8,7 +8,7 @@ const routes = require('./routes/root');
 
 const app = express();
 const PORT = 5000;
-const uri = 'mongodb://localhost:27017/';
+const uri = 'mongodb://127.0.0.1:27017/';
 
 async function connectDB() {
     try {
@@ -41,8 +41,9 @@ app.use((req, res) => {
     );
 });
 
-app.listen(PORT, (err) => {
-    console.log(`\n\n\x1b[32mSERVER RUNNING ON http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', (err) => {
+    console.log(`\n||==========================================||`);
+    console.log(`\x1b[32m>> SERVER RUNNING ON http://localhost:${PORT}\n`);
     if (err) {
         console.log('\x1b[31m>> What happen :0?');
         console.log('\x1b[31m>> Error: ' + err);

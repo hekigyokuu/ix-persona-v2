@@ -351,18 +351,14 @@ function getTypeDescription(type) {
 function getTypeSVG(topType) {
     const svgMap = {
         'The Reformer': svgReformer,
-        'The Helper': `
-            
-        `,
+        'The Helper': svgHelper,
         'The Achiever': `
             
         `,
         'The Individualist': `
             
         `,
-        'The Investigator': `
-            
-        `,
+        'The Investigator': svgInvestigator,
         'The Loyalist': `
             
         `,
