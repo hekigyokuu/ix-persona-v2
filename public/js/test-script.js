@@ -272,18 +272,27 @@ const showResult = () => {
                 card.classList.remove('spinning');
                 cardBack.innerHTML = `
     <div class="card-name">
-        <div class="card-type">${typeNumber}</div>
+        <div class="card-type" id="card-type-container">${typeNumber}</div>
         ${topType}
     </div>
     <div class="card-img" id="card-img-container"></div>
-    <div class="card-brief-description">${getTypeDescription(topType)}</div>
+    <div class="card-brief-description" id="card-description-container">${getTypeDescription(
+        topType
+    )}</div>
 `;
+                const cardTypeContainer = document.getElementById(
+                    'card-type-container'
+                );
                 const cardImgContainer =
                     document.getElementById('card-img-container');
                 cardImgContainer.innerHTML = getTypeSVG(topType);
                 card.classList.add('flipped');
 
                 card.classList.add('glowing', `glowing-${typeNumber}`);
+                cardTypeContainer.classList.add(
+                    'card-type-color',
+                    `glowing-${typeNumber}`
+                );
                 cardImgContainer.classList.add(
                     'inset-glowing',
                     `glowing-${typeNumber}`
@@ -368,9 +377,7 @@ function getTypeSVG(topType) {
         'The Challenger': `
            
         `,
-        'The Peacemaker': `
-            
-        `,
+        'The Peacemaker': svgPeacemaker,
     };
 
     return svgMap[topType] || '';

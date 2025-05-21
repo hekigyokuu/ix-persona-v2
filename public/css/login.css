@@ -142,3 +142,42 @@
 .new-here-box-container .go-now-anchor:hover {
     transform: translateX(4%);
 }
+
+.password-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+}
+
+.eye-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 10%;
+    height: 80%;
+
+    background-color: var(--green-darker);
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    box-shadow: inset 2px 2px 0px var(--black);
+
+    cursor: pointer;
+}
+
+.eye-toggle:hover {
+    background-color: var(--green-darker-alpha);
+}
+
+#show-password {
+    display: inline;
+    stroke: var(--black);
+
+    transition: all 0.2s ease;
+}
+
+#login-password {
+    width: 90%;
+}

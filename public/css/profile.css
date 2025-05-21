@@ -170,3 +170,9 @@
     position: absolute;
     left: 10%;
 }
+
+.profile-image #card-svg-peacemaker {
+    position: absolute;
+    top: 10%;
+    left: 7%;
+}

@@ -206,7 +206,7 @@ const types = [
             },
             {
                 type: 'SX',
-                name: 'CT - Strength/Beauty',
+                name: 'CT - Strength | Beauty',
                 svg: svgReformer,
                 briefDesc:
                     'Focuses on the need to be secure/supported with their intimate connections.',
@@ -294,7 +294,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Appetite',
-                svg: svgReformer,
+                svg: svgPeacemaker,
                 briefDesc:
                     'Focuses on the need to be at peace with their families, health, finances, and home.',
                 fullDesc:
@@ -303,7 +303,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'CT - Participation',
-                svg: svgReformer,
+                svg: svgPeacemaker,
                 briefDesc:
                     'Focuses on the need to be at peace with their groups and communities.',
                 fullDesc:
@@ -312,7 +312,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Fusion',
-                svg: svgReformer,
+                svg: svgPeacemaker,
                 briefDesc:
                     'Focuses On:  The need to be at peace with their intimate connections.',
                 fullDesc:

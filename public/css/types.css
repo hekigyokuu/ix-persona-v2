@@ -680,15 +680,17 @@
 #type-nine .card-type {
     background-color: #00331f;
 }
-#type-nine #card-svg-reformer {
+#type-nine #card-svg-peacemaker {
     position: absolute;
+    top: 10%;
+    left: 15%;
     filter: drop-shadow(5px 5px 0px #00331f);
 }
-#type-nine #card-svg-reformer path {
+#type-nine #card-svg-peacemaker path {
     fill: #87a96b;
     stroke: #00331f;
 }
-#type-nine #card-svg-reformer circle {
+#type-nine #card-svg-peacemaker circle {
     fill: #87a96b;
     stroke: #00331f;
 }

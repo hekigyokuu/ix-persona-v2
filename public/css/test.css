@@ -314,7 +314,7 @@ body.lock-scroll {
 }
 
 .inset-glowing {
-    animation: inset-glow 1s ease-in-out infinite alternate;
+    animation: inset-glow 3s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
@@ -334,16 +334,16 @@ body.lock-scroll {
 
 @keyframes inset-glow {
     0% {
-        box-shadow: inset 0 0 60px var(--glow-color),
-            inset 0 0 70px var(--glow-color);
+        box-shadow: inset 0px -5px 0px var(--glow-color),
+            inset 0px -10px 0px var(--glow-color);
     }
     50% {
-        box-shadow: inset 0 0 100px var(--glow-color),
-            inset 0 0 200px var(--glow-color);
+        box-shadow: inset 0px -500px 0px var(--glow-color),
+            inset 0px -1000px 0px var(--glow-color);
     }
     100% {
-        box-shadow: inset 0 0 60px var(--glow-color),
-            inset 0 0 70px var(--glow-color);
+        box-shadow: inset 0px -5px 0px var(--glow-color),
+            inset 0px -10px 0px var(--glow-color);
     }
 }
 
@@ -358,7 +358,7 @@ body.lock-scroll {
 
 /* Type 2 - The Helper */
 .glowing-2 {
-    --glow-color: #ff2797;
+    --glow-color: #e79cc3;
 }
 
 /* Type 3 - The Achiever */
@@ -373,7 +373,7 @@ body.lock-scroll {
 
 /* Type 5 - The Investigator */
 .glowing-5 {
-    --glow-color: #8d67a3;
+    --glow-color: #7767a3;
 }
 
 /* Type 6 - The Loyalist */
@@ -393,7 +393,7 @@ body.lock-scroll {
 
 /* Type 9 - The Peacemaker */
 .glowing-9 {
-    --glow-color: #20ffa6;
+    --glow-color: #507a4e;
 }
 
 .spinning {
@@ -483,6 +483,11 @@ body.lock-scroll {
     color: #87a96b;
 }
 
+.card-type-color {
+    color: #111;
+    background-color: var(--glow-color);
+}
+
 .fade-out {
     animation: fadeOut 0.5s forwards;
 }
@@ -512,4 +517,11 @@ body.lock-scroll {
     width: 110%;
     top: 4vh;
     left: 16%;
+}
+
+.card-img #card-svg-peacemaker {
+    position: absolute;
+    width: 110%;
+    top: 5vh;
+    left: 13%;
 }
