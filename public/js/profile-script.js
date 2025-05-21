@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const typeColors = {
             1: '#7c7a7a',
-            2: '#ff2797',
+            2: '#e79cc3',
             3: '#ffcb20',
             4: '#20a6ff',
-            5: '#8d67a3',
+            5: '#7767a3',
             6: '#ffff20',
             7: '#ff6e21',
             8: '#ff1d1d',
-            9: '#20ffa6',
+            9: '#507a4e',
         };
 
         const svgMap = {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             6: ``,
             7: ``,
             8: ``,
-            9: ``,
+            9: svgPeacemaker,
         };
 
         const typeMatch = data.personality.match(/Type\s(\d+)/);

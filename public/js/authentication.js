@@ -9,6 +9,27 @@ window.addEventListener('DOMContentLoaded', async () => {
         authLink.href = '#';
         authLink.classList.add('logout');
     }
+
+    const showPasswordContainer = document.getElementById(
+        'show-password-container'
+    );
+    const svgShowPassword = document.querySelector('.show-icon');
+    const passwordInput = document.getElementById('login-password');
+
+    let checked = false;
+    showPasswordContainer.addEventListener('click', () => {
+        if (!checked) {
+            passwordInput.type = 'text';
+            svgShowPassword.style.strokeWidth = '3px';
+            svgShowPassword.style.stroke = '#fff';
+            checked = true;
+        } else {
+            passwordInput.type = 'password';
+            svgShowPassword.style.strokeWidth = '2px';
+            svgShowPassword.style.stroke = '#111';
+            checked = false;
+        }
+    });
 });
 
 const checkSession = async () => {

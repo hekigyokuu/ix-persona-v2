@@ -8,7 +8,7 @@ const routes = require('./routes/root');
 
 const app = express();
 const PORT = 5000;
-const uri = 'mongodb://127.0.0.1:27017/';
+const uri = 'mongodb://127.0.0.1:27017/IXpersona';
 
 async function connectDB() {
     try {
