@@ -1,7 +1,9 @@
+// << TEST INSTRUCTION - popup that provide a detailed instruction that can be skip after 3 seconds >>
 const popupInstruction = document.getElementById('popup-instruction');
 const skipInstruction = document.getElementById('skip-instruction');
-let timeLeft = 3;
 
+// << TEST INSTRUCTION POPUP >>
+let timeLeft = 3;
 const countdownInterval = setInterval(() => {
     timeLeft--;
     skipInstruction.textContent = `Wait ${timeLeft}s`;
@@ -15,6 +17,7 @@ const countdownInterval = setInterval(() => {
     }
 }, 1000);
 
+// << TEST INSTRUCTION POPUP && SKIP BUTTON - add event listener that takes a callback for skipping and removing the instruction >>
 skipInstruction.addEventListener('click', () => {
     if (!skipInstruction.disabled) {
         popupInstruction.style.display = 'none';
@@ -22,6 +25,7 @@ skipInstruction.addEventListener('click', () => {
     }
 });
 
+// << ENNEAGRAM TYPES OBJECT - personalities with their corresponding types >>
 const enneagramTypes = {
     'The Reformer': 'Type 1',
     'The Helper': 'Type 2',
@@ -34,6 +38,7 @@ const enneagramTypes = {
     'The Peacemaker': 'Type 9',
 };
 
+// << TEST QUESTIONNAIRE ARRAY OF OBJECTS - containing a question and points that corresponds in object >>
 const testQuestions = [
     // Type 1: The Reformer
     { text: 'Perfectionist ka ba?', typePoints: { 'The Reformer': 1 } },
@@ -159,6 +164,7 @@ const testQuestions = [
     },
 ];
 
+// << TYPES SCORES ARRAY OF OBJECTS - scores that is assigned into correspondong personalities >>
 let scores = {
     'The Reformer': 0,
     'The Helper': 0,
@@ -174,8 +180,11 @@ let scores = {
 const testContainer = document.getElementById('test-questionnaire-container');
 const optionsContainer = document.getElementById('test-options-container');
 const testResContainer = document.getElementById('test-res');
+
+// << INITIALIZING THE CURRENT QUESTION INDEX >>
 let currentQuestion = 0;
 
+// << GENERATING HTML QUESTIONS AND OPTIONS FOR THE CORRESPONDING TYPE/INDEX - question are based on the index of the array of questions where the options have onclick properties calling the handleAnswer(@param weight) >>
 const showQuestion = (index) => {
     testContainer.innerHTML = '';
     optionsContainer.innerHTML = '';
@@ -213,6 +222,7 @@ const showQuestion = (index) => {
     optionsContainer.appendChild(optionsDiv);
 };
 
+// << SCORING LOGIC - based on the weight of answer it is multiplied and the type point where distributed to specific personality >>
 const handleAnswer = (weight) => {
     const question = testQuestions[currentQuestion];
     Object.keys(question.typePoints).forEach((type) => {
@@ -222,6 +232,12 @@ const handleAnswer = (weight) => {
     showQuestion(currentQuestion);
 };
 
+// << TEST RESULT LOGIC - take the top scorer personality by .reduce method >>
+// << TEST RESULT LOGIC - popping up the div of test result container >>
+// << TEST RESULT LOGIC - removing the (hidden) class of card container and appending a text in the container >>
+// << TEST RESULT LOGIC - card event listener that have a function to spin by adding class for spinning >>
+// << TEST RESULT LOGIC - card event listener that have a function to spin by adding class for spinning >>
+// << TEST RESULT LOGIC - ... >>
 const showResult = () => {
     const topType = Object.keys(scores).reduce((a, b) =>
         scores[a] > scores[b] ? a : b
@@ -232,7 +248,7 @@ const showResult = () => {
     const card = document.getElementById('card');
     const cardBack = document.getElementById('card-result');
 
-    testContainer.style.display = 'block';
+    testResContainer.style.display = 'block';
     testResContainer.style.position = 'absolute';
     testResContainer.style.zIndex = '999999';
     testResContainer.style.top = '0';
@@ -271,14 +287,14 @@ const showResult = () => {
                 const typeNumber = enneagramTypes[topType].split(' ')[1];
                 card.classList.remove('spinning');
                 cardBack.innerHTML = `
-    <div class="card-name">
-        <div class="card-type" id="card-type-container">${typeNumber}</div>
-        ${topType}
-    </div>
-    <div class="card-img" id="card-img-container"></div>
-    <div class="card-brief-description" id="card-description-container">${getTypeDescription(
-        topType
-    )}</div>
+                    <div class="card-name">
+                        <div class="card-type" id="card-type-container">${typeNumber}</div>
+                        ${topType}
+                    </div>
+                    <div class="card-img" id="card-img-container"></div>
+                    <div class="card-brief-description" id="card-description-container">
+                        ${getTypeDescription(topType)}
+                    </div>
 `;
                 const cardTypeContainer = document.getElementById(
                     'card-type-container'
@@ -335,6 +351,7 @@ const showResult = () => {
     );
 };
 
+// << ASSIGNS THE DESCRIPTION INTO THE PERSONALITY BASED ON ITS TYPE >>
 function getTypeDescription(type) {
     const descriptions = {
         'The Reformer':
@@ -357,6 +374,7 @@ function getTypeDescription(type) {
     return descriptions[type] || 'Discover more about your personality type.';
 }
 
+// << ASSIGNS THE SVG CODE INTO THE PERSONALITY BASED ON ITS TYPE >>
 function getTypeSVG(topType) {
     const svgMap = {
         'The Reformer': svgReformer,
@@ -379,8 +397,8 @@ function getTypeSVG(topType) {
     return svgMap[topType] || '';
 }
 
-//answer test using keyboard
-function keyboardOption() {
+// << KEYBOARD LISTENER - the user can answer the test with key (1-5) based on the weight answer >>
+const keyboardOption = () => {
     const options = {
         1: 'answer-one',
         2: 'answer-two',
@@ -389,15 +407,15 @@ function keyboardOption() {
         5: 'answer-five',
     };
 
-    document.addEventListener('keyup', function (event) {
-        if (options[event.key]) {
-            const btn = document.getElementById(options[event.key]);
-            if (btn) {
-                btn.click();
+    document.addEventListener('keyup', (e) => {
+        if (options[e.key]) {
+            const testOptionButtons = document.getElementById(options[e.key]);
+            if (testOptionButtons) {
+                testOptionButtons.click();
             }
         }
     });
-}
+};
 
 showQuestion(currentQuestion);
 keyboardOption();

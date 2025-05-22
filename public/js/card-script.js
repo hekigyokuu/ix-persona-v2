@@ -1,8 +1,6 @@
-const svgTypesPosterContainer = document.getElementById(
-    'svg-types-poster-container'
-);
-
-svgTypesPosterContainer.innerHTML += svgTypesPoster;
+// << ARRAY OF OBJECTS [types] - storing content inside that must be shown in cards and the must have attribute such as tag id, card container title, card container title description, card types, card names, card svg, card brief description, card full description >>
+// << GENERATING CARD'S CONTAINER PER TYPE - the function was called createType(@param typeData) for each types (9 types === 9 container) and appending a content and tags based on its properties >>
+// << GENERATING CARDS CONTAINER PER CONTAINER - the function was called createCard(@param cardData) 3 cards that generates an HTML structure of cards containing its properties >>
 
 const types = [
     {
@@ -378,11 +376,13 @@ function createType(typeData) {
     return typeDiv;
 }
 
-const container = document.getElementById('types-container-personalities');
+const typesContainerPersonalities = document.getElementById(
+    'types-container-personalities'
+);
 
 types.forEach((typeData) => {
     const typeElement = createType(typeData);
-    container.appendChild(typeElement);
+    typesContainerPersonalities.appendChild(typeElement);
 });
 
 document.querySelectorAll('.card').forEach((card) => {

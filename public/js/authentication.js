@@ -1,7 +1,10 @@
+// << FORM IDS AND LOGIN LINK - assigning the specific node into variable >>
 const loginForm = document.getElementById('login-form');
 const signupForm = document.getElementById('signup-form');
 const authLink = document.getElementById('auth-link');
 
+// << PAGE LOAD (GLOBAL) - checking the session if there is and return logged in and change the function of login anchor into logout anchor >>
+// << PAGE LOAD (LOGIN PAGE) - adding event listener into the svg container that shows or hide a person based on the boolean >>
 window.addEventListener('DOMContentLoaded', async () => {
     const { loggedIn } = await checkSession();
     if (loggedIn && authLink) {
@@ -36,14 +39,16 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+// << CHECKING IF THERE IS SESSION - request GET the data from app.js >>
 const checkSession = async () => {
     try {
-        const sessionResponse = await fetch('/check-session', {
+        const response = await fetch('/check-session', {
             credentials: 'include',
         });
-        if (sessionResponse.ok) {
-            const session = await res.json();
-            return session;
+        if (response.ok) {
+            const sessionResponse = await response.json();
+            console.log(sessionResponse);
+            return sessionResponse;
         }
         return { loggedIn: false };
     } catch (err) {
@@ -52,6 +57,12 @@ const checkSession = async () => {
     }
 };
 
+// << LOGIN FUNCTION - adding event listener to a form on submit that takes the input value that is stored in data object >>
+// << LOGIN FUNCTION - modifying child elements of login button as per submit >>
+// << LOGIN FUNCTION - modifying content and functionality of the LOGIN anchor into LOGOUT anchor in nav GLOBALLY >>
+// << LOGIN FUNCTION - stringify the data object to be a JSON that is passed in body on fetch >>
+// << SIGNUP FUNCTION - request POST the data into app.js and getting its response parsed that is displayed in a popup >>
+// << LOGIN FUNCTION - if success: redirect into the specified response.redirect -> /enneagram-test >>
 if (loginForm) {
     loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -109,26 +120,26 @@ if (loginForm) {
     });
 }
 
+// << SIGNUP FUNCTION - adding event listener to a form on submit that takes the input value that is stored in data object >>
+// << SIGNUP FUNCTION - modifying child elements of signup button as per submit >>
+// << SIGNUP FUNCTION - stringify the data object to be a JSON that is passed in body on fetch >>
+// << SIGNUP FUNCTION - request POST the data into app.js and getting its response parsed that is displayed in a popup >>
+// << SIGNUP FUNCTION - if success: redirect into the specified response.redirect -> /auth/login >>
 if (signupForm) {
     signupForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const fullName = document.getElementById('name').value;
-        const usern = document.getElementById('signup-username').value.trim();
-        const passw = document.getElementById('signup-password').value.trim();
-        const confirmPassword = document
-            .getElementById('confirm-signup-password')
-            .value.trim();
-        const userAge = parseInt(document.getElementById('age').value);
-        const userGender = document.getElementById('gender').value;
-
         const data = {
-            name: fullName,
-            username: usern,
-            password: passw,
-            confirmPassword: confirmPassword,
-            age: userAge,
-            gender: userGender,
+            name: document.getElementById('name').value,
+            username: document.getElementById('signup-username').value.trim(),
+            password: (passw = document
+                .getElementById('signup-password')
+                .value.trim()),
+            confirmPassword: document
+                .getElementById('confirm-signup-password')
+                .value.trim(),
+            age: parseInt(document.getElementById('age').value),
+            gender: document.getElementById('gender').value,
         };
 
         const signupSubmitButton = document.getElementById('signup-button');
@@ -171,6 +182,9 @@ if (signupForm) {
     });
 }
 
+// << LOGOUT FUNCTION - request POST the data into app.js and >>
+// << LOGOUT FUNCTION - modifying content and functionality of the LOGOUT anchor into LOGIN anchor in nav GLOBALLY >>
+// << LOGOUT FUNCTION - if success: the parsed response getting it redirect property into specified redirection -> /auth/login >>
 const logout = async () => {
     try {
         const response = await fetch('/auth/logout', {
@@ -188,7 +202,8 @@ const logout = async () => {
             authLink.classList.remove('logout');
         }
 
-        window.location.href = '/auth/login';
+        const logoutResponse = await response.json();
+        window.location.href = logoutResponse.redirect;
     } catch (err) {
         console.error('Logout error:', err);
         displayPopup('Failed to logout. Please try again.', {
@@ -198,6 +213,8 @@ const logout = async () => {
     }
 };
 
+// << AUTHENTICATION ANCHOR : LOGIN / LOGOUT - if logout: getting a popup for confirmation >>
+// << AUTHENTICATION ANCHOR : LOGIN / LOGOUT - if logout confirmed: directing into logout() >>
 if (authLink) {
     authLink.addEventListener('click', async (e) => {
         if (authLink.classList.contains('logout')) {

@@ -1,3 +1,8 @@
+// << PAGE LOAD (SIGNUP PAGE) - appending the ages into the select tag (13 to 120+) >>
+// << PAGE LOAD (GLOBAL) - adding functionality of navigation button and an anchor -> /enneagram-test >>
+// << PAGE LOAD (GLOBAL) - adding functionality to profile button -> /profile >>
+// << PAGE LOAD (INDEX PAGE) - adding functionality to personality type buttons @param buttonID && typeHash -> /enneagram-types${typeHash} >>
+// << PERSONALITY TYPE BUTTONS ONCLICK (INDEX PAGE) - transition into the navigation of page id >>
 document.addEventListener('DOMContentLoaded', () => {
     const ageSelect = document.getElementById('age');
     if (ageSelect) {
@@ -7,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
             option.textContent = i + ' yrs';
             ageSelect.appendChild(option);
         }
+        const option = document.createElement('option');
+        option.value = '120+';
+        option.textContent = i + ' yrs';
+        ageSelect.appendChild(option);
     }
 
     const ctaButtons = document.querySelectorAll('.cta-button');
@@ -15,25 +24,29 @@ document.addEventListener('DOMContentLoaded', () => {
         takeTest.href = '/enneagram-test';
     }
 
-    ctaButtons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            window.location.href = '/auth/login';
+    if (ctaButtons) {
+        ctaButtons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                window.location.href = '/enneagram-test';
+            });
         });
-    });
+    }
+
+    const profileNavButton = document.getElementById('toggle-profile-btn');
+    if (profileNavButton) {
+        profileNavButton.addEventListener('click', () => {
+            window.location.href = '/profile';
+        });
+    }
 
     const setupTypeButton = (buttonId, typeHash) => {
-        const button = document.getElementById(buttonId);
-        if (button) {
-            button.addEventListener('click', () => {
+        const typePosterButton = document.getElementById(buttonId);
+        if (typePosterButton) {
+            typePosterButton.addEventListener('click', () => {
                 window.location.href = `/enneagram-types#${typeHash}`;
             });
         }
     };
-
-    const profileButton = document.getElementById('toggle-profile-btn');
-    profileButton.addEventListener('click', () => {
-        window.location.href = '/profile';
-    });
 
     setupTypeButton('btn-to-one', 'type-one');
     setupTypeButton('btn-to-two', 'type-two');

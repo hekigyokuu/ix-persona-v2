@@ -186,6 +186,7 @@ router.post('/logout', (req, res) => {
         res.clearCookie('connect.sid');
         res.status(200).json({
             success: true,
+            redirect: '/auth/login',
             message: 'Logged out successfully',
         });
     });

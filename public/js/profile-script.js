@@ -1,18 +1,26 @@
+// << PAGE LOAD (PROFILE PAGE) - displaying user data from the data receive from a GET request >>
+// << PAGE LOAD (PROFILE PAGE) - assigning the type color and svg into the profile image container dnamically based on the user's personality extracted >>
+// << RETAKE TEST BUTTON - adding onclick function the navigate into -> /enneagram-test >>
+// << PROFILE LOGOUT BUTTON - adding onclick function that popup the logoutDisplay for logout confirmation >>
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const response = await fetch('/profile/api/profile');
-        const data = await response.json();
+        const userData = await response.json();
 
-        document.getElementById('profile-username').textContent = data.username;
+        document.getElementById('profile-username').textContent =
+            userData.username;
         document.getElementById('profile-personality').textContent =
-            data.personality;
+            userData.personality;
         document.getElementById(
             'profile-name'
-        ).textContent = `Name: ${data.name}`;
-        document.getElementById('profile-age').textContent = `Age: ${data.age}`;
+        ).textContent = `Name: ${userData.name}`;
+        document.getElementById(
+            'profile-age'
+        ).textContent = `Age: ${userData.age}`;
         document.getElementById(
             'profile-gender'
-        ).textContent = `Gender: ${data.gender}`;
+        ).textContent = `Gender: ${userData.gender}`;
 
         const typeColors = {
             1: '#7c7a7a',
@@ -38,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             9: svgPeacemaker,
         };
 
-        const typeMatch = data.personality.match(/Type\s(\d+)/);
+        const typeMatch = userData.personality.match(/Type\s(\d+)/);
 
         if (typeMatch) {
             const typeNumber = typeMatch[1];
@@ -54,13 +62,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
-    document
-        .getElementById('profile-retake-test')
-        .addEventListener('click', () => {
+    const retakeTestButton = document.getElementById('profile-retake-test');
+
+    if (retakeTestButton) {
+        retakeTestButton.addEventListener('click', () => {
             window.location.href = '/enneagram-test';
         });
+    }
 
-    document.getElementById('profile-logout').addEventListener('click', () => {
-        logoutDisplay();
-    });
+    const profileLogout = document.getElementById('profile-logout');
+
+    if (profileLogout) {
+        profileLogout.addEventListener('click', () => {
+            logoutDisplay();
+        });
+    }
 });

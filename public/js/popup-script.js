@@ -1,10 +1,10 @@
-const displayPopup = (popUpMessage, options = {}) => {
-    const {
-        type = 'info', // 'success' | 'error' | 'warning' | 'info'
-        duration = 3000, // ms (0 = no auto-close)
-        closable = true, // Show close button
-    } = options;
+// << POPUP FOR AUTHENTICATION - generate a popup with displayPopup(@param popUpMessage, options) >>
+// << POPUP FOR LOGOUT CONFIRMATION - generate a popup with logoutDisplay() >>
 
+const displayPopup = (
+    popUpMessage,
+    { type = 'info', duration = 3000, closable = true } = {}
+) => {
     const popUp = document.createElement('div');
     popUp.style.position = 'fixed';
     popUp.style.top = '50%';
