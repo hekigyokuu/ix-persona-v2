@@ -1653,4 +1653,6 @@ const svgPeacemaker = `<svg
                     />
                 </svg>`;
 
-svgLandingPageDiv.insertAdjacentHTML('beforeend', svgIndexPoster);
+if (svgLandingPageDiv) {
+    svgLandingPageDiv.insertAdjacentHTML('beforeend', svgIndexPoster);
+}

@@ -17,27 +17,31 @@ window.addEventListener('DOMContentLoaded', async () => {
     const passwordInput = document.getElementById('login-password');
 
     let checked = false;
-    showPasswordContainer.addEventListener('click', () => {
-        if (!checked) {
-            passwordInput.type = 'text';
-            passwordInput.focus();
-            svgShowPassword.style.strokeWidth = '3px';
-            svgShowPassword.style.stroke = '#fff';
-            checked = true;
-        } else {
-            passwordInput.type = 'password';
-            passwordInput.focus();
-            svgShowPassword.style.strokeWidth = '2px';
-            svgShowPassword.style.stroke = '#111';
-            checked = false;
-        }
-    });
+    if (showPasswordContainer && svgShowPassword && passwordInput) {
+        showPasswordContainer.addEventListener('click', () => {
+            if (!checked) {
+                passwordInput.type = 'text';
+                passwordInput.focus();
+                svgShowPassword.style.strokeWidth = '3px';
+                svgShowPassword.style.stroke = '#fff';
+                checked = true;
+            } else {
+                passwordInput.type = 'password';
+                passwordInput.focus();
+                svgShowPassword.style.strokeWidth = '2px';
+                svgShowPassword.style.stroke = '#111';
+                checked = false;
+            }
+        });
+    }
 });
 
 const checkSession = async () => {
     try {
-        const res = await fetch('/check-session', { credentials: 'include' });
-        if (res.ok) {
+        const sessionResponse = await fetch('/check-session', {
+            credentials: 'include',
+        });
+        if (sessionResponse.ok) {
             const session = await res.json();
             return session;
         }
@@ -71,14 +75,14 @@ if (loginForm) {
             });
 
             if (!response.ok) {
-                const errorData = await response.json();
+                const errorResponse = await response.json();
                 throw new Error(
-                    errorData.message ||
+                    errorResponse.message ||
                         `HTTP error! status: ${response.status}`
                 );
             }
 
-            const result = await response.json();
+            const serverResponse = await response.json();
 
             if (authLink) {
                 authLink.textContent = 'Logout';
@@ -91,7 +95,7 @@ if (loginForm) {
             });
 
             setTimeout(() => {
-                window.location.href = result.redirect;
+                window.location.href = serverResponse.redirect;
             }, 1500);
         } catch (err) {
             displayPopup(`Error: ${err.message}`, {
@@ -118,53 +122,11 @@ if (signupForm) {
         const userAge = parseInt(document.getElementById('age').value);
         const userGender = document.getElementById('gender').value;
 
-        if (!usern || !passw) {
-            displayPopup('Please enter both username and password.', {
-                type: 'error',
-            });
-            return;
-        }
-
-        if (passw.length < 8) {
-            displayPopup('Password must have at least 8 characters.', {
-                type: 'error',
-            });
-            return;
-        }
-
-        if (!/[A-Z]/.test(passw) || !/[0-9]/.test(passw)) {
-            displayPopup(
-                'Password needs at least 1 number and 1 uppercase letter',
-                {
-                    type: 'error',
-                }
-            );
-            return;
-        }
-
-        if (!/[!@#$%^&*]/.test(passw)) {
-            displayPopup('Password needs at least 1 special character', {
-                type: 'error',
-            });
-            return;
-        }
-
-        if (passw !== confirmPassword) {
-            displayPopup("Passwords don't match.", { type: 'error' });
-            return;
-        }
-
-        if (!userAge || userAge < 13) {
-            displayPopup('Enter your age (13yrs old or above).', {
-                type: 'error',
-            });
-            return;
-        }
-
         const data = {
             name: fullName,
             username: usern,
             password: passw,
+            confirmPassword: confirmPassword,
             age: userAge,
             gender: userGender,
         };
@@ -183,18 +145,18 @@ if (signupForm) {
             });
 
             if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.message || 'Signup failed');
+                const errorResponse = await response.json();
+                throw new Error(errorResponse.message || 'Signup failed');
             }
 
-            const result = await response.json();
+            const serverResponse = await response.json();
 
             displayPopup('Account created! Redirecting to login...', {
                 type: 'success',
             });
 
             setTimeout(() => {
-                window.location.href = result.redirect;
+                window.location.href = serverResponse.redirect;
             }, 1500);
         } catch (err) {
             console.error('Signup error:', err);
