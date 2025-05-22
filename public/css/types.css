@@ -543,15 +543,15 @@
 #type-four .card-type {
     background-color: #002747;
 }
-#type-four #card-svg-reformer {
+#type-four #card-svg-individualist {
     position: absolute;
     filter: drop-shadow(5px 5px 0px #002747);
 }
-#type-four #card-svg-reformer path {
+#type-four #card-svg-individualist path {
     fill: #87a96b;
     stroke: #002747;
 }
-#type-four #card-svg-reformer circle {
+#type-four #card-svg-individualist circle {
     fill: #87a96b;
     stroke: #002747;
 }
@@ -599,15 +599,15 @@
 #type-six .card-type {
     background-color: #303000;
 }
-#type-six #card-svg-reformer {
+#type-six #card-svg-loyalist {
     position: absolute;
     filter: drop-shadow(5px 5px 0px #303000);
 }
-#type-six #card-svg-reformer path {
+#type-six #card-svg-loyalist path {
     fill: #87a96b;
     stroke: #303000;
 }
-#type-six #card-svg-reformer circle {
+#type-six #card-svg-loyalist circle {
     fill: #87a96b;
     stroke: #303000;
 }

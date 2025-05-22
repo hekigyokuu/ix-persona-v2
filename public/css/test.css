@@ -368,7 +368,7 @@ body.lock-scroll {
 
 /* Type 4 - The Individualist */
 .glowing-4 {
-    --glow-color: #20a6ff;
+    --glow-color: #9f6ea5;
 }
 
 /* Type 5 - The Investigator */
@@ -378,7 +378,7 @@ body.lock-scroll {
 
 /* Type 6 - The Loyalist */
 .glowing-6 {
-    --glow-color: #ffff20;
+    --glow-color: #e5e591;
 }
 
 /* Type 7 - The Enthusiast */
@@ -510,6 +510,12 @@ body.lock-scroll {
 .card-img #card-svg-helper {
     position: absolute;
     left: 8%;
+}
+
+.card-img #card-svg-individualist {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .card-img #card-svg-investigator {

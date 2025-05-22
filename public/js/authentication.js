@@ -20,11 +20,13 @@ window.addEventListener('DOMContentLoaded', async () => {
     showPasswordContainer.addEventListener('click', () => {
         if (!checked) {
             passwordInput.type = 'text';
+            passwordInput.focus();
             svgShowPassword.style.strokeWidth = '3px';
             svgShowPassword.style.stroke = '#fff';
             checked = true;
         } else {
             passwordInput.type = 'password';
+            passwordInput.focus();
             svgShowPassword.style.strokeWidth = '2px';
             svgShowPassword.style.stroke = '#111';
             checked = false;

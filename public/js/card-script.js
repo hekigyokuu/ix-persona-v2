@@ -119,7 +119,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'CT - Tenacity',
-                svg: svgReformer,
+                svg: svgIndividualist,
                 briefDesc:
                     'Focuses on the need to be themselves in order to have their physical needs met.',
                 fullDesc:
@@ -128,7 +128,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Shame',
-                svg: svgReformer,
+                svg: svgIndividualist,
                 briefDesc:
                     'Focuses on the need to be themselves with their groups and communities.',
                 fullDesc:
@@ -137,7 +137,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Competition',
-                svg: svgReformer,
+                svg: svgIndividualist,
                 briefDesc:
                     'Focuses on the need to be themselves with their intimate connections.',
                 fullDesc:
@@ -189,7 +189,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Warmth',
-                svg: svgReformer,
+                svg: svgLoyalist,
                 briefDesc:
                     'Focuses on the need to be secure/supported within their families, health, ...',
                 fullDesc:
@@ -198,7 +198,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Duty',
-                svg: svgReformer,
+                svg: svgLoyalist,
                 briefDesc:
                     'Focuses on the need to be secure/supported with their groups and communities.',
                 fullDesc:
@@ -207,7 +207,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'CT - Strength | Beauty',
-                svg: svgReformer,
+                svg: svgLoyalist,
                 briefDesc:
                     'Focuses on the need to be secure/supported with their intimate connections.',
                 fullDesc:

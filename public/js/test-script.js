@@ -364,13 +364,9 @@ function getTypeSVG(topType) {
         'The Achiever': `
             
         `,
-        'The Individualist': `
-            
-        `,
+        'The Individualist': svgIndividualist,
         'The Investigator': svgInvestigator,
-        'The Loyalist': `
-            
-        `,
+        'The Loyalist': svgLoyalist,
         'The Enthusiast': `
             
         `,

@@ -171,6 +171,17 @@
     left: 10%;
 }
 
+.profile-image #card-svg-individualist {
+    position: absolute;
+    top: 0;
+    left: -10%;
+}
+
+.profile-image #card-svg-loyalist {
+    position: absolute;
+    top: 0;
+}
+
 .profile-image #card-svg-peacemaker {
     position: absolute;
     top: 10%;
