@@ -42,13 +42,13 @@ window.addEventListener('DOMContentLoaded', async () => {
 // << CHECKING IF THERE IS SESSION - request GET the data from app.js >>
 const checkSession = async () => {
     try {
-        const response = await fetch('/check-session', {
+        const sessionResponse = await fetch('/check-session', {
             credentials: 'include',
         });
-        if (response.ok) {
-            const sessionResponse = await response.json();
-            console.log(sessionResponse);
-            return sessionResponse;
+        if (sessionResponse.ok) {
+            const sessionData = await sessionResponse.json();
+            console.log(sessionData);
+            return sessionData;
         }
         return { loggedIn: false };
     } catch (err) {
@@ -79,21 +79,21 @@ if (loginForm) {
             loginSubmitButton.disabled = true;
             loginSubmitButton.textContent = 'Processing...';
 
-            const response = await fetch('/auth/login', {
+            const loginResponse = await fetch('/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
             });
 
-            if (!response.ok) {
-                const errorResponse = await response.json();
+            if (!loginResponse.ok) {
+                const errorData = await loginResponse.json();
                 throw new Error(
-                    errorResponse.message ||
+                    errorData.message ||
                         `HTTP error! status: ${response.status}`
                 );
             }
 
-            const serverResponse = await response.json();
+            const loginData = await loginResponse.json();
 
             if (authLink) {
                 authLink.textContent = 'Logout';
@@ -106,7 +106,7 @@ if (loginForm) {
             });
 
             setTimeout(() => {
-                window.location.href = serverResponse.redirect;
+                window.location.href = loginData.redirect;
             }, 1500);
         } catch (err) {
             displayPopup(`Error: ${err.message}`, {
@@ -149,25 +149,25 @@ if (signupForm) {
             signupSubmitButton.disabled = true;
             signupSubmitButton.textContent = 'Processing...';
 
-            const response = await fetch('/auth/create-account', {
+            const signupResponse = await fetch('/auth/create-account', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
             });
 
-            if (!response.ok) {
-                const errorResponse = await response.json();
-                throw new Error(errorResponse.message || 'Signup failed');
+            if (!signupResponse.ok) {
+                const errorData = await signupResponse.json();
+                throw new Error(errorData.message || 'Signup failed');
             }
 
-            const serverResponse = await response.json();
+            const signupData = await signupResponse.json();
 
             displayPopup('Account created! Redirecting to login...', {
                 type: 'success',
             });
 
             setTimeout(() => {
-                window.location.href = serverResponse.redirect;
+                window.location.href = signupData.redirect;
             }, 1500);
         } catch (err) {
             console.error('Signup error:', err);
@@ -187,12 +187,12 @@ if (signupForm) {
 // << LOGOUT FUNCTION - if success: the parsed response getting it redirect property into specified redirection -> /auth/login >>
 const logout = async () => {
     try {
-        const response = await fetch('/auth/logout', {
+        const logoutResponse = await fetch('/auth/logout', {
             method: 'POST',
             credentials: 'include',
         });
 
-        if (!response.ok) {
+        if (!logoutResponse.ok) {
             throw new Error('Logout failed');
         }
 
@@ -202,8 +202,8 @@ const logout = async () => {
             authLink.classList.remove('logout');
         }
 
-        const logoutResponse = await response.json();
-        window.location.href = logoutResponse.redirect;
+        const logoutData = await logoutResponse.json();
+        window.location.href = logoutData.redirect;
     } catch (err) {
         console.error('Logout error:', err);
         displayPopup('Failed to logout. Please try again.', {

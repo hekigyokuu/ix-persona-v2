@@ -82,7 +82,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'CT - Security',
-                svg: svgReformer,
+                svg: svgAchiever,
                 briefDesc:
                     'Focuses on the need to be valuable/admired to have their physical needs met.',
                 fullDesc:
@@ -91,7 +91,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'Prestige',
-                svg: svgReformer,
+                svg: svgAchiever,
                 briefDesc:
                     'Focuses on the need to be valuable/admired in their groups and communities.',
                 fullDesc:
@@ -100,7 +100,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Charisma',
-                svg: svgReformer,
+                svg: svgAchiever,
                 briefDesc:
                     'Focuses on the need to be valuable/admired by their intimate connections.',
                 fullDesc:
@@ -222,7 +222,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Keepers of the Castle',
-                svg: svgReformer,
+                svg: svgEnthusiast,
                 briefDesc:
                     'Focuses on the need to be satisfied in their families, health, finances, and home.',
                 fullDesc:
@@ -231,7 +231,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'CT - Sacrifice',
-                svg: svgReformer,
+                svg: svgEnthusiast,
                 briefDesc:
                     'Focuses on the need to be satisfied with their groups and communities.',
                 fullDesc:
@@ -240,7 +240,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Suggestibility',
-                svg: svgReformer,
+                svg: svgEnthusiast,
                 briefDesc:
                     'Focuses on the need to be satisfied with their intimate connections.',
                 fullDesc:
