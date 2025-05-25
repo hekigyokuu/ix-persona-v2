@@ -316,7 +316,7 @@ const showResult = () => {
                 void card.offsetWidth;
 
                 try {
-                    const response = await fetch(
+                    const saveResponse = await fetch(
                         '/enneagram-test/save-test-result',
                         {
                             method: 'POST',
@@ -327,9 +327,25 @@ const showResult = () => {
                         }
                     );
 
-                    const data = await response.json();
-                    if (!data.success) {
+                    const saveData = await saveResponse.json();
+                    if (!saveData.success) {
                         console.error('Failed to save test result');
+                    }
+
+                    const historyResponse = await fetch(
+                        '/enneagram-test/log-history',
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ personality: resultText }),
+                        }
+                    );
+
+                    const historyData = await historyResponse.json();
+                    if (!historyData.success) {
+                        console.error('Failed to log test history');
                     }
                 } catch (error) {
                     console.error('Error saving test result:', error);
@@ -379,15 +395,11 @@ function getTypeSVG(topType) {
     const svgMap = {
         'The Reformer': svgReformer,
         'The Helper': svgHelper,
-        'The Achiever': `
-            
-        `,
+        'The Achiever': svgAchiever,
         'The Individualist': svgIndividualist,
         'The Investigator': svgInvestigator,
         'The Loyalist': svgLoyalist,
-        'The Enthusiast': `
-            
-        `,
+        'The Enthusiast': svgEnthusiast,
         'The Challenger': `
            
         `,

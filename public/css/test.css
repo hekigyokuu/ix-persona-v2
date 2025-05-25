@@ -353,17 +353,17 @@ body.lock-scroll {
 
 /* Type 1 - The Reformer */
 .glowing-1 {
-    --glow-color: #7c7a7a;
+    --glow-color: #d3d3d3;
 }
 
 /* Type 2 - The Helper */
 .glowing-2 {
-    --glow-color: #e79cc3;
+    --glow-color: #e2b3cb;
 }
 
 /* Type 3 - The Achiever */
 .glowing-3 {
-    --glow-color: #ffcb20;
+    --glow-color: #e0d4ac;
 }
 
 /* Type 4 - The Individualist */
@@ -383,17 +383,17 @@ body.lock-scroll {
 
 /* Type 7 - The Enthusiast */
 .glowing-7 {
-    --glow-color: #ff6e21;
+    --glow-color: #a8c6cf;
 }
 
 /* Type 8 - The Challenger */
 .glowing-8 {
-    --glow-color: #ff1d1d;
+    --glow-color: #b45b5b;
 }
 
 /* Type 9 - The Peacemaker */
 .glowing-9 {
-    --glow-color: #507a4e;
+    --glow-color: #9eb99c;
 }
 
 .spinning {
