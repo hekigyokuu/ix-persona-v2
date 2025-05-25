@@ -53,13 +53,15 @@
 }
 
 .about-heading-section h2 {
+    display: inline-block;
     width: 100%;
 
-    font-family: 'Potta One', sans-serif;
-    font-size: 6rem;
+    font-family: 'Preahvihear', sans-serif;
+    font-size: 9rem;
     text-align: center;
-    letter-spacing: 2px;
-    color: var(--green-light);
+    line-height: 1.3;
+    color: var(--green-light-alpha);
+    text-shadow: 8px 0px 0px var(--green-darker);
 }
 
 .about-website-container {
@@ -68,10 +70,65 @@
     align-items: center;
 
     width: 100%;
-    height: 97vh;
-    padding: 4% 12%;
+    height: 220vh;
+    padding: 4%;
 
     background-color: var(--green-darker);
+}
+
+.about-web-textbox {
+    width: 100%;
+    height: 200vh;
+    padding: 8%;
+
+    background-color: var(--green-darker-darker);
+    border: 2px solid var(--black);
+    box-shadow: inset 8px 8px 0px var(--black);
+}
+
+.about-web-textbox p {
+    display: inline-block;
+    width: 100%;
+    padding: 6%;
+
+    background-color: var(--green-darker);
+    border: 2px solid var(--black);
+    box-shadow: 10px 10px 0px var(--black);
+
+    font-size: 2.3rem;
+    color: var(--gray-medium);
+}
+
+.types-container-personality-types-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 30vh;
+
+    background-color: var(--green-darker-darker);
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: var(--green-light);
+}
+
+.types-container-divider-one {
+    width: 100%;
+    height: 3vh;
+    background-color: #3f7a60;
+}
+
+.types-container-divider-two {
+    width: 100%;
+    height: 3vh;
+
+    background-color: var(--green-light);
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
 }
 
 .about-author-container {
@@ -123,6 +180,25 @@
     cursor: pointer;
 }
 
+.image-box .about-type-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 8vh;
+
+    background-color: var(--green-darker);
+    border: 2px solid var(--black);
+    box-shadow: 0px 10px 0px var(--black);
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    text-shadow: 4px 2px 0px var(--black);
+}
+
 .about-author-container .text-box {
     display: flex;
     flex-direction: column;
@@ -135,9 +211,11 @@
 }
 
 .about-author-container .text-box h3 {
-    font-family: 'Potta One', sans-serif;
-    font-size: 3rem;
-    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 8px 0px 0px var(--green-darker-alpha);
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 8vh;
 }
 
 .about-author-container .text-box p {
@@ -156,4 +234,65 @@
     padding: 4% 12%;
 
     background-color: var(--green-darker);
+}
+
+#author-box-one {
+    position: relative;
+
+    background-color: #e5e591;
+    box-shadow: inset 10px 10px 0px var(--black);
+    overflow: hidden;
+}
+#author-box-one #card-svg-loyalist {
+    position: absolute;
+    top: 0;
+    left: -25%;
+
+    height: 120vh;
+    filter: drop-shadow(20px 0px 0px #111);
+}
+#author-box-two {
+    position: relative;
+
+    background-color: #a8c6cf;
+    box-shadow: inset 10px 10px 0px var(--black);
+    overflow: hidden;
+}
+#author-box-two #card-svg-investigator {
+    position: absolute;
+    top: 10vh;
+    left: 5%;
+
+    height: 120vh;
+    filter: drop-shadow(20px 0px 0px #111);
+}
+#author-box-three {
+    position: relative;
+
+    background-color: #a8c6cf;
+    box-shadow: inset 10px 10px 0px var(--black);
+    overflow: hidden;
+}
+#author-box-three #card-svg-individualist {
+    position: absolute;
+    top: 5vh;
+    left: -20%;
+
+    height: 120vh;
+    filter: drop-shadow(20px 0px 0px #111);
+}
+#author-box-four {
+    position: relative;
+
+    background-color: #a8c6cf;
+    box-shadow: inset 10px 10px 0px var(--black);
+    overflow: hidden;
+}
+#author-box-four #card-svg-enthusiast {
+    position: absolute;
+    top: 0;
+    left: -25%;
+
+    height: 120vh;
+    filter: drop-shadow(20px 0px 0px #111);
 }

@@ -228,8 +228,9 @@ body {
     border-radius: 4px;
     box-shadow: 4px 4px 0px var(--black);
 
-    font-family: 'Potta One', sans-serif;
-    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
 
     cursor: pointer;
     transition: all 0.2s ease;
@@ -316,8 +317,8 @@ body {
 
 .profile-btn-toggled,
 #toggle-profile-btn:hover {
-    background-color: var(--green-primary);
-    color: var(--white-smoke);
+    background-color: var(--green-light);
+    color: var(--green-darker);
 }
 .hidden {
     display: none !important;
