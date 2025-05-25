@@ -91,7 +91,7 @@ const svgMap = {
     5: svgInvestigator,
     6: svgLoyalist,
     7: svgEnthusiast,
-    8: ``,
+    8: svgChallenger,
     9: svgPeacemaker,
 };
 

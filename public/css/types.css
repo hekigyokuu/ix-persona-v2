@@ -168,7 +168,7 @@
     align-items: center;
 
     width: 100%;
-    height: 230vh;
+    height: 265vh;
 
     padding: 8%;
 
@@ -181,7 +181,7 @@
 
     width: 100%;
     max-width: 1920px;
-    height: 210vh;
+    height: 245vh;
     padding: 5%;
 
     background-color: var(--green-darker-darker);
@@ -237,7 +237,7 @@
     justify-content: center;
     align-items: center;
 
-    height: 440vh;
+    height: 800vh;
     width: 100%;
 
     padding: 8%;
@@ -251,7 +251,7 @@
 
     width: 100%;
     max-width: 1920px;
-    height: 420vh;
+    height: 780vh;
     padding: 5%;
 
     background-color: var(--green-darker-darker);
@@ -330,7 +330,7 @@
     justify-content: center;
     align-items: center;
 
-    height: 100vh;
+    height: 200vh;
     width: 100%;
 
     padding: 8%;
@@ -345,7 +345,7 @@
 
     width: 100%;
     max-width: 1920px;
-    height: 90vh;
+    height: 180vh;
     padding: 5%;
 
     background-color: var(--green-darker-darker);
@@ -896,6 +896,10 @@
     fill: #87a96b;
     stroke: #190041;
 }
+#type-five #card-svg-investigator ellipse {
+    fill: #87a96b;
+    stroke: #190041;
+}
 
 /* Type 6 - The Loyalist */
 #type-six .card-front,
@@ -950,6 +954,10 @@
     fill: #87a96b;
     stroke: #381300;
 }
+#type-seven #card-svg-enthusiast ellipse {
+    fill: #87a96b;
+    stroke: #381300;
+}
 
 /* Type 8 - The Challenger */
 #type-eight .card-front,
@@ -965,15 +973,19 @@
 #type-eight .card-type {
     background-color: #350000;
 }
-#type-eight #card-svg-reformer {
+#type-eight #card-svg-challenger {
     position: absolute;
     filter: drop-shadow(5px 5px 0px #350000);
 }
-#type-eight #card-svg-reformer path {
+#type-eight #card-svg-challenger path {
     fill: #87a96b;
     stroke: #350000;
 }
-#type-eight #card-svg-reformer circle {
+#type-eight #card-svg-challenger circle {
+    fill: #87a96b;
+    stroke: #350000;
+}
+#type-eight #card-svg-challenger ellipse {
     fill: #87a96b;
     stroke: #350000;
 }

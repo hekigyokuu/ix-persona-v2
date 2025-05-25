@@ -176,6 +176,7 @@
 
 .profile-image #card-svg-investigator {
     position: absolute;
+    top: 10%;
     left: 10%;
 }
 
@@ -191,6 +192,11 @@
 }
 
 .profile-image #card-svg-enthusiast {
+    position: absolute;
+    top: 0;
+}
+
+.profile-image #card-svg-challenger {
     position: absolute;
     top: 0;
 }
