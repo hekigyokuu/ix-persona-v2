@@ -257,7 +257,7 @@ const types = [
             {
                 type: 'SP',
                 name: 'Satisfaction',
-                svg: svgReformer,
+                svg: svgChallenger,
                 briefDesc:
                     'Focuses on the need to be protective of their families, health, finances, and home.',
                 fullDesc:
@@ -266,7 +266,7 @@ const types = [
             {
                 type: 'SO',
                 name: 'CT - Solidarity',
-                svg: svgReformer,
+                svg: svgChallenger,
                 briefDesc:
                     'Focuses on the need to be protective of their groups and communities.',
                 fullDesc:
@@ -275,7 +275,7 @@ const types = [
             {
                 type: 'SX',
                 name: 'Possession',
-                svg: svgReformer,
+                svg: svgChallenger,
                 briefDesc:
                     'Focuses on the need to be protective of their intimate connections.',
                 fullDesc:

@@ -400,9 +400,7 @@ function getTypeSVG(topType) {
         'The Investigator': svgInvestigator,
         'The Loyalist': svgLoyalist,
         'The Enthusiast': svgEnthusiast,
-        'The Challenger': `
-           
-        `,
+        'The Challenger': svgChallenger,
         'The Peacemaker': svgPeacemaker,
     };
 

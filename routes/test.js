@@ -34,9 +34,9 @@ router.post('/save-test-result', async (req, res) => {
                 .status(404)
                 .json({ success: false, message: 'User not found' });
         }
+        console.log('>> User Update: ' + updatedUser);
 
         req.session.user.personality = personality;
-
         res.status(200).json({ success: true });
     } catch (err) {
         console.log('\x1b[31mError saving test result:', err);
@@ -60,6 +60,8 @@ router.post('/log-history', async (req, res) => {
             personality,
         });
 
+        console.log('History Object: ' + historyEntry);
+
         await historyEntry.save();
 
         res.status(201).json({
@@ -80,6 +82,8 @@ router.get('/history', async (req, res) => {
         const history = await History.find({
             userId: req.session.user.id,
         }).sort({ takenAt: -1 });
+
+        console.log(history);
 
         res.json({ success: true, history });
     } catch (err) {

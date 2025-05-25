@@ -50,6 +50,8 @@ router.post(
                 });
             }
 
+            console.log('>> Retrieve User Info: ' + user);
+
             const passwordMatch = await bcrypt.compare(password, user.password);
             if (!passwordMatch) {
                 return res.status(401).json({
@@ -122,13 +124,7 @@ router.post(
         }
 
         try {
-            const {
-                username,
-                password,
-                name = 'AnOnymOUs@UsEr123',
-                age,
-                gender = 'Not Stated',
-            } = req.body;
+            const { username, password, name, age, gender } = req.body;
 
             const existingUser = await User.findOne({ username });
             if (existingUser) {
@@ -138,16 +134,18 @@ router.post(
                 });
             }
 
+            // << Hashing 2^10 Iteration >>
             const hashedPassword = await bcrypt.hash(password, 10);
 
             const newUser = new User({
                 username,
                 password: hashedPassword,
-                name,
+                name: name || undefined,
+                gender: gender || undefined,
                 age,
-                gender,
-                createdAt: new Date(new Date().getTime() + 8 * 60 * 60 * 1000),
             });
+
+            console.log('>> New User Details: ' + newUser);
 
             console.log('\x1b[32m>> New Account Created...');
             console.log(

@@ -46,6 +46,13 @@ app.use(
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((req, res, next) => {
+    console.log(JSON.stringify(req.session, null, 2));
+    console.log('>> Session ID: ' + req.session.id);
+    console.log('>> Session User ID: ' + req.session.user?.id);
+    next();
+});
+
 // << MOUNTS ALL ROUTES >>
 app.use('/', routes);
 
