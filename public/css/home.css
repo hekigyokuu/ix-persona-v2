@@ -1,28 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
 
 :root {
-    /* Greens */
-    --green-primary: #1cb61c;
-    --green-dark: #2c4a3b;
-    --green-darker: #275e47;
-    --green-darker-alpha: #275e47aa;
-    --green-darker-darker: #183c2c;
-    --green-light: #87c4a9;
-    --green-light-alpha: #87c4a9aa;
-
-    /* Grays */
-    --gray-light: #f5f5f5;
-    --gray-medium: #cccccc;
-    --gray-dark: #888;
-    --gray-darker: #2c2c2c;
-
-    /* Neutrals */
-    --white-smoke: #f1f1f1;
-    --black: #111;
-
-    /* Special Tones */
-    --lavender-light: #f0f0ff;
-
     --white-smoke: #f9fafb;
     --charcoal: #374151;
     --medium-slate: #8a93a1;
@@ -100,7 +78,7 @@ html {
 
     font-family: 'Jersey 25', monospace;
     font-size: 1.5rem;
-    color: var(--rich-black);
+    color: var(--white-smoke);
     text-align: center;
     text-shadow: 1px 1px 0px var(--rich-black);
 }
@@ -389,7 +367,7 @@ html {
     border-top: 1px solid var(--light-slate);
 
     font-size: 1.8rem;
-    color: var(--gray-light);
+    color: var(--white-smoke);
 
     overflow: hidden;
 }
@@ -408,7 +386,7 @@ html {
 }
 
 .random-quotes-container p {
-    padding: 1%;
+    padding: 2%;
 
     background-color: var(--charcoal);
     box-shadow: 15px 15px 0px var(--light-slate);

@@ -204,7 +204,7 @@ const types = [
             },
             {
                 type: 'SX',
-                name: 'CT - Strength | Beauty',
+                name: 'CT - Strength/Beauty',
                 svg: svgLoyalist,
                 briefDesc:
                     'Focuses on the need to be secure/supported with their intimate connections.',
