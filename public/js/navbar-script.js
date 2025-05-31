@@ -9,9 +9,3 @@ window.addEventListener('scroll', () => {
         navbar.classList.add('scrolled-navbar');
     }
 });
-
-const logo = document.getElementById('web-logo');
-
-logo.addEventListener('click', () => {
-    window.location.href = '/';
-});

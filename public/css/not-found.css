@@ -1,24 +1,20 @@
 :root {
-    /* Greens */
-    --green-primary: #1cb61c;
-    --green-dark: #2c4a3b;
-    --green-darker: #275e47;
-    --green-darker-alpha: #275e47aa;
-    --green-light: #87c4a9;
-    --green-light-alpha: #87c4a9aa;
+    /* Main Colors */
+    --white-smoke: #f9fafb;
+    --charcoal: #374151;
+    --light-slate: #a5afc0;
+    --amber-700: #d97706;
+    --amber-500: #f59e0b;
+    --rich-black: #202225;
+    --light-gray: #f3f4f6;
 
-    /* Grays */
-    --gray-light: #f5f5f5;
-    --gray-medium: #cccccc;
-    --gray-dark: #888;
-    --gray-darker: #2c2c2c;
+    /* Button */
+    --button-bg: var(--amber-700);
+    --button-border: var(--amber-500);
+    --button-hover: var(--amber-500);
 
-    /* Neutrals */
-    --white-smoke: #f1f1f1;
-    --black: #111;
-
-    /* Special Tones */
-    --lavender-light: #f0f0ff;
+    /* Shadow */
+    --shadow-dark: var(--charcoal);
 }
 
 .not-found-container {
@@ -29,9 +25,9 @@
     height: 100vh;
     width: 100%;
 
-    background: var(--green-darker);
+    background: var(--rich-black);
 
-    font-family: 'Mansalva', cursive;
+    font-family: 'Jersey 25', monospace;
     padding: 30px;
 }
 
@@ -44,27 +40,21 @@
 .not-found-message {
     margin-bottom: 20px;
 
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
-    color: var(--green-light);
+    color: var(--amber-500);
     line-height: 1.4;
 }
 
 .not-found-subtext {
-    font-family: 'Preahvihear', cursive;
-    font-size: 1.2rem;
-    color: var(--green-light);
+    font-size: 2rem;
+    color: var(--amber-700);
 }
 
 .not-found-home-link {
-    font-size: 1.2rem;
-    color: var(--green-light);
+    font-size: 1.7rem;
+    color: var(--amber-500);
     text-decoration: none;
 
     cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.not-found-home-link:hover {
-    color: var(--green-primary);
 }

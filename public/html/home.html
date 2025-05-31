@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>IXpersona - Home</title>
+
+        <link rel="stylesheet" href="css/global.css" />
+        <link rel="stylesheet" href="css/home.css" />
+
+        <script defer src="js/popup-script.js"></script>
+        <script defer src="js/navbar-script.js"></script>
+        <script defer src="js/authentication.js"></script>
+        <script defer src="js/button-script.js"></script>
+        <script defer src="js/svg.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container"></div>
+            <button id="go-menu">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-left"
+                >
+                    <line x1="19" y1="12" x2="5" y2="12" />
+                    <polyline points="12 19 5 12 12 5" />
+                </svg>
+                Back to Menu
+            </button>
+            <button onclick="window.location.href = '/enneagram-types'">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-grid"
+                >
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+                Enneagram Types
+            </button>
+            <button onclick="window.location.href = '/enneagram-test'">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right"
+                >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                </svg>
+                Take the Test
+            </button>
+            <div class="navbar-container"></div>
+        </nav>
+
+        <section class="hero-section">
+            <h1 class="quote">
+                Who looks outside, <span>dreams</span> <br /><span
+                    >Who looks inside,</span
+                >
+                awakes
+            </h1>
+            <p class="subtext">
+                Reflect inward. Embrace self-awareness. Awaken your inner truth.
+            </p>
+            <button class="hero-button cta-button">Take the Test ➜</button>
+        </section>
+
+        <section class="why-use-info">
+            <h2>Why Know Your Personality?</h2>
+            <div class="why-use-box-container">
+                <div class="why-use-box">
+                    <h4>>> Know Your Core</h4>
+                    <hr />
+                    <p>
+                        <br />
+                        > Discover your strengths and blind spots. <br /><br />>
+                        Make decisions that truly reflect who you are.
+                    </p>
+                    <hr />
+                </div>
+                <div class="why-use-box">
+                    <h4>>> Connect Deeper</h4>
+                    <hr />
+                    <p>
+                        <br />
+                        > Understand your relationship patterns. <br /><br />>
+                        Build bonds rooted in authenticity.
+                    </p>
+                    <hr />
+                </div>
+                <div class="why-use-box">
+                    <h4>>> Live Aligned</h4>
+                    <hr />
+                    <p>
+                        <br />
+                        > Align your life with your core values. <br /><br />>
+                        Pursue goals that ignite your passion.
+                    </p>
+                    <hr />
+                </div>
+            </div>
+        </section>
+
+        <section class="types-poster">
+            <div class="types-large-header-container">
+                <h2 class="types-large-header">
+                    <span>Explore</span><br />
+                    Nine <br /><span>Enneagram</span><br />
+                    Types
+                </h2>
+            </div>
+        </section>
+
+        <section class="types-poster-personalities">
+            <div class="types-poster-container">
+                <div class="types-poster-grid">
+                    <button class="poster-type-btn" id="btn-to-one">
+                        1. The Reformer
+                    </button>
+                    <button class="poster-type-btn" id="btn-to-two">
+                        2. The Helper
+                    </button>
+                    <button class="poster-type-btn" id="btn-to-three">
+                        3. The Achiever
+                    </button>
+                    <button class="poster-type-btn" id="btn-to-four">
+                        4. The Individualist
+                    </button>
+                    <button class="poster-type-btn" id="btn-to-five">
+                        5. The Investigator
+                    </button>
+                    <button class="poster-type-btn" id="btn-to-six">
+                        6. The Loyalist
+                    </button>
+                    <button class="poster-type-btn" id="btn-to-seven">
+                        7. The Enthusiast
+                    </button>
+                    <button class="poster-type-btn" id="btn-to-eight">
+                        8. The Challenger
+                    </button>
+                    <button class="poster-type-btn" id="btn-to-nine">
+                        9. The Peacemaker
+                    </button>
+                </div>
+
+                <div class="types-poster-navigation">
+                    <a href="/enneagram-types" class="types-poster-explore-type"
+                        >EXPLORE TYPES ➜</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="random-quotes">
+            <div class="random-quotes-container">
+                <p>
+                    <i
+                        >“The curious paradox is that when I accept myself just
+                        as I am, then I can change.”</i
+                    >
+                </p>
+                <p class="author">- <b>Carl Rogers</b></p>
+            </div>
+        </section>
+
+        <section class="self-discovery">
+            <div class="self-discovery-container">
+                <h1 class="self-discovery-quote">
+                    Grow Into Your Best Self<br />
+                    <span class="highlight">Start With Self-Discovery</span>
+                </h1>
+                <p class="self-discovery-subtext">
+                    Unlock your personality insights in just 10 minutes
+                </p>
+                <button class="self-discovery-button cta-button">
+                    Take the Test ➜
+                </button>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="ft-left">
+                <h2>IXpersona</h2>
+                <div class="social-icons"></div>
+            </div>
+            <div class="ft-columns">
+                <div class="ft-column">
+                    <h4>Topic</h4>
+                    <a href="#">Page</a>
+                    <a href="#">Page</a>
+                    <a href="#">Page</a>
+                </div>
+                <div class="ft-column">
+                    <h4>Topic</h4>
+                    <a href="#">Page</a>
+                    <a href="#">Page</a>
+                    <a href="#">Page</a>
+                </div>
+                <div class="ft-column">
+                    <h4>Topic</h4>
+                    <a href="#">Page</a>
+                    <a href="#">Page</a>
+                    <a href="#">Page</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

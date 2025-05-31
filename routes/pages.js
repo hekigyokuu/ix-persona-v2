@@ -43,6 +43,11 @@ router.get('/check-session', (req, res) => {
     }
 });
 
+router.get('/homepage', (req, res) => {
+    console.log('\x1b[34m>> Status Code: 200 - GET /homepage');
+    res.sendFile(path.join(__dirname, '..', 'public', 'html', 'home.html'));
+});
+
 router.get('/about-us', (req, res) => {
     console.log('\x1b[34m>> Status Code: 200 - GET /about-us');
     res.sendFile(path.join(__dirname, '..', 'public', 'html', 'about.html'));

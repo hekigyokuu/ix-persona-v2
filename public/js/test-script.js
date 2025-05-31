@@ -201,8 +201,10 @@ const showQuestion = (index) => {
     questionDiv.className = 'test-question';
     questionDiv.innerHTML = `
         <div class="question">
-            <strong>Question ${index + 1} of ${testQuestions.length}:</strong>
-            <h2>${question.text}</h2>
+            <p style="font-size: 2rem">Question ${index + 1} of ${
+        testQuestions.length
+    }:</p>
+            <p style="font-size: 4rem";>${question.text}</p>
         </div>
     `;
     testContainer.appendChild(questionDiv);
@@ -212,11 +214,11 @@ const showQuestion = (index) => {
     optionsDiv.className = 'test-options';
     optionsDiv.innerHTML = `
         <div class="btn-group">
-            <button onclick="handleAnswer(4)" id="answer-five">Strongly Agree</button>
-            <button onclick="handleAnswer(3)" id="answer-four">Agree</button>
-            <button onclick="handleAnswer(2)" id="answer-three">Neutral</button>
-            <button onclick="handleAnswer(1)" id="answer-two">Disagree</button>
-            <button onclick="handleAnswer(0)" id="answer-one">Strongly Disagree</button>
+            <button onclick="handleAnswer(4)" id="answer-five"><span>5</span>Strongly Agree</button>
+            <button onclick="handleAnswer(3)" id="answer-four"><span>4</span>Agree</button>
+            <button onclick="handleAnswer(2)" id="answer-three"><span>3</span>Neutral</button>
+            <button onclick="handleAnswer(1)" id="answer-two"><span>2</span>Disagree</button>
+            <button onclick="handleAnswer(0)" id="answer-one"><span>1</span>Strongly Disagree</button>
         </div>
     `;
     optionsContainer.appendChild(optionsDiv);
@@ -254,7 +256,7 @@ const showResult = () => {
     testResContainer.style.top = '0';
     testResContainer.style.height = '100vh';
     testResContainer.style.width = '100%';
-    testResContainer.style.backgroundColor = 'var(--green-darker-darker)';
+    testResContainer.style.backgroundColor = 'var(--rich-black)';
     testResContainer.classList.add('fade-in');
 
     container.classList.remove('hidden');
@@ -265,8 +267,8 @@ const showResult = () => {
     continueText.style.bottom = '1%';
     continueText.style.left = '1%';
     continueText.style.textAlign = 'center';
-    continueText.style.fontFamily = '"Preahvihear", sans-serif';
-    continueText.style.fontSize = '1.6rem';
+    continueText.style.fontFamily = '"Jersey 25", sans-serif';
+    continueText.style.fontSize = '2.2rem';
     testResContainer.append(continueText);
 
     card.addEventListener(
@@ -304,7 +306,12 @@ const showResult = () => {
                 cardImgContainer.innerHTML = getTypeSVG(topType);
                 card.classList.add('flipped');
 
-                card.classList.add('glowing', `glowing-${typeNumber}`);
+                testResContainer.classList.add(
+                    'glowing',
+                    `glowing-${typeNumber}`
+                );
+                continueText.style.color = 'var(--charcoal)';
+                continueText.style.textShadow = '2px 2px 0px var(--rich-black)';
                 cardTypeContainer.classList.add(
                     'card-type-color',
                     `glowing-${typeNumber}`

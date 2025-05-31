@@ -2,7 +2,6 @@
 // << PAGE LOAD (PROFILE PAGE) - assigning the type color and svg into the profile image container dnamically based on the user's personality extracted >>
 // << RETAKE TEST BUTTON - adding onclick function the navigate into -> /enneagram-test >>
 // << PROFILE LOGOUT BUTTON - adding onclick function that popup the logoutDisplay for logout confirmation >>
-
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const profileApiResponse = await fetch('/profile/api/profile');
@@ -116,7 +115,7 @@ function displayHistory(history) {
         const typeColor = typeColors[typeNumber] || '#ccc';
 
         historyLogItem.innerHTML = `
-            <span class="personality" style="color: ${typeColor}; font-weight: bold;">
+            <span class="personality" style="color: ${typeColor}; font-weight: 400;">
                 ${item.personality}
             </span>
             <span class="date">${date}</span>

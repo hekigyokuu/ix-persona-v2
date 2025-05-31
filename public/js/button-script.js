@@ -39,6 +39,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function createPixelTransition() {
+        // Create overlay element
+        const overlay = document.createElement('div');
+
+        // Style the overlay with pixelated effect
+        Object.assign(overlay.style, {
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: '#3a4657',
+            zIndex: '9999',
+            pointerEvents: 'none',
+            display: 'none',
+            imageRendering: 'pixelated',
+            backgroundImage: `
+      linear-gradient(45deg, #374151 25%, transparent 25%),
+      linear-gradient(-45deg, #374151 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #374151 75%),
+      linear-gradient(-45deg, transparent 75%, #374151 75%)
+    `,
+            backgroundSize: '20px 20px',
+            backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
+
+            clipPath: 'inset(50% 50% 50% 50%)',
+        });
+
+        overlay.id = 'pixel-transition';
+        document.body.append(overlay);
+        return overlay;
+    }
+
+    function startPixelTransition(url) {
+        let overlay =
+            document.getElementById('pixel-transition') ||
+            createPixelTransition();
+
+        overlay.style.display = 'block';
+        overlay.style.clipPath = 'inset(50% 50% 50% 50%)';
+
+        void overlay.offsetWidth;
+
+        overlay.style.clipPath = 'inset(0% 0% 0% 0%)';
+        overlay.style.transition = 'clip-path 1s steps(8, end)';
+
+        // Navigate when complete
+        overlay.addEventListener(
+            'transitionend',
+            function handler() {
+                overlay.removeEventListener('transitionend', handler);
+                setTimeout(() => {
+                    window.location.href = url;
+                }, 500);
+            },
+            { once: true }
+        );
+    }
+    document.getElementById('go-menu').addEventListener('click', (e) => {
+        e.preventDefault();
+        startPixelTransition('/');
+    });
+
     const setupTypeButton = (buttonId, typeHash) => {
         const typePosterButton = document.getElementById(buttonId);
         if (typePosterButton) {

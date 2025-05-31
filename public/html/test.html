@@ -17,39 +17,62 @@
         <script defer src="../js/test-script.js"></script>
     </head>
     <body>
-        <div id="profile-options" class="hidden"></div>
-        <nav class="navbar scrolled-navbar">
-            <div class="left-group">
-                <div class="web-logo">
-                    <h1 id="web-logo"><span>IX</span>persona</h1>
-                </div>
-                <div class="navigation-links">
-                    <a href="#" id="take-test-nav" class="active"
-                        >Enneagram Test</a
-                    >
-                    <a href="/enneagram-types">Explore Types</a>
-                    <a href="/about-us">About us</a>
-                </div>
-            </div>
-            <div class="action-links">
-                <a href="/auth/login" id="auth-link">Login</a>
-                <button class="nav-button cta-button">Take the Test</button>
-                <button id="toggle-profile-btn" aria-label="Toggle Profile">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                        style="vertical-align: middle; margin: 0px 4px"
-                    >
-                        <circle cx="12" cy="8" r="4" />
-                        <path
-                            d="M12 14c-5 0-9 2.5-9 5v1h18v-1c0-2.5-4-5-9-5z"
-                        />
-                    </svg>
-                </button>
-            </div>
+        <nav class="navbar">
+            <div class="navbar-container"></div>
+            <button id="go-menu">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-left"
+                >
+                    <line x1="19" y1="12" x2="5" y2="12" />
+                    <polyline points="12 19 5 12 12 5" />
+                </svg>
+                Back to Menu
+            </button>
+            <button onclick="window.location.href = '/enneagram-types'">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-grid"
+                >
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+                Enneagram Types
+            </button>
+            <button onclick="window.location.href = '/enneagram-test'">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right"
+                >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                </svg>
+                Take the Test
+            </button>
+            <div class="navbar-container"></div>
         </nav>
 
         <div class="test-instruction" id="popup-instruction">

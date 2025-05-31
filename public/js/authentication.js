@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     if (loggedIn && authLink) {
         authLink.textContent = 'Logout';
         authLink.href = '#';
+        authLink.style.color = '#ff0000';
         authLink.classList.add('logout');
     }
 
@@ -199,6 +200,7 @@ const logout = async () => {
         if (authLink) {
             authLink.textContent = 'Login';
             authLink.href = '/auth/login';
+            authLink.style.color = '#000';
             authLink.classList.remove('logout');
         }
 

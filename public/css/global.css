@@ -11,28 +11,28 @@
   8.  Effects & Motion        → transition, transform, animation
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
 :root {
-    /* Greens */
-    --green-primary: #1cb61c;
-    --green-dark: #2c4a3b;
-    --green-darker: #275e47;
-    --green-darker-alpha: #275e47aa;
-    --green-darker-darker: #183c2c;
-    --green-light: #87c4a9;
-    --green-light-alpha: #87c4a9aa;
+    /* Main Colors */
+    --white-smoke: #f9fafb;
+    --charcoal: #374151;
+    --medium-slate: #8a93a1;
+    --light-slate: #a5afc0;
+    --light-slate-a: #a5afc0aa;
+    --amber-700: #d97706;
+    --amber-500: #f59e0b;
+    --rich-black: #202225;
+    --light-gray: #f3f4f6;
 
-    /* Grays */
-    --gray-light: #f5f5f5;
-    --gray-medium: #cccccc;
-    --gray-dark: #888;
-    --gray-darker: #2c2c2c;
+    /* Button */
+    --button-bg: var(--amber-700);
+    --button-border: var(--amber-500);
+    --button-hover: var(--amber-500);
 
-    /* Neutrals */
-    --white-smoke: #f1f1f1;
-    --black: #111;
-
-    /* Special Tones */
-    --lavender-light: #f0f0ff;
+    /* Shadow */
+    --shadow-dark: var(--charcoal);
 }
 
 @font-face {
@@ -77,21 +77,20 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 20px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--green-light);
-    border-left: 1px solid var(--gray-darker);
+    background: var(--medium-slate);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--green-darker-darker);
+    background: var(--amber-700);
+    border: 1px solid var(--amber-500);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--green-primary);
-    border: 1px solid var(--gray-darker);
+    background: var(--amber-500);
     border-right: none;
 }
 
@@ -101,143 +100,60 @@ body {
     font-family: 'Preahvihear', sans-serif;
 }
 
-/* NAVBAR */
 .navbar {
     position: fixed;
-    z-index: 100;
+    z-index: 9999;
 
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
 
     width: 100%;
-    height: 75px;
-    padding: 1% 4%;
+    height: 80px;
 
-    background-color: var(--lavender-light);
-
-    transition: all 0.1s ease-in-out;
+    background-color: var(--light-slate);
+    border-bottom: 1px solid var(--light-slate);
+    box-shadow: 0px 6px var(--rich-black);
 }
 
-/* NAV SCRIPT CLASS */
 .scrolled-navbar {
-    background-color: var(--gray-light);
-    border-bottom: 2px solid var(--black);
-    box-shadow: 0px 4px 0px var(--gray-darker);
+    box-shadow: 6px 6px var(--rich-black);
 }
 
-/* LEFT GROUP */
-.navbar .left-group {
+.navbar-container {
+    width: 20%;
+    height: 60px;
+
+    background-color: var(--light-slate);
+    border: 1px solid var(--charcoal);
+    box-shadow: inset 8px 8px 0px var(--charcoal);
+}
+
+.navbar button {
     display: flex;
-    justify-content: space-between;
-    width: 55%;
-}
-
-/* LOGO */
-.web-logo {
-    margin-right: 5%;
-
-    font-family: 'Mansalva', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--gray-darker);
-
-    cursor: pointer;
-}
-
-#web-logo span {
-    color: var(--green-dark);
-}
-
-#web-logo:hover {
-    color: var(--green-primary);
-}
-
-#web-logo:hover span {
-    color: var(--green-primary);
-}
-
-/* NAVIGATION LINKS */
-.navigation-links {
-    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
-    gap: 40px;
 
-    width: 50vw;
-    margin-left: 5%;
-}
+    width: 12%;
+    height: 60px;
 
-.navigation-links a,
-.action-links a {
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    color: var(--gray-darker);
-}
+    background-color: transparent;
+    color: var(--charcoal);
+    border: 1px solid var(--charcoal);
+    border-radius: 2px;
+    box-shadow: 2px 2px 0px var(--rich-black);
 
-.navigation-links .active {
-    color: var(--green-primary);
-}
-
-.navigation-links a:hover {
-    color: var(--green-primary);
-}
-
-/* ACTION LINKS */
-.action-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 40px;
-
-    width: 40%;
-}
-
-.action-links a {
-    display: block;
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: all 0.1s ease;
-}
-
-.action-links a:hover {
-    background-color: var(--gray-medium);
-}
-
-.action-links .nav-button {
-    width: 15vw;
-
-    background-color: var(--green-light);
-    color: var(--green-darker);
-}
-
-.action-links .nav-button:hover {
-    background-color: var(--green-light-alpha);
-    color: var(--green-darker-alpha);
-}
-
-/* UNIVERSAL CTA BUTTON */
-.cta-button {
-    padding: 10px 20px;
-
-    border: 2px solid var(--gray-darker);
-    border-radius: 4px;
-    box-shadow: 4px 4px 0px var(--black);
-
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-
-    cursor: pointer;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1rem;
     transition: all 0.2s ease;
 }
 
-.cta-button:hover {
-    transform: scale(1.1);
+.navbar button:hover {
+    background-color: var(--charcoal);
+    color: var(--light-slate);
+    transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -249,8 +165,7 @@ body {
     min-height: 60vh;
     padding: 50px 45px;
 
-    border-top: 2px solid var(--black);
-    background-color: var(--green-darker-darker);
+    background-color: var(--black);
 
     font-family: 'Preahvihear', sans-serif;
     color: var(--gray-light);
@@ -299,10 +214,12 @@ body {
 
 #toggle-profile-btn {
     padding: 5px;
+    width: 44px;
+    aspect-ratio: 1/1;
 
-    border: 2px solid var(--gray-darker);
-    border-radius: 4px;
-    box-shadow: 4px 4px 0px var(--gray-darker);
+    border: none;
+    border-radius: 50px;
+    background: none;
 
     font-family: 'Potta One', sans-serif;
     font-size: 1rem;
@@ -311,15 +228,18 @@ body {
     transition: all 0.2s ease;
 }
 
-#toggle-profile-btn:hover {
-    transform: scale(1.1);
-}
-
 .profile-btn-toggled,
 #toggle-profile-btn:hover {
-    background-color: var(--green-light);
-    color: var(--green-darker);
+    background-color: var(--gray-medium);
+    color: var(--black);
 }
+
 .hidden {
     display: none !important;
+}
+
+.card-svg {
+    shape-rendering: crispEdges;
+    image-rendering: pixelated;
+    filter: contrast(200%) saturate(200%) brightness(120%);
 }

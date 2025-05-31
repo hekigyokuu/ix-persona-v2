@@ -1,25 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
 :root {
-    /* Greens */
-    --green-primary: #1cb61c;
-    --green-dark: #2c4a3b;
-    --green-darker: #275e47;
-    --green-darker-alpha: #275e47aa;
-    --green-darker-darker: #183c2c;
-    --green-light: #87c4a9;
-    --green-light-alpha: #87c4a9aa;
+    /* Main Colors */
+    --white-smoke: #f9fafb;
+    --charcoal: #374151;
+    --charcoal-a: #374151aa;
+    --medium-slate: #8a93a1;
+    --light-slate: #a5afc0;
+    --light-slate-a: #a5afc0aa;
+    --amber-700: #d97706;
+    --amber-500: #f59e0b;
+    --rich-black: #202225;
+    --rich-green: #34575a;
+    --light-gray: #f3f4f6;
 
-    /* Grays */
-    --gray-light: #f5f5f5;
-    --gray-medium: #cccccc;
-    --gray-dark: #888;
-    --gray-darker: #2c2c2c;
+    /* Button */
+    --button-bg: var(--amber-700);
+    --button-border: var(--amber-500);
+    --button-hover: var(--amber-500);
 
-    /* Neutrals */
-    --white-smoke: #f1f1f1;
-    --black: #111;
-
-    /* Special Tones */
-    --lavender-light: #f0f0ff;
+    /* Shadow */
+    --shadow-dark: var(--charcoal);
 }
 
 .enneagram-test {
@@ -27,9 +29,9 @@
     height: 100vh;
     padding: 4% 8%;
 
-    background-color: var(--green-darker);
+    background-color: var(--rich-green);
 
-    color: var(--green-light);
+    color: var(--light-gray);
     text-align: center;
 }
 
@@ -63,9 +65,9 @@
     height: 100%;
     padding: 2%;
 
-    background-color: var(--green-darker-darker);
-    border: 2px solid var(--black);
-    box-shadow: 8px 8px 0px var(--black);
+    background-color: var(--rich-green);
+    border: 1px solid var(--light-slate);
+    box-shadow: 12px 12px 0px var(--rich-black);
 
     font-size: 1.8rem;
 }
@@ -78,13 +80,17 @@
 
     width: 38vw;
     height: 60vh;
-    padding: 2%;
+    padding: 5%;
 
-    background-color: var(--green-dark);
-    border: 2px solid var(--black);
-    box-shadow: inset 4px 4px 0px var(--black);
+    background-color: var(--charcoal);
+    border: 1px solid var(--light-slate);
+    box-shadow: inset 12px 12px 0px var(--rich-black),
+        inset 12px 12px 100px var(--rich-black);
 
-    color: var(--green-light);
+    font-family: 'Jersey 25', monospace;
+    font-size: 3rem;
+    color: var(--amber-500);
+    text-shadow: 4px 2px 0px var(--rich-black);
 }
 
 #test-options-container {
@@ -96,11 +102,9 @@
     height: 100%;
     padding: 2%;
 
-    background-color: var(--green-dark);
-    border: 2px solid var(--black);
-    box-shadow: inset 8px 8px 0px var(--black);
-
-    font-size: 1.8rem;
+    background-color: var(--charcoal);
+    border: 1px solid var(--light-slate);
+    box-shadow: inset 8px 8px 0px var(--rich-black);
 }
 
 #test-options-container .btn-group {
@@ -113,31 +117,49 @@
     height: 60vh;
     padding: 2%;
 
-    background-color: #192b22;
-    border: 2px solid var(--black);
-    box-shadow: inset 4px 4px 0px var(--black);
-
-    color: var(--green-light);
+    background-color: var(--charcoal);
+    border: 1px solid var(--light-slate);
+    box-shadow: inset 12px 12px 0px var(--rich-black);
 }
 
 .btn-group button {
+    position: relative;
+
     width: 80%;
     height: 8vh;
 
-    background-color: var(--green-darker);
-    border: 4px solid var(--black);
+    background-color: var(--amber-700);
+    border: 1px solid var(--amber-500);
     border-radius: 4px;
-    box-shadow: 4px 4px 0px var(--black);
+    box-shadow: 8px 8px 0px var(--rich-black);
 
-    font-family: 'Preahvihear', sans-serif;
-    font-size: 1.4rem;
-    color: var(--white-smoke);
+    font-family: 'Jersey 25', monospace;
+    font-weight: 200;
+    font-size: 1.8rem;
+    color: var(--glow-color);
+    text-shadow: 2px 1px 0px var(--rich-black);
+}
 
-    transition: all 0.2s ease;
+.btn-group span {
+    position: absolute;
+    left: 4%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 27px;
+    aspect-ratio: 1/1;
+
+    border: 1px solid var(--amber-500);
+    color: var(--amber-500);
+
+    font-size: 1.5rem;
+    text-shadow: none;
 }
 
 .btn-group button:hover {
-    background-color: var(--green-darker-alpha);
+    background-color: var(--amber-500);
 
     box-shadow: none;
     transform: translate(2px, 2px);
@@ -159,6 +181,7 @@
 
     background: #000a;
     color: var(--gray-light);
+    text-shadow: 4px 2px 0px var(--rich-black);
 }
 
 .test-instruction-container {
@@ -174,12 +197,12 @@
     width: 60%;
     padding: 2%;
 
-    background: var(--green-darker-darker);
-    border: 4px solid var(--black);
-    border-radius: 4px;
+    background: var(--charcoal);
+    border: 1px solid var(--light-slate);
+    border-radius: 2px;
 
-    font-family: 'Poppins', sans-serif;
-    color: var(--gray-light);
+    font-family: 'Jersey 25', sans-serif;
+    color: var(--light-slate);
     text-align: center;
 }
 
@@ -189,8 +212,7 @@
 
     width: 100%;
 
-    font-size: 2em;
-    color: var(--green-light);
+    font-size: 3rem;
 }
 
 .test-instruction-text-container {
@@ -200,9 +222,9 @@
     height: 45vh;
     padding: 2%;
 
-    background-color: var(--green-darker);
-    border: 2px solid var(--black);
-    box-shadow: inset 2px 2px 0px var(--black);
+    background-color: var(--rich-black);
+    border: 1px solid var(--light-slate);
+    box-shadow: inset 6px 6px 0px var(--charcoal);
 
     overflow: auto;
 }
@@ -210,42 +232,44 @@
 .test-instruction-container p {
     z-index: 1;
 
-    font-family: 'Preahvihear', sans-serif;
-    font-size: 1.2em;
+    font-family: 'Jersey 25', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
     text-align: left;
     color: var(--gray-light);
 }
 
 .skip-instruction-btn {
     width: 30%;
-    height: auto;
+    height: 50px;
     margin-top: 15px;
     padding: 8px 16px;
 
-    background-color: var(--gray-darker);
-    border: 2px solid var(--black);
-    border-radius: 4px;
+    background-color: var(--rich-black);
+    border: 1px solid var(--light-slate);
+    border-radius: 2px;
+    box-shadow: 0px 6px 0px var(--rich-black);
 
-    font-weight: 800;
-    color: var(--gray-light);
+    font-family: 'Jersey 25', monospace;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--white-smoke);
+    text-shadow: 2px 1px 0px var(--rich-black);
 
     cursor: not-allowed;
 }
 
 .skip-instruction-btn.enabled {
-    background-color: var(--green-light);
-
-    color: var(--green-darker-darker);
+    background-color: var(--amber-700);
+    border: 1px solid var(--amber-500);
 
     cursor: pointer;
-    transition: all 0.2s ease;
 }
 
 .skip-instruction-btn.enabled:hover {
-    background-color: var(--green-light-alpha);
-    box-shadow: 0px 6px 0px var(--black);
-
-    transform: scale(1.1);
+    background-color: var(--amber-500);
+    box-shadow: none;
+    transform: translateY(4px);
 }
 
 body.lock-scroll {
@@ -281,9 +305,12 @@ body.lock-scroll {
     height: 80vh;
     padding: 3%;
 
-    background-color: var(--gray-dark);
-    border: 4px solid var(--black);
+    background-color: var(--charcoal);
+    border: 1px solid var(--rich-black);
     border-radius: 4px;
+
+    font-family: 'Jersey 25', monospace;
+    color: var(--rich-black);
 
     backface-visibility: hidden;
 }
@@ -294,17 +321,19 @@ body.lock-scroll {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #87a96b;
-    font-family: 'Poppins', sans-serif;
+    border: 1px solid var(--light-slate);
+    color: var(--rich-black);
+    font-family: 'Jersey 25', sans-serif;
     font-size: 4rem;
     font-weight: 800;
-    text-shadow: 4px 4px 0px var(--black);
+    text-shadow: 4px 4px 0px var(--rich-black);
 
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .card-back {
+    border: 1px solid var(--rich-black);
     transform: rotateY(180deg);
     transition: all 0.2s ease;
 }
@@ -313,42 +342,20 @@ body.lock-scroll {
     animation: glow 1s ease-in-out infinite alternate;
 }
 
-.inset-glowing {
-    animation: inset-glow 3s ease-in-out infinite alternate;
-}
-
 @keyframes glow {
     0% {
-        box-shadow: 0 0 10px 10px var(--glow-color),
-            0 0 5px 5px var(--glow-color);
+        background-color: var(--glow-color);
     }
     50% {
-        box-shadow: 0 0 100px 50px var(--glow-color),
-            0 0 100px 50px var(--glow-color);
+        background-color: var(--glow-color);
     }
     100% {
-        box-shadow: 0 0 10px 10px var(--glow-color),
-            0 0 5px 5px var(--glow-color);
-    }
-}
-
-@keyframes inset-glow {
-    0% {
-        box-shadow: inset 0px -5px 0px var(--glow-color),
-            inset 0px -10px 0px var(--glow-color);
-    }
-    50% {
-        box-shadow: inset 0px -500px 0px var(--glow-color),
-            inset 0px -1000px 0px var(--glow-color);
-    }
-    100% {
-        box-shadow: inset 0px -5px 0px var(--glow-color),
-            inset 0px -10px 0px var(--glow-color);
+        background-color: var(--glow-color);
     }
 }
 
 .card-svg {
-    filter: drop-shadow(8px 8px 0px #111);
+    filter: drop-shadow(12px 8px 0px var(--charcoal));
 }
 
 /* Type 1 - The Reformer */
@@ -368,12 +375,12 @@ body.lock-scroll {
 
 /* Type 4 - The Individualist */
 .glowing-4 {
-    --glow-color: #9f6ea5;
+    --glow-color: #aa8ead;
 }
 
 /* Type 5 - The Investigator */
 .glowing-5 {
-    --glow-color: #7767a3;
+    --glow-color: #897ea7;
 }
 
 /* Type 6 - The Loyalist */
@@ -388,7 +395,7 @@ body.lock-scroll {
 
 /* Type 8 - The Challenger */
 .glowing-8 {
-    --glow-color: #b45b5b;
+    --glow-color: #eebfbf;
 }
 
 /* Type 9 - The Peacemaker */
@@ -409,8 +416,21 @@ body.lock-scroll {
     }
 }
 
+@keyframes float {
+    0% {
+        transform: rotateY(180deg) translateY(0);
+    }
+    50% {
+        transform: rotateY(180deg) translateY(-10px);
+    }
+    100% {
+        transform: rotateY(180deg) translateY(0);
+    }
+}
+
 .flipped {
-    transform: rotateY(180deg);
+    box-shadow: -12px 12px 0px var(--charcoal);
+    animation: float 2s ease-in-out infinite;
 }
 
 .card-name {
@@ -422,11 +442,11 @@ body.lock-scroll {
     height: 9vh;
     padding: 1% 3%;
 
-    border: 4px solid var(--black);
+    border: 2px solid var(--rich-black);
 
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 800;
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 3px;
 }
 
 .card-type {
@@ -434,11 +454,12 @@ body.lock-scroll {
     justify-content: center;
     align-items: center;
 
-    height: 5vh;
+    height: 30px;
     aspect-ratio: 1/1;
 
-    border: 3px solid var(--black);
+    border: 1px solid var(--rich-black);
     border-radius: 4px;
+    box-shadow: 1px 1px 0px var(--charcoal);
 }
 
 .card-brief-description {
@@ -446,24 +467,27 @@ body.lock-scroll {
     width: 100%;
     height: 30vh;
 
-    border: 3px solid var(--black);
-
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+    font-weight: 200;
     text-align: left;
+    letter-spacing: 1px;
 }
 
 .card-front,
 .card-back {
-    background-color: #4a6b3a;
-    color: #1d3514;
+    background-color: var(--charcoal);
+    color: var(--light-slate);
 }
 
 .card-name,
 .card-brief-description,
 .card-img {
-    background-color: #87a96b;
-    border: 3px solid #2e5a1c;
-    box-shadow: inset 4px 4px 0px var(--black), inset -2px -2px 0px var(--black);
+    background-color: var(--light-slate);
+    border: 1px solid var(--rich-black);
+    color: var(--charcoal);
+    text-shadow: 1px 1px 0px var(--rich-black);
+    box-shadow: inset 4px 4px 0px var(--charcoal),
+        inset -2px -2px 0px var(--charcoal);
 }
 
 .card-img {
@@ -472,19 +496,18 @@ body.lock-scroll {
     width: 100%;
     height: 40vh;
 
-    border: 4px solid var(--black);
-    box-shadow: none;
+    border: 1px solid var(--rich-black);
 
     overflow: hidden;
 }
 
 .card-type {
-    background-color: #2e5a1c;
-    color: #87a96b;
+    background-color: var(--light-slate);
+    color: var(--rich-black);
 }
 
 .card-type-color {
-    color: #111;
+    color: var(--rich-black);
     background-color: var(--glow-color);
 }
 
@@ -528,6 +551,10 @@ body.lock-scroll {
 .card-img #card-svg-peacemaker {
     position: absolute;
     width: 110%;
-    top: 5vh;
-    left: 13%;
+    top: 0;
+    left: 0;
+}
+
+.inset-glowing {
+    background-color: var(--glow-color);
 }
