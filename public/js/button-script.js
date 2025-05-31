@@ -101,6 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         startPixelTransition('/');
     });
+    document.getElementById('go-types').addEventListener('click', (e) => {
+        e.preventDefault();
+        startPixelTransition('/enneagram-types');
+    });
+    document.getElementById('go-test').addEventListener('click', (e) => {
+        e.preventDefault();
+        startPixelTransition('/enneagram-test');
+    });
 
     const setupTypeButton = (buttonId, typeHash) => {
         const typePosterButton = document.getElementById(buttonId);

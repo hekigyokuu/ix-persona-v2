@@ -66,14 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    function clearScreenDisplay() {
-        screenDisplay.innerHTML = '';
-    }
-
-    function zoomInScreenDisplay() {
-        screenDisplay.classList.add('zoom-in-effect');
-    }
-
     function startTest(e) {
         e.preventDefault();
         startPixelTransition('/enneagram-test');
@@ -135,22 +127,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const key = event.key.toLowerCase();
         switch (key) {
             case 't':
-                startTest();
+                startTest(e);
                 break;
             case 'p':
-                openProfile();
+                openProfile(e);
                 break;
             case 'h':
-                goHome();
+                goHome(e);
                 break;
             case 'e':
-                viewTypes();
+                viewTypes(e);
                 break;
             case 'a':
-                openAbout();
+                openAbout(e);
                 break;
             case 'escape':
-                confirmExit();
+                confirmExit(e);
                 break;
         }
     });

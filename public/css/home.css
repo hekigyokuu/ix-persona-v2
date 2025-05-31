@@ -102,6 +102,7 @@ html {
     font-size: 1.5rem;
     color: var(--rich-black);
     text-align: center;
+    text-shadow: 1px 1px 0px var(--rich-black);
 }
 
 .hero-button:hover {
@@ -120,7 +121,7 @@ html {
     padding: 5% 13%;
 
     background: var(--rich-black);
-    border-bottom: 6px solid var(--light-slate);
+    border-bottom: 6px solid var(--charcoal);
     color: var(--green-darker);
 }
 
@@ -158,9 +159,9 @@ html {
     height: 450px;
     padding: 3%;
 
-    border: 6px solid var(--amber-500);
+    border: 6px solid var(--light-slate);
     border-radius: 4px;
-    background: var(--amber-700);
+    background: var(--light-slate-a);
 
     color: var(--white-smoke);
     overflow: hidden;
@@ -194,7 +195,7 @@ html {
 }
 
 .why-use-box:hover {
-    background-color: var(--amber-500);
+    background-color: var(--light-slate);
     box-shadow: 12px 12px 0px var(--charcoal);
 
     text-shadow: none;
@@ -215,14 +216,9 @@ html {
 
     width: 100%;
     padding: 15%;
-    padding-top: 50%;
+    padding-top: 30%;
 
-    background: linear-gradient(
-        to bottom,
-        var(--green-light) 0%,
-        var(--green-darker) 60%,
-        var(--green-darker) 100%
-    );
+    background: var(--light-slate);
 
     overflow: hidden;
 }
@@ -240,15 +236,15 @@ html {
 
     padding: 5%;
 
-    background-color: var(--green-darker);
-    box-shadow: 20px 20px 0px var(--green-light);
-    border: 3px solid var(--green-light);
-    border-radius: 4px;
+    background-color: var(--charcoal);
+    box-shadow: 10px 10px 0px var(--rich-black);
+    border: 6px solid var(--amber-500);
+    border-radius: 2px;
 
-    font-family: 'Preahvihear', sans-serif;
-    font-size: 8rem;
-    line-height: 1.3;
-    color: var(--green-light);
+    font-family: 'Jersey 25', monospace;
+    font-size: 10rem;
+    color: var(--amber-700);
+    text-shadow: 6px 6px 0px var(--rich-black);
 }
 
 .types-poster-reformer {
@@ -260,13 +256,31 @@ html {
     width: 70%;
     max-width: 900px;
 
-    filter: drop-shadow(30px 0px 0px var(--green-light));
+    shape-rendering: crispEdges;
+    image-rendering: pixelated;
+    filter: contrast(200%) saturate(200%) brightness(120%);
+    filter: drop-shadow(10px 0px 0px var(--rich-black));
+}
+
+.types-poster-reformer path {
+    stroke: var(--amber-700);
+    fill: var(--amber-500);
+}
+.types-poster-reformer circle {
+    stroke: var(--amber-700);
+    fill: var(--amber-500);
+    filter: drop-shadow(2px 2px 0px var(--rich-black));
+}
+.types-poster-reformer ellipse {
+    stroke: var(--amber-700);
+    fill: var(--amber-500);
 }
 
 .types-large-header span {
     padding: 1%;
+    color: var(--amber-500);
 
-    font-size: 6rem;
+    font-size: 8rem;
 }
 
 .types-poster-personalities {
@@ -279,11 +293,12 @@ html {
 
     min-height: 100vh;
 
-    background-color: var(--green-darker-darker);
-    border-top: 3px solid var(--green-light);
+    background-color: var(--charcoal);
+    border-top: 6px solid var(--amber-700);
+    box-shadow: inset 0px 10px 0px var(--rich-black);
 
-    font-family: 'Potta One', cursive;
-    color: var(--green-light);
+    font-family: 'Jersey 25', monospace;
+    color: var(--light-slate);
 }
 
 .types-poster-container {
@@ -309,27 +324,25 @@ html {
     height: 70px;
     padding: 15px 30px;
 
-    border: 3px solid var(--green-light);
-    border-radius: 4px;
-    background-color: var(--green-darker);
+    border: 3px solid var(--amber-500);
+    border-radius: 2px;
+    background-color: var(--amber-700);
+    box-shadow: 6px 6px 0px var(--rich-black);
 
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: var(--green-light);
+    font-family: 'Jersey 25', monospace;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--white-smoke);
+    text-shadow: 1px 1px 0px var(--rich-black);
 
     cursor: pointer;
-
-    transition: all 0.2s ease;
 }
 
 .poster-type-btn:hover {
     transform: scale(1.03);
 
-    background-color: var(--green-light);
-    border: 1px solid var(--black);
-
-    color: var(--black);
+    background-color: var(--amber-500);
+    text-shadow: none;
 }
 
 .types-poster-navigation {
@@ -338,10 +351,10 @@ html {
 }
 
 .types-poster-explore-type {
-    font-size: 3.5rem;
+    font-size: 4rem;
     text-decoration: none;
-    color: var(--green-light);
-    transition: all 0.2s ease;
+    color: var(--light-slate);
+    text-shadow: 4px 4px 0px var(--rich-black);
 }
 
 .types-poster-explore-type:hover {
@@ -354,14 +367,11 @@ html {
     align-self: center;
 
     width: 100%;
-    height: 140vh;
+    height: 50vh;
     padding: 15%;
 
-    background: linear-gradient(
-        to bottom,
-        var(--green-darker-darker) 0%,
-        var(--green-darker) 100%
-    );
+    background: var(--rich-black);
+    border-top: 6px solid var(--light-slate);
 
     font-size: 1.8rem;
     color: var(--gray-light);
@@ -380,84 +390,15 @@ html {
 .random-quotes-container p {
     padding: 1%;
 
-    background-color: var(--green-darker-darker);
-    box-shadow: 15px 15px 0px var(--green-darker);
+    background-color: var(--charcoal);
+    box-shadow: 15px 15px 0px var(--light-slate);
+
+    font-family: 'Jersey 25', monospace;
+    font-size: 2rem;
+
+    text-shadow: 4px 2px 0px var(--rich-black);
 }
 
 .random-quotes .author {
-    font-weight: 700;
-}
-
-.self-discovery {
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 170vh;
-    padding: 15%;
-
-    background: linear-gradient(
-        to bottom,
-        var(--green-darker) 0%,
-        var(--lavender-light) 100%
-    );
-
-    overflow: hidden;
-}
-
-.self-discovery-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    z-index: 1;
-
-    width: 100%;
-    max-width: 1920px;
-}
-
-.self-discovery-quote {
-    margin-bottom: 2rem;
-
-    font-family: 'Poppins', cursive;
-    font-size: 4rem;
-    color: var(--gray-darker);
-    line-height: 1.4;
-    text-align: center;
-}
-
-.self-discovery-quote span {
-    color: var(--green-dark);
-}
-
-.self-discovery-subtext {
-    font-family: Preahvihear, sans-serif;
-    font-size: 1.4rem;
-    line-height: 2;
-    color: var(--gray-darker);
-    text-align: center;
-}
-
-.self-discovery-button {
-    width: 42%;
-    padding: 12px;
-    margin-top: 2%;
-
-    border: 1px solid var(--black);
-    background-color: var(--green-darker-darker);
-    border-radius: 4px;
-
-    color: var(--green-light);
-    text-align: center;
-}
-
-.self-discovery-button:hover {
-    background-color: var(--green-light);
-    box-shadow: none;
-    color: var(--black);
+    font-weight: 500;
 }
