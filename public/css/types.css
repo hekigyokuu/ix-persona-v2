@@ -1356,5 +1356,94 @@
     }
 }
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /*Phone*/
 
+=======
+=======
+>>>>>>> Stashed changes
+/*desktop*/
+@media (max-width: 1536px){
+    .types-container-info {
+    height: 1450px;
+    width: 100%;
+    padding: 7%;
+    }
+
+    .enneagram-full-information-container {
+    width: 100%;
+    max-width: 1920px;
+    height: 106%;
+    padding: 5%;
+    border-radius: 2px;
+    }
+
+    .enneagram-full-information-container h3{
+        width: 100%;
+
+        font-size: 8.5rem;
+        line-height: 1;
+    }
+
+    .enneagram-full-information-container p{
+        width: 100%;
+
+    font-size: 2.6rem;
+    line-height: 1.5;
+    }
+
+    .types-ct-information {
+    height: 1170px;
+    width: 100%;
+
+    padding: 8%;
+    }
+
+    .types-container-text-box h3 {
+    width: 100%;
+
+    font-size: 8.5rem;
+    line-height: 1;
+    }
+
+    .types-container-text-box p {
+    width: 100%;
+
+    font-size: 2.8rem;
+    line-height: 1.4;
+    }
+
+    .text-box h3 {
+    width: 100%;
+
+    font-size: 5.5rem;
+    line-height: 1;
+    }
+
+    .text-box p {
+    width: 100%;
+
+    font-size: 2.6rem;
+    line-height: 1.6;
+    }
+
+    .types-subtypes-information {
+        height: 3150px;
+    }
+
+    .subtype-text-box h4 {
+        font-size: 4;
+        line-height: 1;
+    }
+
+    .subtype-text-box p {
+        font-size: 4.9;
+        line-height: 1.9;
+    }
+<<<<<<< Updated upstream
+}
+>>>>>>> Stashed changes
+=======
+}
+>>>>>>> Stashed changes

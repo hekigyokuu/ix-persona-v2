@@ -275,6 +275,8 @@
     text-shadow: 2px 1px 0px var(--rich-black);
 }
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /*phone*/
 @media (max-width: 600px) {
   .profile-container {
@@ -337,3 +339,17 @@
     font-size: 0.9rem;
   }
 }
+=======
+=======
+>>>>>>> Stashed changes
+/*desktop*/
+@media (max-width: 1536px){
+    .profile-container{
+        padding: 100px 4% 0 2%;
+    }
+<<<<<<< Updated upstream
+}
+>>>>>>> Stashed changes
+=======
+}
+>>>>>>> Stashed changes

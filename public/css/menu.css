@@ -238,6 +238,8 @@ body {
     }
 }
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /*phones*/
 @media (max-width: 600px) {
     .menu-border {
@@ -287,3 +289,29 @@ body {
         height: 20px;
     }
 }
+=======
+=======
+>>>>>>> Stashed changes
+/*desktop*/
+@media (max-width: 1536px){
+    .menu {
+    height: 100vh;
+    }
+
+    .menu-border {
+    width: 85%;
+    height: 530px;
+    }
+
+    .menu-navigation-group {
+    gap: 23px;
+
+    height: 100%;
+    width: 75%;
+}
+<<<<<<< Updated upstream
+}
+>>>>>>> Stashed changes
+=======
+}
+>>>>>>> Stashed changes
