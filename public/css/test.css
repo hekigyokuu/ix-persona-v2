@@ -606,78 +606,118 @@ body.lock-scroll {
 
 /*Phone*/
 @media (max-width: 600px) {
-  .enneagram-test {
-    padding: 5%;
-    height: auto;
-  }
+    .enneagram-test {
+        height: 100%;
+    }
 
-  .enneagram-test-container {
-    flex-direction: column;
-    margin-top: 4vh;
-  }
+    .enneagram-test-container {
+        flex-direction: column;
+        margin-top: 12vh;
+    }
 
-  #test-questionnaire-options-wrapper {
-    position: static;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-  }
+    #test-questionnaire-options-wrapper {
+        position: static;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
 
-  #test-questionnaire-container,
-  #test-options-container {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
+    #test-questionnaire-container,
+    #test-options-container {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
 
-  #test-questionnaire-container .question,
-  #test-options-container .btn-group {
-    width: 100%;
-    height: auto;
-    padding: 5%;
-    font-size: 1.5rem;
-  }
+    #test-questionnaire-container .question {
+        width: 80vw;
+        height: 40vh;
+        font-size: 1.5rem;
+        padding: 5%;
+    }
 
-  .btn-group button {
-    font-size: 1.4rem;
-    height: auto;
-    padding: 10px;
-  }
+    #test-options-container .btn-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
 
-  #question-num {
-    font-size: 1.2rem;
-  }
+        width: 80vw;
+        height: 30vh;
+        padding: 0;
 
-  .test-instruction-container {
-    width: 90%;
-    height: auto;
-  }
+        font-size: 1.5rem;
+    }
 
-  .test-instruction-text-container {
-    height: auto;
-    max-height: 300px;
-  }
+    .btn-group button {
+        width: 30vw;
+        height: 25vh;
+        font-size: 1.4rem;
+        padding: 10px;
+    }
 
-  .skip-instruction-btn {
-    width: 70%;
-    font-size: 1rem;
-  }
+    .btn-group button span {
+        opacity: 0;
+    }
 
-  #card-container {
-    height: auto;
-    padding: 20px;
-  }
+    #question-num {
+        font-size: 1.2rem;
+    }
 
-  .card-inner {
-    width: 100%;
-    height: auto;
-  }
+    .test-instruction-container {
+        width: 100vw;
+        height: 80vh;
+        padding: 5%;
+    }
 
-  .card-front,
-  .card-back {
-    width: 100%;
-    height: auto;
-    font-size: 2rem;
-    padding: 5%;
-  }
+    .test-instruction-container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2vh;
+    }
+
+    .test-instruction-text-container {
+        height: auto;
+        height: 50vh;
+        max-height: 350px;
+        padding: 7%;
+    }
+
+    .skip-instruction-btn {
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    #test-res {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 90%;
+    }
+
+    #card-container {
+        padding: 10%;
+        height: 60vh;
+    }
+
+    .card-inner {
+        margin-top: 15vh;
+        width: 100%;
+        height: 60vh;
+    }
+
+    .card-front,
+    .card-back {
+        width: 100%;
+        height: 60vh;
+        font-size: 1.2rem;
+        padding: 5%;
+    }
+
+    #continue-text {
+        margin: 10vh 2vw;
+        font-size: 1.5rem !important;
+        text-shadow: none !important;
+    }
 }

@@ -480,6 +480,7 @@ const showResult = () => {
     container.classList.remove('hidden');
 
     const continueText = document.createElement('p');
+    continueText.id = 'continue-text';
     continueText.textContent = 'Tap the card to reveal personality...';
     continueText.style.position = 'absolute';
     continueText.style.bottom = '1%';
