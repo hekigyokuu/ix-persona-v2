@@ -18,10 +18,10 @@ const displayPopup = (
     popUp.style.maxWidth = '1920px';
     popUp.style.height = '50vh';
     popUp.style.padding = '20px';
-    popUp.style.backgroundColor = '#87c4a9';
-    popUp.style.border = '2px solid #111';
-    popUp.style.borderRadius = '4px';
-    popUp.style.boxShadow = '6px 6px 0px #111';
+    popUp.style.backgroundColor = 'var(--charcoal)';
+    popUp.style.border = '1px solid var(--light-slate)';
+    popUp.style.borderRadius = '2px';
+    popUp.style.boxShadow = '6px 6px 0px var(--rich-black)';
 
     if (closable) {
         const closeBtn = document.createElement('button');
@@ -41,14 +41,17 @@ const displayPopup = (
     }
 
     const message = document.createElement('p');
+    message.style.fontFamily = '"Jersey 25", monospace';
+    message.style.textShadow = '2px 2px 0px var(--rich-black)';
+    message.style.textAlign = 'center';
     message.textContent = popUpMessage;
-    message.style.fontSize = '1.5rem';
+    message.style.fontSize = '2rem';
 
     const textColors = {
-        success: '#1d5c20',
-        error: '#a81a1a',
+        success: '#51d858',
+        error: '#eb5b5b',
         warning: '#a89f8a',
-        info: '#0a0a0a',
+        info: '#d1cdc3',
     };
     message.style.color = textColors[type] || textColors.info;
 
@@ -83,13 +86,12 @@ const logoutDisplay = () => {
     logOutPopup.style.height = '50vh';
     logOutPopup.style.padding = '20px';
 
-    logOutPopup.style.backgroundColor = '#87c4a9';
-    logOutPopup.style.border = '2px solid #111';
-    logOutPopup.style.borderRadius = '4px';
-    logOutPopup.style.boxShadow = '6px 6px 0px #111';
+    logOutPopup.style.backgroundColor = 'var(--charcoal)';
+    logOutPopup.style.border = '1px solid var(--light-slate)';
+    logOutPopup.style.borderRadius = '2px';
+    logOutPopup.style.boxShadow = '6px 6px 0px var(--rich-black)';
 
     const logOutBtn = document.createElement('button');
-
     logOutBtn.className = 'log-out-button';
 
     logOutBtn.textContent = 'Confirm';
@@ -97,15 +99,18 @@ const logoutDisplay = () => {
     logOutBtn.style.padding = '10px 20px';
     logOutBtn.style.marginTop = '5%';
 
-    logOutBtn.style.backgroundColor = '#275e47';
-    logOutBtn.style.border = '2px solid #111';
-    logOutBtn.style.borderRadius = '4px';
-    logOutBtn.style.boxShadow = '4px 4px 0px #2c2c2c';
+    logOutBtn.style.backgroundColor = 'var(--amber-700)';
+    logOutBtn.style.border = '1px solid var(--amber-500)';
+    logOutBtn.style.borderRadius = '2px';
+    logOutBtn.style.boxShadow = '6px 6px 0px var(--rich-black)';
 
-    logOutBtn.style.fontFamily = '"Potta One", sans-serif';
-    logOutBtn.style.fontSize = '1.2rem';
-    logOutBtn.style.color = '#87c4a9';
+    logOutBtn.style.color = 'var(--white-smoke)';
     logOutBtn.style.transition = 'all .2s ease';
+
+    logOutBtn.style.fontFamily = '"Jersey 25", monospace';
+    logOutBtn.style.textShadow = '2px 2px 0px var(--rich-black)';
+    logOutBtn.style.textAlign = 'center';
+    logOutBtn.style.fontSize = '1.5rem';
 
     logOutBtn.addEventListener('click', async () => {
         await logout();
@@ -115,6 +120,7 @@ const logoutDisplay = () => {
 
     const closeBtn = document.createElement('button');
     closeBtn.textContent = '✖';
+    closeBtn.style.color = 'var(--white-smoke)';
     closeBtn.style.position = 'absolute';
     closeBtn.style.top = '5px';
     closeBtn.style.right = '10px';
@@ -129,7 +135,11 @@ const logoutDisplay = () => {
 
     const message = document.createElement('p');
     message.textContent = 'Are you sure logging out?';
-    message.style.fontSize = '1.5rem';
+    message.style.fontFamily = '"Jersey 25", monospace';
+    message.style.textShadow = '2px 2px 0px var(--rich-black)';
+    message.style.textAlign = 'center';
+    message.style.fontSize = '2rem';
+    message.style.color = 'var(--white-smoke)';
 
     logOutPopup.append(closeBtn);
     logOutPopup.append(message);

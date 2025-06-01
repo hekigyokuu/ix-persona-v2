@@ -2,26 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
 
 :root {
-    /* Main Colors */
     --white-smoke: #f9fafb;
     --charcoal: #374151;
     --charcoal-a: #374151aa;
+    --dark-charcoal: #131924;
     --medium-slate: #8a93a1;
     --light-slate: #a5afc0;
+    --light-slate-dark: #626974;
     --light-slate-a: #a5afc0aa;
     --amber-700: #d97706;
     --amber-500: #f59e0b;
     --rich-black: #202225;
     --rich-green: #34575a;
     --light-gray: #f3f4f6;
-
-    /* Button */
-    --button-bg: var(--amber-700);
-    --button-border: var(--amber-500);
-    --button-hover: var(--amber-500);
-
-    /* Shadow */
-    --shadow-dark: var(--charcoal);
+    --blue-a: #7cf1f1;
+    --light-blue: #61aaaa;
+    --purple-a: #bb62fa;
+    --light-purple: #9256bd;
 }
 
 .enneagram-test {
@@ -69,7 +66,7 @@
     border: 1px solid var(--light-slate);
     box-shadow: 12px 12px 0px var(--rich-black);
 
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 #test-questionnaire-container .question {
@@ -88,9 +85,21 @@
         inset 12px 12px 100px var(--rich-black);
 
     font-family: 'Jersey 25', monospace;
-    font-size: 3rem;
-    color: var(--amber-500);
+    font-size: 2.4rem;
+    color: var(--light-slate);
     text-shadow: 4px 2px 0px var(--rich-black);
+}
+
+#question-num {
+    font-size: 1.5rem;
+}
+
+#statement-a {
+    color: var(--blue-a);
+}
+
+#statement-b {
+    color: var(--purple-a);
 }
 
 #test-options-container {
@@ -125,22 +134,29 @@
 .btn-group button {
     position: relative;
 
-    width: 80%;
-    height: 8vh;
+    width: 90%;
+    height: 40%;
 
-    background-color: var(--amber-700);
-    border: 1px solid var(--amber-500);
     border-radius: 4px;
     box-shadow: 8px 8px 0px var(--rich-black);
 
     font-family: 'Jersey 25', monospace;
     font-weight: 200;
     font-size: 1.8rem;
-    color: var(--glow-color);
+    color: var(--white-smoke);
     text-shadow: 2px 1px 0px var(--rich-black);
 }
 
-.btn-group span {
+#answer-a {
+    background-color: var(--light-blue);
+    border: 1px solid var(--blue-a);
+}
+
+#answer-a:hover {
+    background-color: var(--blue-a);
+}
+
+#answer-a span {
     position: absolute;
     left: 4%;
 
@@ -151,8 +167,35 @@
     height: 27px;
     aspect-ratio: 1/1;
 
-    border: 1px solid var(--amber-500);
-    color: var(--amber-500);
+    border: 1px solid var(--blue-a);
+    color: var(--blue-a);
+
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+
+#answer-b {
+    background-color: var(--light-purple);
+    border: 1px solid var(--purple-a);
+}
+
+#answer-b:hover {
+    background-color: var(--purple-a);
+}
+
+#answer-b span {
+    position: absolute;
+    left: 4%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 27px;
+    aspect-ratio: 1/1;
+
+    border: 1px solid var(--purple-a);
+    color: var(--purple-a);
 
     font-size: 1.5rem;
     text-shadow: none;
@@ -180,8 +223,8 @@
     height: 100vh;
 
     background: #000a;
-    color: var(--gray-light);
-    text-shadow: 4px 2px 0px var(--rich-black);
+    font-weight: 400;
+    text-shadow: 2px 1px 0px var(--rich-black);
 }
 
 .test-instruction-container {
@@ -197,12 +240,12 @@
     width: 60%;
     padding: 2%;
 
-    background: var(--charcoal);
+    background: var(--rich-green);
     border: 1px solid var(--light-slate);
     border-radius: 2px;
 
     font-family: 'Jersey 25', sans-serif;
-    color: var(--light-slate);
+    color: var(--light-slate-dark);
     text-align: center;
 }
 
@@ -212,6 +255,8 @@
 
     width: 100%;
 
+    color: var(--light-slate);
+    letter-spacing: 2px;
     font-size: 3rem;
 }
 
@@ -222,9 +267,9 @@
     height: 45vh;
     padding: 2%;
 
-    background-color: var(--rich-black);
+    background-color: var(--charcoal);
     border: 1px solid var(--light-slate);
-    box-shadow: inset 6px 6px 0px var(--charcoal);
+    box-shadow: inset 6px 6px 0px var(--rich-black);
 
     overflow: auto;
 }
@@ -236,7 +281,7 @@
     font-size: 1.5rem;
     line-height: 1.5;
     text-align: left;
-    color: var(--gray-light);
+    color: var(--light-slate);
 }
 
 .skip-instruction-btn {
@@ -260,14 +305,14 @@
 }
 
 .skip-instruction-btn.enabled {
-    background-color: var(--amber-700);
-    border: 1px solid var(--amber-500);
+    background-color: var(--light-purple);
+    border: 1px solid var(--purple-a);
 
     cursor: pointer;
 }
 
 .skip-instruction-btn.enabled:hover {
-    background-color: var(--amber-500);
+    background-color: var(--purple-a);
     box-shadow: none;
     transform: translateY(4px);
 }
@@ -465,7 +510,7 @@ body.lock-scroll {
 .card-brief-description {
     padding: 4%;
     width: 100%;
-    height: 30vh;
+    height: 170px;
 
     font-size: 1.7rem;
     font-weight: 200;

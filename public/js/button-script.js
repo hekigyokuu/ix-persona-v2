@@ -12,10 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
             option.textContent = i + ' yrs';
             ageSelect.appendChild(option);
         }
-        const option = document.createElement('option');
-        option.value = '120+';
-        option.textContent = i + ' yrs';
-        ageSelect.appendChild(option);
     }
 
     const ctaButtons = document.querySelectorAll('.cta-button');
@@ -40,10 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createPixelTransition() {
-        // Create overlay element
         const overlay = document.createElement('div');
 
-        // Style the overlay with pixelated effect
         Object.assign(overlay.style, {
             position: 'fixed',
             top: '0',
@@ -85,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.style.clipPath = 'inset(0% 0% 0% 0%)';
         overlay.style.transition = 'clip-path .6s steps(8, end)';
 
-        // Navigate when complete
         overlay.addEventListener(
             'transitionend',
             function handler() {
@@ -108,6 +101,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('go-test').addEventListener('click', (e) => {
         e.preventDefault();
         startPixelTransition('/enneagram-test');
+    });
+    document.getElementById('go-home').addEventListener('click', (e) => {
+        e.preventDefault();
+        startPixelTransition('/homepage');
     });
 
     const setupTypeButton = (buttonId, typeHash) => {

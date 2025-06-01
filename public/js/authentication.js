@@ -1,18 +1,39 @@
 // << FORM IDS AND LOGIN LINK - assigning the specific node into variable >>
 const loginForm = document.getElementById('login-form');
 const signupForm = document.getElementById('signup-form');
-const authLink = document.getElementById('auth-link');
+const authBtn = document.getElementById('auth-link');
+
+const setAuthBtnState = (loggedIn) => {
+    if (!authBtn) return;
+
+    if (loggedIn) {
+        authBtn.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+        <polyline points="16 17 21 12 16 7"/>
+        <line x1="21" y1="12" x2="9" y2="12"/>
+      </svg>
+    `;
+        authBtn.classList.add('logout');
+        authBtn.style.color = '#eb5b5b';
+    } else {
+        authBtn.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+        <polyline points="10 17 15 12 10 7"/>
+        <line x1="15" y1="12" x2="3" y2="12"/>
+      </svg>
+    `;
+        authBtn.classList.remove('logout');
+        authBtn.style.color = '';
+    }
+};
 
 // << PAGE LOAD (GLOBAL) - checking the session if there is and return logged in and change the function of login anchor into logout anchor >>
 // << PAGE LOAD (LOGIN PAGE) - adding event listener into the svg container that shows or hide a person based on the boolean >>
 window.addEventListener('DOMContentLoaded', async () => {
     const { loggedIn } = await checkSession();
-    if (loggedIn && authLink) {
-        authLink.textContent = 'Logout';
-        authLink.href = '#';
-        authLink.style.color = '#ff0000';
-        authLink.classList.add('logout');
-    }
+    setAuthBtnState(loggedIn);
 
     const showPasswordContainer = document.getElementById(
         'show-password-container'
@@ -33,7 +54,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 passwordInput.type = 'password';
                 passwordInput.focus();
                 svgShowPassword.style.strokeWidth = '2px';
-                svgShowPassword.style.stroke = '#111';
+                svgShowPassword.style.stroke = 'var(--amber-700)';
                 checked = false;
             }
         });
@@ -95,12 +116,7 @@ if (loginForm) {
             }
 
             const loginData = await loginResponse.json();
-
-            if (authLink) {
-                authLink.textContent = 'Logout';
-                authLink.href = '#';
-                authLink.classList.add('logout');
-            }
+            setAuthBtnState(true);
 
             displayPopup('Login successful! Redirecting...', {
                 type: 'success',
@@ -196,14 +212,7 @@ const logout = async () => {
         if (!logoutResponse.ok) {
             throw new Error('Logout failed');
         }
-
-        if (authLink) {
-            authLink.textContent = 'Login';
-            authLink.href = '/auth/login';
-            authLink.style.color = '#000';
-            authLink.classList.remove('logout');
-        }
-
+        setAuthBtnState(false);
         const logoutData = await logoutResponse.json();
         window.location.href = logoutData.redirect;
     } catch (err) {
@@ -217,12 +226,14 @@ const logout = async () => {
 
 // << AUTHENTICATION ANCHOR : LOGIN / LOGOUT - if logout: getting a popup for confirmation >>
 // << AUTHENTICATION ANCHOR : LOGIN / LOGOUT - if logout confirmed: directing into logout() >>
-if (authLink) {
-    authLink.addEventListener('click', async (e) => {
-        if (authLink.classList.contains('logout')) {
+if (authBtn) {
+    authBtn.addEventListener('click', async (e) => {
+        if (authBtn.classList.contains('logout')) {
             e.preventDefault();
 
             logoutDisplay();
+        } else {
+            window.location.href = '/auth/login';
         }
     });
 }

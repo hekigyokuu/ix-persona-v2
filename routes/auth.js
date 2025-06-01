@@ -72,7 +72,7 @@ router.post(
             console.log('\x1b[32m>> User Succesfully Login...');
             res.status(200).json({
                 success: true,
-                redirect: '/enneagram-test',
+                redirect: '/homepage',
             });
         } catch (err) {
             console.error('\x1b[31mLogin error:', err);

@@ -51,16 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
         void overlay.offsetWidth;
 
         overlay.style.clipPath = 'inset(0% 0% 0% 0%)';
-        overlay.style.transition = 'clip-path 1s steps(8, end)';
+        overlay.style.transition = 'clip-path .6s steps(8, end)';
 
-        // Navigate when complete
         overlay.addEventListener(
             'transitionend',
             function handler() {
                 overlay.removeEventListener('transitionend', handler);
                 setTimeout(() => {
                     window.location.href = url;
-                }, 500);
+                }, 100);
             },
             { once: true }
         );

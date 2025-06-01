@@ -18,7 +18,25 @@
     </head>
     <body>
         <nav class="navbar">
-            <div class="navbar-container"></div>
+            <div class="navbar-container">
+                <h1>IXpersona</h1>
+                <button id="go-home">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"
+                        />
+                    </svg>
+                </button>
+            </div>
             <button id="go-menu">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +54,7 @@
                 </svg>
                 Back to Menu
             </button>
-            <button onclick="window.location.href = '/enneagram-types'">
+            <button id="go-types">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -55,7 +73,7 @@
                 </svg>
                 Enneagram Types
             </button>
-            <button onclick="window.location.href = '/enneagram-test'">
+            <button id="go-test">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -72,22 +90,99 @@
                 </svg>
                 Take the Test
             </button>
-            <div class="navbar-container"></div>
+            <div class="navbar-container">
+                <button id="toggle-profile-btn">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </button>
+                <button id="auth-link">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                        <polyline points="10 17 15 12 10 7" />
+                        <line x1="15" y1="12" x2="3" y2="12" />
+                    </svg>
+                </button>
+            </div>
         </nav>
 
         <section class="about-section">
             <div class="about-heading-section">
-                <h2>About Us</h2>
+                <h2>About <br />Us<span class="cursor">|</span></h2>
+                <div class="enneagram-svg">
+                    <svg
+                        viewBox="0 0 658 571"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="responsive-svg"
+                    >
+                        <g clip-path="url(#clip0)">
+                            <path
+                                d="M575.715 443.25H83.2847L329.5 32.7217L575.715 443.25Z"
+                                stroke="currentColor"
+                                stroke-width="10"
+                            />
+                            <path
+                                d="M140 62L269.286 512"
+                                stroke="currentColor"
+                                stroke-width="10"
+                            />
+                            <path
+                                d="M379 510.13L524 66.1304"
+                                stroke="currentColor"
+                                stroke-width="10"
+                            />
+                            <path
+                                d="M141.5 63L617.881 255.367"
+                                stroke="currentColor"
+                                stroke-width="10"
+                            />
+                            <path
+                                d="M35 254L524 67.7047"
+                                stroke="currentColor"
+                                stroke-width="10"
+                            />
+                            <path
+                                d="M267.08 511.888L35 254"
+                                stroke="currentColor"
+                                stroke-width="10"
+                            />
+                            <path
+                                d="M379 512L616 257"
+                                stroke="currentColor"
+                                stroke-width="10"
+                            />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <rect width="658" height="571" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
             </div>
-            <div class="types-container-divider-two"></div>
-            <div class="types-container-divider-one"></div>
-
             <div class="types-container-personality-types-header">
                 <h2>What is IXpersona?</h2>
             </div>
-
-            <div class="types-container-divider-one"></div>
-            <div class="types-container-divider-two"></div>
             <div class="about-website-container">
                 <div class="about-web-textbox">
                     <p>
@@ -106,13 +201,9 @@
                     </p>
                 </div>
             </div>
-            <div class="types-container-divider-two"></div>
-            <div class="types-container-divider-one"></div>
             <div class="types-container-personality-types-header">
                 <h2>About Authors</h2>
             </div>
-            <div class="types-container-divider-one"></div>
-            <div class="types-container-divider-two"></div>
             <div class="about-author-container">
                 <div class="row">
                     <div class="box image-box" id="author-box-one">
@@ -162,49 +253,10 @@
                     </div>
                 </div>
             </div>
-            <div class="types-container-divider-two"></div>
-            <div class="types-container-divider-one"></div>
-
             <div class="types-container-personality-types-header">
                 <h2>References Used</h2>
             </div>
-
-            <div class="types-container-divider-one"></div>
-            <div class="types-container-divider-two"></div>
             <div class="about-reference-container"></div>
         </section>
-        <div class="types-container-divider-two"></div>
-        <div class="types-container-divider-one"></div>
-
-        <div class="types-container-personality-types-header"></div>
-
-        <div class="types-container-divider-one"></div>
-        <div class="types-container-divider-two"></div>
-        <footer class="footer" style="border-top: none">
-            <div class="ft-left">
-                <h2>IXpersona</h2>
-                <div class="social-icons"></div>
-            </div>
-            <div class="ft-columns">
-                <div class="ft-column">
-                    <h4>Topic</h4>
-                    <a href="#">Page</a>
-                    <a href="#">Page</a>
-                    <a href="#">Page</a>
-                </div>
-                <div class="ft-column">
-                    <h4>Topic</h4>
-                    <a href="#">Page</a>
-                    <a href="#">Page</a>
-                    <a href="#">Page</a>
-                </div>
-                <div class="ft-column">
-                    <h4>Topic</h4>
-                    <a href="#">Page</a>
-                    <a href="#">Page</a>
-                    <a href="#">Page</a>
-                </div>
-            </div>
-        </footer>
     </body>
 </html>

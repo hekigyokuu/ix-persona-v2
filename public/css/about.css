@@ -1,25 +1,21 @@
 :root {
-    /* Greens */
-    --green-primary: #1cb61c;
-    --green-dark: #2c4a3b;
-    --green-darker: #275e47;
-    --green-darker-alpha: #275e47aa;
-    --green-darker-darker: #183c2c;
-    --green-light: #87c4a9;
-    --green-light-alpha: #87c4a9aa;
-
-    /* Grays */
-    --gray-light: #f5f5f5;
-    --gray-medium: #cccccc;
-    --gray-dark: #888;
-    --gray-darker: #2c2c2c;
-
-    /* Neutrals */
-    --white-smoke: #f1f1f1;
-    --black: #111;
-
-    /* Special Tones */
-    --lavender-light: #f0f0ff;
+    --white-smoke: #f9fafb;
+    --charcoal: #374151;
+    --charcoal-a: #374151aa;
+    --dark-charcoal: #131924;
+    --medium-slate: #8a93a1;
+    --light-slate: #a5afc0;
+    --light-slate-dark: #626974;
+    --light-slate-a: #a5afc0aa;
+    --amber-700: #d97706;
+    --amber-500: #f59e0b;
+    --rich-black: #202225;
+    --rich-green: #34575a;
+    --light-gray: #f3f4f6;
+    --blue-a: #7cf1f1;
+    --light-blue: #61aaaa;
+    --purple-a: #bb62fa;
+    --light-purple: #9256bd;
 }
 
 .about-section {
@@ -28,19 +24,21 @@
     justify-content: center;
     align-items: center;
 
-    font-family: 'Preahvihear', sans-serif;
+    font-family: 'Jersey 25', monospace;
 }
 
 .about-section-middle-div {
     width: 100%;
     height: 2vh;
 
-    background-color: var(--green-light);
+    background-color: var(--light-slate);
     border-top: 2px solid var(--black);
     border-bottom: 2px solid var(--black);
 }
 
 .about-heading-section {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,19 +47,32 @@
     height: 100vh;
     padding: 4% 12%;
 
-    background-color: var(--green-darker-darker);
+    background-color: var(--charcoal);
+    border-bottom: 1px solid var(--light-slate);
+
+    overflow: hidden;
 }
 
 .about-heading-section h2 {
-    display: inline-block;
-    width: 100%;
+    position: relative;
+    z-index: 2;
 
-    font-family: 'Preahvihear', sans-serif;
-    font-size: 9rem;
-    text-align: center;
-    line-height: 1.3;
-    color: var(--green-light-alpha);
-    text-shadow: 8px 0px 0px var(--green-darker);
+    display: block;
+
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    margin-top: 10vh;
+
+    font-family: 'Jersey 25', sans-serif;
+    font-size: 13rem;
+    text-align: left;
+    color: var(--light-slate);
+    text-shadow: 8px 0px 0px var(--rich-black);
+}
+
+.about-heading-section h2 .cursor {
+    animation: blink 1s steps(1) infinite;
 }
 
 .about-website-container {
@@ -70,20 +81,22 @@
     align-items: center;
 
     width: 100%;
-    height: 220vh;
-    padding: 4%;
+    height: 800px;
+    padding: 8%;
 
-    background-color: var(--green-darker);
+    background-color: #314646;
+    border-bottom: 1px solid var(--light-slate);
+    box-shadow: inset 0px 12px 0px var(--rich-black);
 }
 
 .about-web-textbox {
     width: 100%;
-    height: 200vh;
-    padding: 8%;
+    height: 100%;
+    padding: 4%;
 
-    background-color: var(--green-darker-darker);
-    border: 2px solid var(--black);
-    box-shadow: inset 8px 8px 0px var(--black);
+    background-color: #badbdb;
+    border: 1px solid var(--light-slate);
+    box-shadow: inset 8px 8px 0px #314646;
 }
 
 .about-web-textbox p {
@@ -91,12 +104,13 @@
     width: 100%;
     padding: 6%;
 
-    background-color: var(--green-darker);
-    border: 2px solid var(--black);
-    box-shadow: 10px 10px 0px var(--black);
+    background-color: #314646;
+    border: 1px solid var(--light-slate);
+    box-shadow: 10px 10px 0px #314646;
 
     font-size: 2.3rem;
-    color: var(--gray-medium);
+    color: #badbdb;
+    text-shadow: 2px 2px 0px var(--rich-black);
 }
 
 .types-container-personality-types-header {
@@ -105,30 +119,16 @@
     align-items: center;
 
     width: 100%;
-    height: 30vh;
+    height: 40vh;
 
-    background-color: var(--green-darker-darker);
-    border-top: 2px solid var(--black);
-    border-bottom: 2px solid var(--black);
+    background-color: var(--charcoal);
+    border-bottom: 1px solid var(--light-slate);
+    box-shadow: inset 0px 12px 0px var(--rich-black);
 
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    color: var(--green-light);
-}
-
-.types-container-divider-one {
-    width: 100%;
-    height: 3vh;
-    background-color: #3f7a60;
-}
-
-.types-container-divider-two {
-    width: 100%;
-    height: 3vh;
-
-    background-color: var(--green-light);
-    border-top: 2px solid var(--black);
-    border-bottom: 2px solid var(--black);
+    font-family: 'Jersey 25', monospace;
+    font-size: 4rem;
+    color: var(--light-slate);
+    text-shadow: 4px 2px 0px var(--rich-black);
 }
 
 .about-author-container {
@@ -141,9 +141,13 @@
     height: auto;
     padding: 10% 12%;
 
-    background-color: var(--green-darker-darker);
+    background-color: #383832;
+    border-bottom: 1px solid var(--light-slate);
+    box-shadow: inset 0px 12px 0px var(--rich-black);
 
-    color: var(--green-light);
+    font-family: 'Jersey 25', monospace;
+    color: var(--light-slate);
+    text-shadow: 4px 2px 0px var(--rich-black);
 }
 
 .about-author-container hr {
@@ -151,7 +155,7 @@
     max-width: 1920px;
     margin: 5% 0;
 
-    border: 2px dashed var(--green-light);
+    border: 2px dashed var(--light-slate);
 }
 
 .about-author-container .row {
@@ -173,8 +177,9 @@
 }
 
 .about-author-container .image-box {
-    background-color: var(--green-light);
-    border: 2px solid var(--black);
+    border: 6px solid var(--light-slate);
+    box-shadow: inset 8px 8px 0px var(--rich-black),
+        inset -1px -1px 0px var(--rich-black), 8px 8px 0px var(--rich-black);
     aspect-ratio: 1 / 1;
 
     cursor: pointer;
@@ -188,11 +193,12 @@
     width: 100%;
     height: 8vh;
 
-    background-color: var(--green-darker);
-    border: 2px solid var(--black);
-    box-shadow: 0px 10px 0px var(--black);
+    background-color: var(--charcoal);
+    border: 1px solid var(--rich-black);
+    box-shadow: 0px 8px 0px var(--rich-black),
+        inset 8px 8px 0px var(--rich-black);
 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Jersey 25', monospace;
     font-weight: 800;
     font-size: 1.6rem;
     letter-spacing: 3px;
@@ -211,16 +217,17 @@
 }
 
 .about-author-container .text-box h3 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Jersey 25', monospace;
+    color: var(--amber-500);
     text-shadow: 8px 0px 0px var(--green-darker-alpha);
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 1;
-    margin-bottom: 8vh;
+    letter-spacing: 4px;
+    margin-bottom: 4vh;
 }
 
 .about-author-container .text-box p {
     font-size: 2rem;
-    line-height: 2;
     color: var(--green-light);
 }
 
@@ -233,14 +240,14 @@
     height: 97vh;
     padding: 4% 12%;
 
-    background-color: var(--green-darker);
+    background-color: var(--dark-charcoal);
+    box-shadow: inset 0px 12px 0px var(--charcoal);
 }
 
 #author-box-one {
     position: relative;
 
     background-color: #e5e591;
-    box-shadow: inset 10px 10px 0px var(--black);
     overflow: hidden;
 }
 #author-box-one #card-svg-loyalist {
@@ -255,7 +262,6 @@
     position: relative;
 
     background-color: #a8c6cf;
-    box-shadow: inset 10px 10px 0px var(--black);
     overflow: hidden;
 }
 #author-box-two #card-svg-investigator {
@@ -270,7 +276,6 @@
     position: relative;
 
     background-color: #a8c6cf;
-    box-shadow: inset 10px 10px 0px var(--black);
     overflow: hidden;
 }
 #author-box-three #card-svg-individualist {
@@ -285,7 +290,6 @@
     position: relative;
 
     background-color: #a8c6cf;
-    box-shadow: inset 10px 10px 0px var(--black);
     overflow: hidden;
 }
 #author-box-four #card-svg-enthusiast {
@@ -295,4 +299,38 @@
 
     height: 120vh;
     filter: drop-shadow(20px 0px 0px #111);
+}
+
+.enneagram-svg {
+    position: absolute;
+    top: 60%;
+    right: -50%;
+    z-index: 1;
+
+    width: 70vw;
+
+    color: var(--light-slate-a);
+    filter: drop-shadow(6px 6px 0px var(--rich-black));
+    transform: rotate(240deg);
+    animation: spin 200s linear infinite;
+}
+
+@keyframes blink {
+    0%,
+    50% {
+        opacity: 1;
+    }
+    50.1%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
