@@ -421,3 +421,83 @@ html {
 .types-poster-stars g {
     fill: var(--light-slate);
 }
+
+/*Phone*/
+@media (max-width: 600px) {
+  .hero-section {
+    height: auto;
+    padding: 4% 5%;
+  }
+
+  .quote {
+    font-size: 3rem;
+    padding-top: 3vh;
+  }
+
+  .hero-section .subtext {
+    font-size: 1.4rem;
+    max-width: 90ch;
+  }
+
+  .hero-button {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+
+  .why-use-info {
+    height: auto;
+    padding: 5% 5%;
+  }
+
+  .why-use-info h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .why-use-box-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .why-use-box {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .types-large-header {
+    font-size: 5rem;
+    padding: 3% 2%;
+  }
+
+  .types-large-header span {
+    font-size: 4rem;
+  }
+
+  .types-poster {
+    padding: 20% 10% 30% 10%;
+  }
+
+  .types-poster-personalities {
+    padding: 10% 5%;
+    min-height: auto;
+  }
+
+  .types-poster-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+
+  .poster-type-btn {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .random-quotes {
+    height: auto;
+    padding: 10%;
+    font-size: 1.4rem;
+  }
+}

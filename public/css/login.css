@@ -183,3 +183,58 @@
 #login-password {
     width: 90%;
 }
+
+/*Phone*/
+@media (max-width: 600px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .login-form-container,
+  .new-here-container {
+    width: 90%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .new-here-box-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .new-here-box-container h2 {
+    font-size: 3rem;
+  }
+
+  .new-here-box-container p {
+    font-size: 1.5rem;
+  }
+
+  .form-container h2 {
+    font-size: 2rem;
+  }
+
+  .form-container input,
+  #login-password {
+    width: 100%;
+  }
+
+  .eye-toggle {
+    width: 15%;
+    height: auto;
+  }
+
+  .form-container button {
+    width: 100%;
+  }
+
+  .login-anchoring {
+    text-align: center;
+  }
+
+  .new-here-box-container a {
+    font-size: 1.6rem;
+  }
+}

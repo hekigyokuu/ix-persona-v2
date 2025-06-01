@@ -334,3 +334,71 @@
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
+/*Phone*/
+@media (max-width: 600px) {
+  .about-heading-section {
+    height: auto;
+    padding: 4% 6%;
+  }
+
+  .about-heading-section h2 {
+    font-size: 4rem;
+    margin-top: 5vh;
+    text-align: center;
+  }
+
+  .enneagram-svg {
+    position: static;
+    width: 90vw;
+    margin: 2rem auto;
+    transform: rotate(0);
+    filter: none;
+    animation: none;
+  }
+
+  .about-website-container {
+    height: auto;
+    padding: 4% 6%;
+  }
+
+  .about-web-textbox p {
+    font-size: 1.4rem;
+    padding: 2%;
+  }
+
+  .types-container-personality-types-header {
+    height: auto;
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+
+  .about-author-container {
+    padding: 5% 6%;
+  }
+
+  .about-author-container .row,
+  .about-author-container .reverse {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-author-container .box {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .about-author-container .text-box h3 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .about-author-container .text-box p {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .about-author-container hr {
+    margin: 2rem 0;
+  }
+}

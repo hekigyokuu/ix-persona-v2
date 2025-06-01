@@ -603,3 +603,81 @@ body.lock-scroll {
 .inset-glowing {
     background-color: var(--glow-color);
 }
+
+/*Phone*/
+@media (max-width: 600px) {
+  .enneagram-test {
+    padding: 5%;
+    height: auto;
+  }
+
+  .enneagram-test-container {
+    flex-direction: column;
+    margin-top: 4vh;
+  }
+
+  #test-questionnaire-options-wrapper {
+    position: static;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  #test-questionnaire-container,
+  #test-options-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  #test-questionnaire-container .question,
+  #test-options-container .btn-group {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    font-size: 1.5rem;
+  }
+
+  .btn-group button {
+    font-size: 1.4rem;
+    height: auto;
+    padding: 10px;
+  }
+
+  #question-num {
+    font-size: 1.2rem;
+  }
+
+  .test-instruction-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .test-instruction-text-container {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .skip-instruction-btn {
+    width: 70%;
+    font-size: 1rem;
+  }
+
+  #card-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .card-inner {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: auto;
+    font-size: 2rem;
+    padding: 5%;
+  }
+}

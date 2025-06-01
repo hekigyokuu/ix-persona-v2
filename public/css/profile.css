@@ -274,3 +274,66 @@
     font-size: 1rem;
     text-shadow: 2px 1px 0px var(--rich-black);
 }
+
+/*phone*/
+@media (max-width: 600px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 5% 0 5%;
+  }
+
+  .profile-left,
+  .profile-right {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    padding: 6% 4%;
+  }
+
+  .profile-right {
+    max-height: none;
+    overflow: visible;
+    margin-top: 20px;
+  }
+
+  .profile-left {
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;    
+  }
+
+  .profile-left button {
+    width: 90%;
+  }
+
+  .history-log-section {
+    padding: 6%;
+  }
+
+  .history-log-item {
+    padding: 6% 4%;
+  }
+
+  #profile-username {
+    font-size: 2.5rem;
+  }
+
+  #profile-personality {
+    font-size: 1.5rem;
+  }
+
+  #profile-name,
+  #profile-age,
+  #profile-gender {
+    font-size: 1.3rem;
+  }
+
+  .history-log-item .personality {
+    font-size: 1.6rem;
+  }
+
+  .history-log-item .date {
+    font-size: 0.9rem;
+  }
+}

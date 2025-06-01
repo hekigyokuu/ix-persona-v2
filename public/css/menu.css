@@ -237,3 +237,53 @@ body {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
+/*phones*/
+@media (max-width: 600px) {
+  .menu-border {
+    width: 95%;
+    height: auto;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    padding: 2% 4%;
+  }
+
+  .menu-intro-container {
+    width: 100%;
+    height: auto;
+    padding: 3% 5%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu-intro-container h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .menu-intro-container p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .menu-navigation-group {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .menu-navigation-group button {
+    width: 80%;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .menu-navigation-group span {
+    left: 8%;
+    height: 20px;
+  }
+}
