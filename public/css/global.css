@@ -159,6 +159,9 @@ body {
     font-family: monospace;
     font-weight: 700;
     font-size: 1rem;
+
+    cursor: pointer;
+
     transition: all 0.2s ease;
 }
 
@@ -258,6 +261,7 @@ body {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
+<<<<<<< HEAD
 /*Phone*/
 =======
 =======
@@ -274,3 +278,33 @@ body {
 =======
 }
 >>>>>>> Stashed changes
+=======
+/* phone */
+@media (max-width: 600px) {
+    .navbar {
+        height: 8vh;
+    }
+
+    .navbar span {
+        display: none;
+    }
+
+    .navbar-container h1 {
+        display: none;
+    }
+
+    .navbar button {
+        width: 10vw;
+        height: 5vh;
+    }
+
+    .first-container {
+        width: 15vw;
+        aspect-ratio: 1/1;
+    }
+
+    .second-container {
+        width: 30vw;
+    }
+}
+>>>>>>> e2e1885fd05ba616011a4a50059e93c95dfa9cc1

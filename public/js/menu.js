@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             function handler() {
                 overlay.removeEventListener('transitionend', handler);
                 setTimeout(() => {
+                    overlay.remove();
                     window.location.href = url;
                 }, 100);
             },
