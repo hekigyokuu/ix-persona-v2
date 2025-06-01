@@ -159,6 +159,9 @@ body {
     font-family: monospace;
     font-weight: 700;
     font-size: 1rem;
+
+    cursor: pointer;
+
     transition: all 0.2s ease;
 }
 
@@ -256,4 +259,31 @@ body {
     filter: contrast(200%) saturate(200%) brightness(120%);
 }
 
-/*Phone*/
+/* phone */
+@media (max-width: 600px) {
+    .navbar {
+        height: 8vh;
+    }
+
+    .navbar span {
+        display: none;
+    }
+
+    .navbar-container h1 {
+        display: none;
+    }
+
+    .navbar button {
+        width: 10vw;
+        height: 5vh;
+    }
+
+    .first-container {
+        width: 15vw;
+        aspect-ratio: 1/1;
+    }
+
+    .second-container {
+        width: 30vw;
+    }
+}

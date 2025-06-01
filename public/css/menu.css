@@ -240,26 +240,30 @@ body {
 
 /*phones*/
 @media (max-width: 600px) {
+    .menu {
+        height: 90vh;
+    }
+
     .menu-border {
         width: 95%;
-        height: auto;
+        height: 85vh;
     }
 
     .menu-container {
         flex-direction: column;
-        padding: 2% 4%;
+        padding: 5%;
     }
 
     .menu-intro-container {
         width: 100%;
-        height: auto;
-        padding: 3% 5%;
+        height: 60%;
+        padding: 5%;
         align-items: center;
         text-align: center;
     }
 
     .menu-intro-container h1 {
-        font-size: 2.5rem;
+        font-size: 4rem;
         line-height: 1.2;
     }
 
@@ -270,6 +274,7 @@ body {
 
     .menu-navigation-group {
         width: 100%;
+        height: 40%;
         flex-direction: column;
         gap: 15px;
         align-items: center;
@@ -277,13 +282,12 @@ body {
     }
 
     .menu-navigation-group button {
-        width: 80%;
-        height: 45px;
+        width: 100%;
+        height: 15%;
         font-size: 1rem;
     }
 
     .menu-navigation-group span {
-        left: 8%;
-        height: 20px;
+        display: none;
     }
 }
