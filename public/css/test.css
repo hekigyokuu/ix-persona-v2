@@ -530,6 +530,7 @@ body.lock-scroll {
     background-color: var(--light-slate);
     border: 1px solid var(--rich-black);
     color: var(--charcoal);
+    font-size: 1.65rem;
     text-shadow: 1px 1px 0px var(--rich-black);
     box-shadow: inset 4px 4px 0px var(--charcoal),
         inset -2px -2px 0px var(--charcoal);

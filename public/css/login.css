@@ -188,7 +188,7 @@
 @media (max-width: 600px) {
   .login-container {
     flex-direction: column;
-    height: auto;
+    height: 100%;
     padding: 2rem 0;
   }
 
@@ -200,6 +200,7 @@
   }
 
   .new-here-box-container {
+    padding: 1.5rem 0;
     align-items: center;
     text-align: center;
   }
