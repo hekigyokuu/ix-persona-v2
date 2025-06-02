@@ -135,7 +135,7 @@
     position: relative;
 
     width: 90%;
-    height: 40%;
+    height: 30%;
 
     border-radius: 4px;
     box-shadow: 8px 8px 0px var(--rich-black);
@@ -201,6 +201,39 @@
     text-shadow: none;
 }
 
+#undo-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 15%;
+
+    background-color: var(--charcoal);
+    border: 1px solid var(--light-slate);
+}
+
+#undo-button span {
+    position: absolute;
+    left: 4%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 27px;
+    aspect-ratio: 1/1;
+
+    border: 1px solid var(--light-slate);
+    color: var(--light-slate);
+
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+
+#undo-button:hover {
+    background-color: var(--light-slate);
+}
+
 .btn-group button:hover {
     background-color: var(--amber-500);
 
@@ -225,6 +258,20 @@
     background: #000a;
     font-weight: 400;
     text-shadow: 2px 1px 0px var(--rich-black);
+}
+
+#test-instruction-close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+    background-color: transparent;
+    border: none;
+
+    font-size: 1rem;
+    color: var(--white-smoke);
+
+    cursor: pointer;
 }
 
 .test-instruction-container {
@@ -305,14 +352,14 @@
 }
 
 .skip-instruction-btn.enabled {
-    background-color: var(--light-purple);
-    border: 1px solid var(--purple-a);
+    background-color: var(--amber-700);
+    border: 1px solid var(--amber-500);
 
     cursor: pointer;
 }
 
 .skip-instruction-btn.enabled:hover {
-    background-color: var(--purple-a);
+    background-color: var(--amber-700);
     box-shadow: none;
     transform: translateY(4px);
 }

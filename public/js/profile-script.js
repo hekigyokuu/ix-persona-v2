@@ -2,6 +2,9 @@
 // << PAGE LOAD (PROFILE PAGE) - assigning the type color and svg into the profile image container dnamically based on the user's personality extracted >>
 // << RETAKE TEST BUTTON - adding onclick function the navigate into -> /enneagram-test >>
 // << PROFILE LOGOUT BUTTON - adding onclick function that popup the logoutDisplay for logout confirmation >>
+const retakeTestButton = document.getElementById('profile-retake-test');
+const profileLogout = document.getElementById('profile-logout');
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const profileApiResponse = await fetch('/profile/api/profile');
@@ -20,6 +23,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById(
             'profile-gender'
         ).textContent = `Gender: ${userData.gender}`;
+
+        if (userData.personality === 'Not Set') {
+            retakeTestButton.textContent = 'Take Test';
+        } else {
+            retakeTestButton.textContent = 'Retake Test';
+        }
 
         const typeMatch = userData.personality.match(/Type\s(\d+)/);
 
@@ -53,15 +62,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
-    const retakeTestButton = document.getElementById('profile-retake-test');
-
     if (retakeTestButton) {
         retakeTestButton.addEventListener('click', () => {
             window.location.href = '/enneagram-test';
         });
     }
-
-    const profileLogout = document.getElementById('profile-logout');
 
     if (profileLogout) {
         profileLogout.addEventListener('click', () => {

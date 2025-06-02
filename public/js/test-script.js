@@ -429,14 +429,27 @@ const showQuestion = (index) => {
         <div class="btn-group">
             <button id="answer-a" onclick="handleAnswer('A')"><span>A</span>Select A</button>
             <button id="answer-b" onclick="handleAnswer('B')"><span>B</span>Select B</button>
+            <button id="undo-button" class="undo-btn hidden" onclick="undoLastAnswer()">
+                <span>U</span>↩ Undo
+            </button>
         </div>
     `;
     optionsContainer.appendChild(optionsDiv);
+
+    updateUndoButtonVisibility();
 };
 
 // << SCORING LOGIC - based on the weight of answer it is multiplied and the type point where distributed to specific personality >>
+let answerHistory = [];
+
 const handleAnswer = (choice) => {
     const question = testQuestions[currentQuestion];
+
+    answerHistory.push({
+        currentQuestion: currentQuestion,
+        scores: { ...scores },
+        choice: choice,
+    });
 
     if (choice === 'A') {
         Object.keys(question.typePointsA).forEach((type) => {
@@ -450,6 +463,23 @@ const handleAnswer = (choice) => {
 
     currentQuestion++;
     showQuestion(currentQuestion);
+};
+
+const undoLastAnswer = () => {
+    if (answerHistory.length === 0) return;
+
+    const lastAnswer = answerHistory.pop();
+    currentQuestion = lastAnswer.currentQuestion;
+    scores = { ...lastAnswer.scores };
+
+    showQuestion(currentQuestion);
+};
+
+const updateUndoButtonVisibility = () => {
+    const undoButton = document.getElementById('undo-button');
+    if (undoButton) {
+        undoButton.classList.toggle('hidden', answerHistory.length === 0);
+    }
 };
 
 // << TEST RESULT LOGIC - take the top scorer personality by .reduce method >>
@@ -635,19 +665,13 @@ function getTypeSVG(topType) {
 
 // << KEYBOARD LISTENER - the user can answer the test with key (1-5) based on the weight answer >>
 const keyboardOption = () => {
-    const options = {
-        1: 'answer-one',
-        2: 'answer-two',
-        3: 'answer-three',
-        4: 'answer-four',
-        5: 'answer-five',
-    };
-
     document.addEventListener('keyup', (e) => {
         if (e.key === 'a' || e.key === 'A') {
             handleAnswer('A');
         } else if (e.key === 'b' || e.key === 'B') {
             handleAnswer('B');
+        } else if (e.key === 'u' || e.key === 'U') {
+            undoLastAnswer();
         }
     });
 };

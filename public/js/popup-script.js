@@ -27,6 +27,7 @@ const displayPopup = (
     if (closable) {
         const closeBtn = document.createElement('button');
         closeBtn.textContent = '✖';
+        closeBtn.style.color = 'var(--white-smoke)';
         closeBtn.style.position = 'absolute';
         closeBtn.style.top = '5px';
         closeBtn.style.right = '10px';
