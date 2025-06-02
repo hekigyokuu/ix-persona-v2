@@ -6,6 +6,7 @@ const displayPopup = (
     { type = 'info', duration = 3000, closable = true } = {}
 ) => {
     const popUp = document.createElement('div');
+    popUp.id = 'popup-display';
     popUp.style.position = 'fixed';
     popUp.style.top = '50%';
     popUp.style.left = '50%';
@@ -70,6 +71,7 @@ const displayPopup = (
 
 const logoutDisplay = () => {
     const logOutPopup = document.createElement('div');
+    logOutPopup.id = 'logout-display';
     logOutPopup.style.position = 'fixed';
     logOutPopup.style.top = '50%';
     logOutPopup.style.left = '50%';

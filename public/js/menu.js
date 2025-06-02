@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const typeButton = document.getElementById('type-button');
     const aboutButton = document.getElementById('about-button');
     const escButton = document.getElementById('esc-button');
-    const screenDisplay = document.querySelector('.menu-intro-container');
 
     function createPixelTransition() {
         // Create overlay element
@@ -91,20 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         startPixelTransition('/about-us');
     }
 
-    function confirmExit() {
-        const confirmExit = confirm(
-            'Are you sure you want to exit the application?'
-        );
-        if (confirmExit) {
-            // Wait for zoom animation to complete before exiting
-            setTimeout(() => {
-                window.location.href = '/exiting-ix-persona';
-            }, 100); // match the CSS animation duration
-        } else {
-            alert('Exit cancelled.');
-        }
-    }
-
     if (testButton) {
         testButton.addEventListener('click', startTest);
     }
@@ -120,29 +105,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (aboutButton) {
         aboutButton.addEventListener('click', openAbout);
     }
-    if (escButton) {
-        escButton.addEventListener('click', confirmExit);
-    }
     document.addEventListener('keydown', (event) => {
         const key = event.key.toLowerCase();
         switch (key) {
             case 't':
-                startTest(e);
+                startTest(event);
                 break;
             case 'p':
-                openProfile(e);
+                openProfile(event);
                 break;
             case 'h':
-                goHome(e);
+                goHome(event);
                 break;
             case 'e':
-                viewTypes(e);
+                viewTypes(event);
                 break;
             case 'a':
-                openAbout(e);
-                break;
-            case 'escape':
-                confirmExit(e);
+                openAbout(event);
                 break;
         }
     });
