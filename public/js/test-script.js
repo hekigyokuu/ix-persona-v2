@@ -443,6 +443,7 @@ const showQuestion = (index) => {
 let answerHistory = [];
 
 const handleAnswer = (choice) => {
+    clickSFX();
     const question = testQuestions[currentQuestion];
 
     answerHistory.push({
@@ -466,6 +467,7 @@ const handleAnswer = (choice) => {
 };
 
 const undoLastAnswer = () => {
+    clickSFX();
     if (answerHistory.length === 0) return;
 
     const lastAnswer = answerHistory.pop();
@@ -511,7 +513,8 @@ const showResult = () => {
 
     const continueText = document.createElement('p');
     continueText.id = 'continue-text';
-    continueText.textContent = 'Tap the card to reveal personality...';
+    continueText.textContent =
+        '[SPACE] Click the card to reveal personality...';
     continueText.style.position = 'absolute';
     continueText.style.bottom = '1%';
     continueText.style.left = '1%';
@@ -520,107 +523,131 @@ const showResult = () => {
     continueText.style.fontSize = '2.2rem';
     testResContainer.append(continueText);
 
-    card.addEventListener(
-        'click',
-        async () => {
-            card.classList.add('spinning');
-            testResContainer.classList.remove('fade-in');
+    // Function to handle card reveal
+    const revealCard = async () => {
+        const flippingAudio = new Audio('sfx/flipping.wav');
+        flippingAudio.play();
+        flippingAudio.playbackRate = 1.1;
+        card.classList.add('spinning');
+        testResContainer.classList.remove('fade-in');
 
+        cardBack.innerHTML = `
+            <div class="card-name">
+                <div class="card-type">??</div>
+            </div>
+            <div class="card-img"></div>
+            <div class="card-brief-description"></div>
+        `;
+
+        setTimeout(async () => {
+            flippingAudio.pause();
+            flippingAudio.remove();
+            const revealCardAudio = new Audio('sfx/reveal.wav');
+            const typeNumber = enneagramTypes[topType].split(' ')[1];
+            card.classList.remove('spinning');
+            revealCardAudio.play().then(() => revealCardAudio.remove());
             cardBack.innerHTML = `
                 <div class="card-name">
-                    <div class="card-type">??</div>
+                    <div class="card-type" id="card-type-container">${typeNumber}</div>
+                    ${topType}
                 </div>
-                <div class="card-img"></div>
-                <div class="card-brief-description"></div>
+                <div class="card-img" id="card-img-container"></div>
+                <div class="card-brief-description" id="card-description-container">
+                    ${getTypeDescription(topType)}
+                </div>
             `;
+            const cardTypeContainer = document.getElementById(
+                'card-type-container'
+            );
+            const cardImgContainer =
+                document.getElementById('card-img-container');
+            cardImgContainer.innerHTML = getTypeSVG(topType);
+            card.classList.add('flipped');
 
-            setTimeout(async () => {
-                const typeNumber = enneagramTypes[topType].split(' ')[1];
-                card.classList.remove('spinning');
-                cardBack.innerHTML = `
-                    <div class="card-name">
-                        <div class="card-type" id="card-type-container">${typeNumber}</div>
-                        ${topType}
-                    </div>
-                    <div class="card-img" id="card-img-container"></div>
-                    <div class="card-brief-description" id="card-description-container">
-                        ${getTypeDescription(topType)}
-                    </div>
-`;
-                const cardTypeContainer = document.getElementById(
-                    'card-type-container'
-                );
-                const cardImgContainer =
-                    document.getElementById('card-img-container');
-                cardImgContainer.innerHTML = getTypeSVG(topType);
-                card.classList.add('flipped');
+            testResContainer.classList.add('glowing', `glowing-${typeNumber}`);
+            continueText.style.color = 'var(--charcoal)';
+            continueText.style.textShadow = '2px 2px 0px var(--rich-black)';
+            cardTypeContainer.classList.add(
+                'card-type-color',
+                `glowing-${typeNumber}`
+            );
+            cardImgContainer.classList.add(
+                'inset-glowing',
+                `glowing-${typeNumber}`
+            );
+            void card.offsetWidth;
 
-                testResContainer.classList.add(
-                    'glowing',
-                    `glowing-${typeNumber}`
-                );
-                continueText.style.color = 'var(--charcoal)';
-                continueText.style.textShadow = '2px 2px 0px var(--rich-black)';
-                cardTypeContainer.classList.add(
-                    'card-type-color',
-                    `glowing-${typeNumber}`
-                );
-                cardImgContainer.classList.add(
-                    'inset-glowing',
-                    `glowing-${typeNumber}`
-                );
-                void card.offsetWidth;
-
-                try {
-                    const saveResponse = await fetch(
-                        '/enneagram-test/save-test-result',
-                        {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({ personality: resultText }),
-                        }
-                    );
-
-                    const saveData = await saveResponse.json();
-                    if (!saveData.success) {
-                        console.error('Failed to save test result');
+            try {
+                const saveResponse = await fetch(
+                    '/enneagram-test/save-test-result',
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ personality: resultText }),
                     }
+                );
 
-                    const historyResponse = await fetch(
-                        '/enneagram-test/log-history',
-                        {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({ personality: resultText }),
-                        }
-                    );
-
-                    const historyData = await historyResponse.json();
-                    if (!historyData.success) {
-                        console.error('Failed to log test history');
-                    }
-                } catch (error) {
-                    console.error('Error saving test result:', error);
+                const saveData = await saveResponse.json();
+                if (!saveData.success) {
+                    console.error('Failed to save test result');
                 }
 
-                setTimeout(() => {
-                    continueText.classList.add('fade-in');
-                    continueText.textContent = 'Tap to continue...';
-                    testResContainer.style.cursor = 'pointer';
+                const historyResponse = await fetch(
+                    '/enneagram-test/log-history',
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ personality: resultText }),
+                    }
+                );
 
-                    testResContainer.addEventListener('click', () => {
-                        continueText.classList.remove('fade-in');
-                        window.location.href = '/enneagram-types';
-                    });
-                }, 2000);
-            }, 3100);
-        },
-        { once: true }
-    );
+                const historyData = await historyResponse.json();
+                if (!historyData.success) {
+                    console.error('Failed to log test history');
+                }
+            } catch (error) {
+                console.error('Error saving test result:', error);
+            }
+
+            setTimeout(() => {
+                continueText.classList.add('fade-in');
+                continueText.textContent = '[SPACE] Tap to continue...';
+                testResContainer.style.cursor = 'pointer';
+
+                const continueAction = () => {
+                    clickSFX();
+                    continueText.classList.remove('fade-in');
+                    window.location.href = '/enneagram-types';
+                };
+
+                testResContainer.addEventListener('click', continueAction, {
+                    once: true,
+                });
+
+                const handleKeyPress = (e) => {
+                    if (e.key === ' ') {
+                        document.removeEventListener('keydown', handleKeyPress);
+                        continueAction();
+                    }
+                };
+                document.addEventListener('keydown', handleKeyPress);
+            }, 2000);
+        }, 3100);
+    };
+
+    card.addEventListener('click', revealCard, { once: true });
+
+    const handleInitialKeyPress = (e) => {
+        if (e.key === ' ') {
+            document.removeEventListener('keydown', handleInitialKeyPress);
+            revealCard();
+        }
+    };
+    document.addEventListener('keydown', handleInitialKeyPress);
 };
 
 // << ASSIGNS THE DESCRIPTION INTO THE PERSONALITY BASED ON ITS TYPE >>
@@ -662,6 +689,11 @@ function getTypeSVG(topType) {
 
     return svgMap[topType] || '';
 }
+
+const clickSFX = () => {
+    const clickAudio = new Audio('sfx/click.wav');
+    clickAudio.play().then(() => clickAudio.remove());
+};
 
 // << KEYBOARD LISTENER - the user can answer the test with key (1-5) based on the weight answer >>
 const keyboardOption = () => {

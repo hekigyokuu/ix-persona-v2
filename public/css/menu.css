@@ -134,6 +134,9 @@ body {
     font-weight: 700;
     font-size: 1.3rem;
     text-shadow: 1px 1px 0px var(--rich-black);
+
+    cursor: pointer;
+
     transition: all 0.2s ease;
 }
 

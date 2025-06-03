@@ -114,6 +114,7 @@ const logoutDisplay = () => {
     logOutBtn.style.textShadow = '2px 2px 0px var(--rich-black)';
     logOutBtn.style.textAlign = 'center';
     logOutBtn.style.fontSize = '1.5rem';
+    logOutBtn.style.cursor = 'pointer';
 
     logOutBtn.addEventListener('click', async () => {
         await logout();

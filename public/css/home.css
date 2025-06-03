@@ -81,6 +81,8 @@ html {
     color: var(--white-smoke);
     text-align: center;
     text-shadow: 1px 1px 0px var(--rich-black);
+
+    cursor: pointer;
 }
 
 .hero-button:hover {

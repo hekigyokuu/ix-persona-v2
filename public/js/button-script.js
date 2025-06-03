@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ctaButtons) {
         ctaButtons.forEach((btn) => {
             btn.addEventListener('click', () => {
+                clickSFX();
                 window.location.href = '/enneagram-test';
             });
         });
