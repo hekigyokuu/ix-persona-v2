@@ -82,15 +82,16 @@ const svgMap = {
     9: svgPeacemaker,
 };
 
-function displayHistory(enneagramTestHistory) {
+const displayHistory = (enneagramTestHistory) => {
     const historyLogContainer = document.getElementById(
         'history-log-container'
     );
     historyLogContainer.innerHTML = '';
 
-    enneagramTestHistory.forEach((item) => {
+    enneagramTestHistory.forEach((item, index) => {
         const historyLogItem = document.createElement('div');
         historyLogItem.className = 'history-log-item';
+        historyLogItem.id = `history-item-${index}`;
 
         const date = new Date(item.takenAt).toLocaleDateString('en-US', {
             year: 'numeric',
@@ -112,9 +113,25 @@ function displayHistory(enneagramTestHistory) {
         `;
 
         historyLogContainer.append(historyLogItem);
-    });
-}
 
+        if (typeNumber) {
+            const typeHash = `type-${
+                [
+                    'one',
+                    'two',
+                    'three',
+                    'four',
+                    'five',
+                    'six',
+                    'seven',
+                    'eight',
+                    'nine',
+                ][typeNumber - 1]
+            }`;
+            setupTypeButton(`history-item-${index}`, typeHash);
+        }
+    });
+};
 const retakeTestButton = document.getElementById('profile-retake-test');
 if (retakeTestButton) {
     retakeTestButton.addEventListener('click', () => {
