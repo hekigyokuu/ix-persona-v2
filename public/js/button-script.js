@@ -124,3 +124,10 @@ const setupTypeButton = (buttonId, typeHash) => {
         });
     }
 };
+
+document.addEventListener('keydown', (event) => {
+    const globalKeyToMenu = event.key.toLowerCase();
+    if (globalKeyToMenu === 'm') {
+        pixelTransitionAndLocatorFunc('/');
+    }
+});
