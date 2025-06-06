@@ -2817,6 +2817,20 @@ const svgPeacemaker = `
                     />
                 </svg>`;
 
+const svgMuted = `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3 9V15H7L12 20V4L7 9H3Z" fill="currentColor"/>
+  <line x1="16" y1="8" x2="20" y2="16" stroke="currentColor" stroke-width="2"/>
+  <line x1="20" y1="8" x2="16" y2="16" stroke="currentColor" stroke-width="2"/>
+</svg>
+`;
+
+const svgUnmuted = `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3 9V15H7L12 20V4L7 9H3Z" fill="currentColor"/>
+  <path d="M16.5 12C16.5 10.67 15.83 9.5 14.76 8.87L14.24 9.87C14.89 10.28 15.3 11.09 15.3 12C15.3 12.91 14.89 13.72 14.24 14.13L14.76 15.13C15.83 14.5 16.5 13.33 16.5 12Z" fill="currentColor"/>
+  <path d="M18.5 12C18.5 9.79 17.11 7.85 15.25 6.9L14.74 7.9C16.15 8.62 17 10.19 17 12C17 13.81 16.15 15.38 14.74 16.1L15.25 17.1C17.11 16.15 18.5 14.21 18.5 12Z" fill="currentColor"/>
+</svg>
+`;
+
 if (svgLandingPageDiv) {
     svgLandingPageDiv.innerHTML += svgIndexPoster;
 }

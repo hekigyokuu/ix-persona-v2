@@ -1,14 +1,13 @@
 // << TEST INSTRUCTION - popup that provide a detailed instruction that can be skip after 3 seconds >>
-const popupInstruction = document.getElementById('popup-instruction');
-const skipInstruction = document.getElementById('skip-instruction');
 
 // << TEST INSTRUCTION POPUP >>
-let timeLeft = 3;
+let instructionButtonTimeLeft = 3;
+const skipInstruction = document.getElementById('skip-instruction');
 const countdownInterval = setInterval(() => {
-    timeLeft--;
-    skipInstruction.textContent = `Wait ${timeLeft}s`;
+    instructionButtonTimeLeft--;
+    skipInstruction.textContent = `Wait ${instructionButtonTimeLeft}s`;
 
-    if (timeLeft <= 0) {
+    if (instructionButtonTimeLeft <= 0) {
         clearInterval(countdownInterval);
         skipInstruction.textContent = 'Take The Test Now';
         skipInstruction.disabled = false;
@@ -18,9 +17,10 @@ const countdownInterval = setInterval(() => {
 }, 1000);
 
 // << TEST INSTRUCTION POPUP && SKIP BUTTON - add event listener that takes a callback for skipping and removing the instruction >>
+const enneagramPopupInstruction = document.getElementById('popup-instruction');
 skipInstruction.addEventListener('click', () => {
     if (!skipInstruction.disabled) {
-        popupInstruction.style.display = 'none';
+        enneagramPopupInstruction.style.display = 'none';
         document.body.classList.remove('lock-scroll');
     }
 });
@@ -377,7 +377,7 @@ const testQuestions = [
     },
 ];
 
-// << TYPES SCORES ARRAY OF OBJECTS - scores that is assigned into correspondong personalities >>
+// << TYPES SCORES ARRAY OF OBJECTS - scores that is assigned into correspondiing personalities >>
 let scores = {
     'The Reformer': 0,
     'The Helper': 0,
@@ -390,14 +390,15 @@ let scores = {
     'The Peacemaker': 0,
 };
 
-const testContainer = document.getElementById('test-questionnaire-container');
 const optionsContainer = document.getElementById('test-options-container');
 const testResContainer = document.getElementById('test-res');
+const testContainer = document.getElementById('test-questionnaire-container');
 
 // << INITIALIZING THE CURRENT QUESTION INDEX >>
 let currentQuestion = 0;
 
 // << GENERATING HTML QUESTIONS AND OPTIONS FOR THE CORRESPONDING TYPE/INDEX - question are based on the index of the array of questions where the options have onclick properties calling the handleAnswer(@param weight) >>
+let keyboardEventListener = null;
 const showQuestion = (index) => {
     testContainer.innerHTML = '';
     optionsContainer.innerHTML = '';
@@ -421,7 +422,7 @@ const showQuestion = (index) => {
             <p id="statement-b">${question.statementB}</p>
         </div>
     `;
-    testContainer.appendChild(questionDiv);
+    testContainer.append(questionDiv);
 
     const optionsDiv = document.createElement('div');
     optionsDiv.className = 'test-options';
@@ -434,7 +435,7 @@ const showQuestion = (index) => {
             </button>
         </div>
     `;
-    optionsContainer.appendChild(optionsDiv);
+    optionsContainer.append(optionsDiv);
 
     updateUndoButtonVisibility();
 };
@@ -443,6 +444,7 @@ const showQuestion = (index) => {
 let answerHistory = [];
 
 const handleAnswer = (choice) => {
+    console.log(scores);
     clickSFX();
     const question = testQuestions[currentQuestion];
 
@@ -490,7 +492,13 @@ const updateUndoButtonVisibility = () => {
 // << TEST RESULT LOGIC - card event listener that have a function to spin by adding class for spinning >>
 // << TEST RESULT LOGIC - card event listener that have a function to spin by adding class for spinning >>
 // << TEST RESULT LOGIC - ... >>
+let isMuted = false;
+
 const showResult = () => {
+    if (keyboardEventListener) {
+        document.removeEventListener('keyup', keyboardEventListener);
+        keyboardEventListener = null;
+    }
     const topType = Object.keys(scores).reduce((a, b) =>
         scores[a] > scores[b] ? a : b
     );
@@ -526,10 +534,11 @@ const showResult = () => {
     // Function to handle card reveal
     const revealCard = async () => {
         const flippingAudio = new Audio('sfx/flipping.wav');
-        flippingAudio.play();
         flippingAudio.playbackRate = 1.1;
+        if (!isMuted) flippingAudio.play();
         card.classList.add('spinning');
         testResContainer.classList.remove('fade-in');
+        console.log(isMuted);
 
         cardBack.innerHTML = `
             <div class="card-name">
@@ -539,13 +548,17 @@ const showResult = () => {
             <div class="card-brief-description"></div>
         `;
 
+        const isRevealMuted = isMuted;
         setTimeout(async () => {
             flippingAudio.pause();
             flippingAudio.remove();
-            const revealCardAudio = new Audio('sfx/reveal.wav');
             const typeNumber = enneagramTypes[topType].split(' ')[1];
+            const revealCardAudio = new Audio('sfx/reveal.wav');
             card.classList.remove('spinning');
-            revealCardAudio.play().then(() => revealCardAudio.remove());
+
+            if (!isRevealMuted)
+                revealCardAudio.play().then(() => revealCardAudio.remove());
+
             cardBack.innerHTML = `
                 <div class="card-name">
                     <div class="card-type" id="card-type-container">${typeNumber}</div>
@@ -619,7 +632,6 @@ const showResult = () => {
                 testResContainer.style.cursor = 'pointer';
 
                 const continueAction = () => {
-                    clickSFX();
                     continueText.classList.remove('fade-in');
                     window.location.href = '/enneagram-types';
                 };
@@ -691,13 +703,19 @@ function getTypeSVG(topType) {
 }
 
 const clickSFX = () => {
+    if (isMuted) return;
+
     const clickAudio = new Audio('sfx/click.wav');
     clickAudio.play().then(() => clickAudio.remove());
 };
 
 // << KEYBOARD LISTENER - the user can answer the test with key (1-5) based on the weight answer >>
 const keyboardOption = () => {
-    document.addEventListener('keyup', (e) => {
+    if (keyboardEventListener) {
+        document.removeEventListener('keyup', keyboardEventListener);
+    }
+
+    keyboardEventListener = (e) => {
         if (e.key === 'a' || e.key === 'A') {
             handleAnswer('A');
         } else if (e.key === 'b' || e.key === 'B') {
@@ -705,7 +723,16 @@ const keyboardOption = () => {
         } else if (e.key === 'u' || e.key === 'U') {
             undoLastAnswer();
         }
-    });
+    };
+
+    document.addEventListener('keyup', keyboardEventListener);
+};
+
+const toggleTestMute = () => {
+    isMuted = !isMuted;
+    const testMuteButton = document.getElementById('test-mute-toggle');
+    testMuteButton.innerHTML = isMuted ? svgMuted : svgUnmuted;
+    testMuteButton.classList.toggle('active', isMuted);
 };
 
 showQuestion(currentQuestion);

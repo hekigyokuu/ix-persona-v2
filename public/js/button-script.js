@@ -14,71 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const logoGoHomeButton = document.getElementById('logo-go-home');
-    if (logoGoHomeButton) {
-        logoGoHomeButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            pixelTransitionAndLocatorFunc('/homepage');
-        });
-    }
+    const testMuteToggle = document.getElementById('test-mute-toggle');
+    testMuteToggle ? (testMuteToggle.innerHTML = svgUnmuted) : null;
 
-    const homepageCtaButton = document.querySelector('.cta-button');
-    if (homepageCtaButton) {
-        homepageCtaButton.addEventListener('click', (e) => {
+    buttonNavigationRoutes.forEach(({ selector, url }) => {
+        const navButton = document.getElementById(selector);
+        navButton?.addEventListener('click', (e) => {
             e.preventDefault();
-            pixelTransitionAndLocatorFunc('/enneagram-test');
+            pixelTransitionAndLocatorFunc(url);
         });
-    }
-
-    const goMenuButton = document.getElementById('go-menu');
-    if (goMenuButton) {
-        goMenuButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            pixelTransitionAndLocatorFunc('/');
-        });
-    }
-
-    const goTypesButton = document.getElementById('go-types');
-    if (goTypesButton) {
-        goTypesButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            pixelTransitionAndLocatorFunc('/enneagram-types');
-        });
-    }
-
-    const goTestButton = document.getElementById('go-test');
-    if (goTestButton) {
-        goTestButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            pixelTransitionAndLocatorFunc('/enneagram-test');
-        });
-    }
-
-    const goHomeButton = document.getElementById('go-home');
-    if (goHomeButton) {
-        goHomeButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            pixelTransitionAndLocatorFunc('/homepage');
-        });
-    }
-
-    const goProfileButton = document.getElementById('go-profile');
-    if (goProfileButton) {
-        goProfileButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            pixelTransitionAndLocatorFunc('/profile');
-        });
-    }
-
-    const setupTypeButton = (buttonId, typeHash) => {
-        const typePosterButton = document.getElementById(buttonId);
-        if (typePosterButton) {
-            typePosterButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                pixelTransitionAndLocatorFunc(`/enneagram-types#${typeHash}`);
-            });
-        }
-    };
+    });
 
     setupTypeButton('btn-to-one', 'type-one');
     setupTypeButton('btn-to-two', 'type-two');
@@ -158,4 +103,24 @@ const pixelTransitionAndLocatorFunc = (url) => {
         },
         { once: true }
     );
+};
+
+const buttonNavigationRoutes = [
+    { selector: 'logo-go-home', url: '/homepage' },
+    { selector: 'take-the-test-button-homepage', url: '/enneagram-test' },
+    { selector: 'go-menu', url: '/' },
+    { selector: 'go-types', url: '/enneagram-types' },
+    { selector: 'go-test', url: '/enneagram-test' },
+    { selector: 'go-home', url: '/homepage' },
+    { selector: 'go-profile', url: '/profile' },
+];
+
+const setupTypeButton = (buttonId, typeHash) => {
+    const typePosterButton = document.getElementById(buttonId);
+    if (typePosterButton) {
+        typePosterButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            pixelTransitionAndLocatorFunc(`/enneagram-types#${typeHash}`);
+        });
+    }
 };

@@ -78,7 +78,7 @@
     font-size: 1.5rem;
     color: var(--light-slate);
     text-align: center;
-    text-shadow: 4px 2px 0px var(--rich-black);
+    letter-spacing: 2px;
 }
 
 .styled-input {
@@ -102,7 +102,7 @@
     font-family: 'Jersey 25', sans-serif;
     font-size: 1.5rem;
     color: var(--rich-green);
-    text-shadow: 4px 2px 0px var(--rich-black);
+    letter-spacing: 2px;
 }
 
 .form-container a {

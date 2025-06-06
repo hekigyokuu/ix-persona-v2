@@ -2,8 +2,6 @@
 // << PAGE LOAD (PROFILE PAGE) - assigning the type color and svg into the profile image container dnamically based on the user's personality extracted >>
 // << RETAKE TEST BUTTON - adding onclick function the navigate into -> /enneagram-test >>
 // << PROFILE LOGOUT BUTTON - adding onclick function that popup the logoutDisplay for logout confirmation >>
-const retakeTestButton = document.getElementById('profile-retake-test');
-const profileLogout = document.getElementById('profile-logout');
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
@@ -24,11 +22,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             'profile-gender'
         ).textContent = `Gender: ${userData.gender}`;
 
-        if (userData.personality === 'Not Set') {
-            retakeTestButton.textContent = 'Take Test';
-        } else {
-            retakeTestButton.textContent = 'Retake Test';
-        }
+        retakeTestButton.textContent =
+            userData.personality === 'Not Set' ? 'Take Test' : 'Retake Test';
 
         const typeMatch = userData.personality.match(/Type\s(\d+)/);
 
@@ -61,18 +56,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         window.location.href = '/auth/login';
         return;
     }
-
-    if (retakeTestButton) {
-        retakeTestButton.addEventListener('click', () => {
-            window.location.href = '/enneagram-test';
-        });
-    }
-
-    if (profileLogout) {
-        profileLogout.addEventListener('click', () => {
-            logoutDisplay();
-        });
-    }
 });
 
 const typeColors = {
@@ -99,11 +82,13 @@ const svgMap = {
     9: svgPeacemaker,
 };
 
-function displayHistory(history) {
-    const container = document.getElementById('history-log-container');
-    container.innerHTML = '';
+function displayHistory(enneagramTestHistory) {
+    const historyLogContainer = document.getElementById(
+        'history-log-container'
+    );
+    historyLogContainer.innerHTML = '';
 
-    history.forEach((item) => {
+    enneagramTestHistory.forEach((item) => {
         const historyLogItem = document.createElement('div');
         historyLogItem.className = 'history-log-item';
 
@@ -120,12 +105,26 @@ function displayHistory(history) {
         const typeColor = typeColors[typeNumber] || '#ccc';
 
         historyLogItem.innerHTML = `
-            <span class="personality" style="color: ${typeColor}; font-weight: 400;">
+            <span class="personality" style="color: ${typeColor};">
                 ${item.personality}
             </span>
-            <span class="date">${date}</span>
+            <span class="date">Test taken on ${date}</span>
         `;
 
-        container.appendChild(historyLogItem);
+        historyLogContainer.append(historyLogItem);
+    });
+}
+
+const retakeTestButton = document.getElementById('profile-retake-test');
+if (retakeTestButton) {
+    retakeTestButton.addEventListener('click', () => {
+        window.location.href = '/enneagram-test';
+    });
+}
+
+const profileLogout = document.getElementById('profile-logout');
+if (profileLogout) {
+    profileLogout.addEventListener('click', () => {
+        logoutDisplay();
     });
 }

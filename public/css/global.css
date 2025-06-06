@@ -206,10 +206,15 @@ body {
 }
 
 .navbar button:hover {
-    background-color: var(--charcoal);
+    background-color: var(--light-slate-dark);
     color: var(--light-slate);
     transform: translate(2px, 2px);
     box-shadow: none;
+}
+
+.navbar .active {
+    background-color: var(--light-slate-dark);
+    color: var(--light-slate);
 }
 
 .log-out-button:hover {
