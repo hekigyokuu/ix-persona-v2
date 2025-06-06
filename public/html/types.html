@@ -19,8 +19,8 @@
     <body>
         <nav class="navbar">
             <div class="navbar-container first-container">
-                <h1>IXpersona</h1>
-                <button id="go-home">
+                <h1 id="logo-go-home">IXpersona</h1>
+                <button id="go-menu">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -30,14 +30,16 @@
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
+                        class="lucide lucide-grid"
                     >
-                        <path
-                            d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"
-                        />
+                        <rect x="3" y="3" width="7" height="7" />
+                        <rect x="14" y="3" width="7" height="7" />
+                        <rect x="14" y="14" width="7" height="7" />
+                        <rect x="3" y="14" width="7" height="7" />
                     </svg>
                 </button>
             </div>
-            <button id="go-menu">
+            <button id="go-home">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -47,12 +49,12 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-arrow-left"
                 >
-                    <line x1="19" y1="12" x2="5" y2="12" />
-                    <polyline points="12 19 5 12 12 5" />
+                    <path
+                        d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"
+                    />
                 </svg>
-                <span class="p-responsive">Back to Menu</span>
+                <span class="p-responsive">Homepage</span>
             </button>
             <button id="go-types">
                 <svg
@@ -64,12 +66,12 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-grid"
+                    class="feather feather-book"
                 >
-                    <rect x="3" y="3" width="7" height="7" />
-                    <rect x="14" y="3" width="7" height="7" />
-                    <rect x="14" y="14" width="7" height="7" />
-                    <rect x="3" y="14" width="7" height="7" />
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path
+                        d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"
+                    />
                 </svg>
                 <span class="p-responsive">Enneagram Types</span>
             </button>
@@ -91,7 +93,7 @@
                 <span class="p-responsive">Take the Test</span>
             </button>
             <div class="navbar-container second-container">
-                <button id="toggle-profile-btn">
+                <button id="go-profile">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

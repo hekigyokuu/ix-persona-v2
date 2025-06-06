@@ -14,106 +14,68 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const ctaButtons = document.querySelectorAll('.cta-button');
-    const takeTest = document.getElementById('take-test-nav');
-    if (takeTest) {
-        takeTest.href = '/enneagram-test';
-    }
-
-    if (ctaButtons) {
-        ctaButtons.forEach((btn) => {
-            btn.addEventListener('click', () => {
-                clickSFX();
-                window.location.href = '/enneagram-test';
-            });
+    const logoGoHomeButton = document.getElementById('logo-go-home');
+    if (logoGoHomeButton) {
+        logoGoHomeButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            pixelTransitionAndLocatorFunc('/homepage');
         });
     }
 
-    const profileNavButton = document.getElementById('toggle-profile-btn');
-    if (profileNavButton) {
-        profileNavButton.addEventListener('click', () => {
-            window.location.href = '/profile';
+    const homepageCtaButton = document.querySelector('.cta-button');
+    if (homepageCtaButton) {
+        homepageCtaButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            pixelTransitionAndLocatorFunc('/enneagram-test');
         });
     }
 
-    function createPixelTransition() {
-        const overlay = document.createElement('div');
-
-        Object.assign(overlay.style, {
-            position: 'fixed',
-            top: '0',
-            left: '0',
-            width: '100vw',
-            height: '100vh',
-            backgroundColor: '#3a4657',
-            zIndex: '9999',
-            pointerEvents: 'none',
-            display: 'none',
-            imageRendering: 'pixelated',
-            backgroundImage: `
-      linear-gradient(45deg, #374151 25%, transparent 25%),
-      linear-gradient(-45deg, #374151 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, #374151 75%),
-      linear-gradient(-45deg, transparent 75%, #374151 75%)
-    `,
-            backgroundSize: '20px 20px',
-            backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
-
-            clipPath: 'inset(50% 50% 50% 50%)',
+    const goMenuButton = document.getElementById('go-menu');
+    if (goMenuButton) {
+        goMenuButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            pixelTransitionAndLocatorFunc('/');
         });
-
-        overlay.id = 'pixel-transition';
-        document.body.append(overlay);
-        return overlay;
     }
 
-    function startPixelTransition(url) {
-        let overlay =
-            document.getElementById('pixel-transition') ||
-            createPixelTransition();
-
-        overlay.style.display = 'block';
-        overlay.style.clipPath = 'inset(50% 50% 50% 50%)';
-
-        void overlay.offsetWidth;
-
-        overlay.style.clipPath = 'inset(0% 0% 0% 0%)';
-        overlay.style.transition = 'clip-path .6s steps(8, end)';
-
-        overlay.addEventListener(
-            'transitionend',
-            function handler() {
-                overlay.removeEventListener('transitionend', handler);
-                setTimeout(() => {
-                    overlay.remove();
-                    window.location.href = url;
-                }, 100);
-            },
-            { once: true }
-        );
+    const goTypesButton = document.getElementById('go-types');
+    if (goTypesButton) {
+        goTypesButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            pixelTransitionAndLocatorFunc('/enneagram-types');
+        });
     }
-    document.getElementById('go-menu').addEventListener('click', (e) => {
-        e.preventDefault();
-        startPixelTransition('/');
-    });
-    document.getElementById('go-types').addEventListener('click', (e) => {
-        e.preventDefault();
-        startPixelTransition('/enneagram-types');
-    });
-    document.getElementById('go-test').addEventListener('click', (e) => {
-        e.preventDefault();
-        startPixelTransition('/enneagram-test');
-    });
-    document.getElementById('go-home').addEventListener('click', (e) => {
-        e.preventDefault();
-        startPixelTransition('/homepage');
-    });
+
+    const goTestButton = document.getElementById('go-test');
+    if (goTestButton) {
+        goTestButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            pixelTransitionAndLocatorFunc('/enneagram-test');
+        });
+    }
+
+    const goHomeButton = document.getElementById('go-home');
+    if (goHomeButton) {
+        goHomeButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            pixelTransitionAndLocatorFunc('/homepage');
+        });
+    }
+
+    const goProfileButton = document.getElementById('go-profile');
+    if (goProfileButton) {
+        goProfileButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            pixelTransitionAndLocatorFunc('/profile');
+        });
+    }
 
     const setupTypeButton = (buttonId, typeHash) => {
         const typePosterButton = document.getElementById(buttonId);
         if (typePosterButton) {
-            typePosterButton.addEventListener('click', () => {
-                window.location.href = `/enneagram-types#${typeHash}`;
+            typePosterButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                pixelTransitionAndLocatorFunc(`/enneagram-types#${typeHash}`);
             });
         }
     };
@@ -141,3 +103,59 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 100);
 });
+
+const createPixelTransition = () => {
+    const overlay = document.createElement('div');
+
+    Object.assign(overlay.style, {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: '#3a4657',
+        zIndex: '9999',
+        pointerEvents: 'none',
+        display: 'none',
+        imageRendering: 'pixelated',
+        backgroundImage: `
+      linear-gradient(45deg, #374151 25%, transparent 25%),
+      linear-gradient(-45deg, #374151 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #374151 75%),
+      linear-gradient(-45deg, transparent 75%, #374151 75%)
+    `,
+        backgroundSize: '20px 20px',
+        backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
+
+        clipPath: 'inset(50% 50% 50% 50%)',
+    });
+
+    overlay.id = 'pixel-transition';
+    document.body.append(overlay);
+    return overlay;
+};
+
+const pixelTransitionAndLocatorFunc = (url) => {
+    let overlay =
+        document.getElementById('pixel-transition') || createPixelTransition();
+
+    overlay.style.display = 'block';
+    overlay.style.clipPath = 'inset(50% 50% 50% 50%)';
+
+    void overlay.offsetWidth;
+
+    overlay.style.clipPath = 'inset(0% 0% 0% 0%)';
+    overlay.style.transition = 'clip-path .6s steps(8, end)';
+
+    overlay.addEventListener(
+        'transitionend',
+        function handler() {
+            overlay.removeEventListener('transitionend', handler);
+            setTimeout(() => {
+                overlay.remove();
+                window.location.href = url;
+            }, 100);
+        },
+        { once: true }
+    );
+};

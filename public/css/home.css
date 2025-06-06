@@ -40,13 +40,12 @@ html {
 }
 
 .quote {
-    padding-top: 5vh;
     margin-bottom: 1rem;
 
     font-family: 'Jersey 25', cursive;
     font-size: 6rem;
     color: var(--amber-500);
-    text-shadow: 4px 4px 0px var(--rich-black);
+    text-shadow: 6px 4px 0px var(--rich-black);
 }
 
 .quote span {
@@ -83,6 +82,8 @@ html {
     text-shadow: 1px 1px 0px var(--rich-black);
 
     cursor: pointer;
+
+    transition: all 0.2s ease;
 }
 
 .hero-button:hover {
@@ -117,7 +118,7 @@ html {
 
     border-radius: 4px;
 
-    font-family: 'Jersey 25', sans-serif;
+    font-family: 'Jersey 25', monospace;
     font-size: 5rem;
     color: var(--light-slate);
     text-shadow: 4px 2px 0px var(--charcoal);
@@ -156,6 +157,8 @@ html {
     overflow: hidden;
 
     cursor: pointer;
+
+    transition: all 0.2s ease;
 }
 
 .why-use-box h4 {
@@ -163,8 +166,10 @@ html {
 
     font-family: 'Jersey 25', monospace;
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 800;
     line-height: 1.8;
+
+    letter-spacing: 2px;
     text-shadow: 1px 1px 0px var(--rich-black);
 }
 
@@ -332,6 +337,8 @@ html {
     text-shadow: 1px 1px 0px var(--rich-black);
 
     cursor: pointer;
+
+    transition: background-color 0.2s ease;
 }
 
 .poster-type-btn:hover {
