@@ -1,3 +1,4 @@
+let isMuted = false;
 // << TEST INSTRUCTION - popup that provide a detailed instruction that can be skip after 3 seconds >>
 
 // << TEST INSTRUCTION POPUP >>
@@ -22,6 +23,7 @@ skipInstruction.addEventListener('click', () => {
     if (!skipInstruction.disabled) {
         enneagramPopupInstruction.style.display = 'none';
         document.body.classList.remove('lock-scroll');
+        enableKeyboard(); // Enable keyboard when skipping instructions
     }
 });
 
@@ -492,13 +494,9 @@ const updateUndoButtonVisibility = () => {
 // << TEST RESULT LOGIC - card event listener that have a function to spin by adding class for spinning >>
 // << TEST RESULT LOGIC - card event listener that have a function to spin by adding class for spinning >>
 // << TEST RESULT LOGIC - ... >>
-let isMuted = false;
 
 const showResult = () => {
-    if (keyboardEventListener) {
-        document.removeEventListener('keyup', keyboardEventListener);
-        keyboardEventListener = null;
-    }
+    disableKeyboard();
     const topType = Object.keys(scores).reduce((a, b) =>
         scores[a] > scores[b] ? a : b
     );
@@ -663,7 +661,7 @@ const showResult = () => {
 };
 
 // << ASSIGNS THE DESCRIPTION INTO THE PERSONALITY BASED ON ITS TYPE >>
-function getTypeDescription(type) {
+const getTypeDescription = (type) => {
     const descriptions = {
         'The Reformer':
             'Rational and idealistic, principled, purposeful, self-controlled, and perfectionistic.',
@@ -683,10 +681,10 @@ function getTypeDescription(type) {
         'The Peacemaker': 'Receptive, reassuring, agreeable, and complacent.',
     };
     return descriptions[type] || 'Discover more about your personality type.';
-}
+};
 
 // << ASSIGNS THE SVG CODE INTO THE PERSONALITY BASED ON ITS TYPE >>
-function getTypeSVG(topType) {
+const getTypeSVG = (topType) => {
     const svgMap = {
         'The Reformer': svgReformer,
         'The Helper': svgHelper,
@@ -700,7 +698,7 @@ function getTypeSVG(topType) {
     };
 
     return svgMap[topType] || '';
-}
+};
 
 const clickSFX = () => {
     if (isMuted) return;
@@ -728,6 +726,19 @@ const keyboardOption = () => {
     document.addEventListener('keyup', keyboardEventListener);
 };
 
+const disableKeyboard = () => {
+    if (keyboardEventListener) {
+        document.removeEventListener('keyup', keyboardEventListener);
+        keyboardEventListener = null;
+    }
+};
+
+const enableKeyboard = () => {
+    if (!keyboardEventListener) {
+        keyboardOption();
+    }
+};
+
 const toggleTestMute = () => {
     isMuted = !isMuted;
     const testMuteButton = document.getElementById('test-mute-toggle');
@@ -737,3 +748,4 @@ const toggleTestMute = () => {
 
 showQuestion(currentQuestion);
 keyboardOption();
+disableKeyboard();
