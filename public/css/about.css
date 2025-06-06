@@ -131,6 +131,7 @@
     text-shadow: 4px 2px 0px var(--rich-black);
 }
 
+
 .about-author-container {
     display: flex;
     flex-direction: column;

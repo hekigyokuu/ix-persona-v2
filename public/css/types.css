@@ -786,7 +786,8 @@
 
 #type-one h3,
 #type-one .title-description-container,
-#type-one .type-bottom {
+#type-one .type-bottom,
+#reformer-fulldesc {
     background-color: #2c2c2c;
     color: #a09e9e;
 }
@@ -845,7 +846,8 @@
 /* Type 2 - The Helper */
 #type-two h3,
 #type-two .title-description-container,
-#type-two .type-bottom {
+#type-two .type-bottom,
+#helper-fulldesc {
     background-color: #2e2222;
     color: #997272;
 }
@@ -904,7 +906,8 @@
 /* Type 3 - The Achiever */
 #type-three h3,
 #type-three .title-description-container,
-#type-three .type-bottom {
+#type-three .type-bottom,
+#achiever-fulldesc {
     background-color: #323525;
     color: #cecc7c;
 }
@@ -961,7 +964,8 @@
 /* Type 4 - The Individualist */
 #type-four h3,
 #type-four .title-description-container,
-#type-four .type-bottom {
+#type-four .type-bottom,
+#individualist-fulldesc {
     background-color: #312530;
     color: #a086a8;
 }
@@ -1018,7 +1022,8 @@
 /* Type 5 - The Investigator */
 #type-five h3,
 #type-five .title-description-container,
-#type-five .type-bottom {
+#type-five .type-bottom,
+#investigator-fulldesc {
     background-color: #211c2b;
     color: #8d86a8;
 }
@@ -1077,7 +1082,8 @@
 /* Type 6 - The Loyalist */
 #type-six h3,
 #type-six .title-description-container,
-#type-six .type-bottom {
+#type-six .type-bottom,
+#loyalist-fulldesc {
     background-color: #323525;
     color: #cecc7c;
 }
@@ -1133,7 +1139,8 @@
 /* Type 7 - The Enthusiast */
 #type-seven h3,
 #type-seven .title-description-container,
-#type-seven .type-bottom {
+#type-seven .type-bottom,
+#enthusiast-fulldesc {
     background-color: #1c1c2b;
     color: #869ea8;
 }
@@ -1190,7 +1197,8 @@
 /* Type 8 - The Challenger */
 #type-eight h3,
 #type-eight .title-description-container,
-#type-eight .type-bottom {
+#type-eight .type-bottom,
+#challenger-fulldesc {
     background-color: #2b1c1f;
     color: #be8888;
 }
@@ -1246,7 +1254,8 @@
 /* Type 9 - The Peacemaker */
 #type-nine h3,
 #type-nine .title-description-container,
-#type-nine .type-bottom {
+#type-nine .type-bottom,
+#peacemaker-fulldesc {
     background-color: #1c2b24;
     color: #95be88;
 }

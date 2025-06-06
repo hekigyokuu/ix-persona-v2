@@ -455,11 +455,12 @@ html {
 @media (max-width: 600px) {
     .hero-section {
         height: auto;
+        margin-top: 5rem;
         padding: 4% 5%;
     }
 
     .quote {
-        font-size: 3rem;
+        font-size: 2rem;
         padding-top: 3vh;
     }
 
@@ -479,6 +480,7 @@ html {
     }
 
     .why-use-info h2 {
+        margin-top: 27 rem;
         font-size: 3rem;
         margin-bottom: 1.5rem;
     }

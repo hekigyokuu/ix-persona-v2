@@ -34,7 +34,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be correct/right with their intimate connections.',
                 fullDesc:
-                    ' Expresses passionate idealism in close relationships and aims to reform others. Their intensity can come off as rigid or controlling but stems from deep conviction.',
+                    ' Expresses passionate idealism in close relationships and aims to reform others. Their intensity can come off as rigid or controlling but stems from deep conviction. Because of their expressive intensity and zeal, they are occasionally confused with Type 4, who also exhibits deep emotional depth.',
             },
         ],
     },
@@ -51,7 +51,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be charming in order to have their physical needs met. ',
                 fullDesc:
-                    'Wants to be loved for who they are and may act childlike or charming to attract nurturing. They tend to avoid showing how much they actually need others.',
+                    'Wants to be loved for who they are and may act childlike or charming to attract nurturing. They tend to avoid showing how much they actually need others. Their internal focus and neediness frequently cause them to be confused with Type 4, who likewise has intense longing and emotional depth.',
             },
             {
                 type: 'SO',
@@ -86,7 +86,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be valuable/admired to have their physical needs met.',
                 fullDesc:
-                    'Strives for success quietly, focusing more on inner efficiency and productivity than external praise. They may downplay accomplishments while still deeply identifying with performance.',
+                    'Strives for success quietly, focusing more on inner efficiency and productivity than external praise. They may downplay accomplishments while still deeply identifying with performance. Because they minimize their accomplishments, they are sometimes confused for Type 5, who is also more secretive and reserved.',
             },
             {
                 type: 'SO',
@@ -121,7 +121,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be themselves in order to have their physical needs met.',
                 fullDesc:
-                    'Appears emotionally restrained while enduring deep feelings beneath the surface. They try to prove strength by being self-sufficient despite inner sensitivity.',
+                    'Appears emotionally restrained while enduring deep feelings beneath the surface. They try to prove strength by being self-sufficient despite inner sensitivity. Their control and self-discipline frequently lead to them being misidentified as Type 5, who similarly has a quiet, emotionally contained personality.',
             },
             {
                 type: 'SO',
@@ -174,7 +174,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be competent with their intimate connections.',
                 fullDesc:
-                    'Desires deep, meaningful one-on-one bonds but fears emotional overwhelm. They may show surprising boldness in intimate settings while remaining guarded elsewhere.',
+                    'Desires deep, meaningful one-on-one bonds but fears emotional overwhelm. They may show surprising boldness in intimate settings while remaining guarded elsewhere. Because of their bold self-expression and desire to merge, they can be confused with Type 4 or even Type 8, as they appear less introverted and more intense.',
             },
         ],
     },
@@ -209,7 +209,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be secure/supported with their intimate connections.',
                 fullDesc:
-                    'Faces fear head-on by appearing strong, assertive, or even intimidating. They often rely only on themselves and distrust external structures.',
+                    'Faces fear head-on by appearing strong, assertive, or even intimidating. They often rely only on themselves and distrust external structures. Because of their bold appearance, they are frequently confused with Type 8, who meets threats head on.',
             },
         ],
     },
@@ -235,7 +235,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be satisfied with their groups and communities.',
                 fullDesc:
-                    'Prioritizes group needs and aims to be of service, often downplaying their personal desires. They may feel conflicted between helping others and pursuing their own freedom.',
+                    'Prioritizes group needs and aims to be of service, often downplaying their personal desires. They may feel conflicted between helping others and pursuing their own freedom. Their helpfulness and service-oriented mindset can loo a lot like Type 2.',
             },
             {
                 type: 'SX',
@@ -270,7 +270,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be protective of their groups and communities.',
                 fullDesc:
-                    'Leads by defending others and fighting for justice, focusing on fairness over domination. They may soften their power in favor of serving the group.',
+                    'Leads by defending others and fighting for justice, focusing on fairness over domination. They may soften their power in favor of serving the group. Their group focus and feeling of duty might be mistaken for Type 6.',
             },
             {
                 type: 'SX',
@@ -305,7 +305,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be at peace with their groups and communities.',
                 fullDesc:
-                    'Engages actively in groups to create harmony, often forgetting personal priorities. They may appear outgoing while repressing inner conflict.',
+                    'Engages actively in groups to create harmony, often forgetting personal priorities. They may appear outgoing while repressing inner conflict. Their self-sacrificing behavior may resemble Type 2.',
             },
             {
                 type: 'SX',
