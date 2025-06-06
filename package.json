@@ -1,20 +1,20 @@
 {
-  "name": "ixpersona",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "server": "node app.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "connect-mongo": "^5.1.0",
-    "express": "^5.1.0",
-    "express-session": "^1.18.1",
-    "express-validator": "^7.2.1",
-    "mongoose": "^8.15.0"
-  }
+    "name": "ixpersona",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "server": "node app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "bcrypt": "^6.0.0",
+        "connect-mongo": "^5.1.0",
+        "express": "^5.1.0",
+        "express-session": "^1.18.1",
+        "express-validator": "^7.2.1",
+        "mongoose": "^8.15.0"
+    }
 }

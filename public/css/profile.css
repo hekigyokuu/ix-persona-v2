@@ -1,25 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
-
 :root {
-    /* Main Colors */
     --white-smoke: #f9fafb;
     --charcoal: #374151;
+    --charcoal-a: #374151aa;
+    --dark-charcoal: #131924;
     --medium-slate: #8a93a1;
     --light-slate: #a5afc0;
+    --light-slate-dark: #626974;
+    --light-slate-dark-a: #626974aa;
     --light-slate-a: #a5afc0aa;
     --amber-700: #d97706;
     --amber-500: #f59e0b;
     --rich-black: #202225;
+    --rich-green: #34575a;
     --light-gray: #f3f4f6;
-
-    /* Button */
-    --button-bg: var(--amber-700);
-    --button-border: var(--amber-500);
-    --button-hover: var(--amber-500);
-
-    /* Shadow */
-    --shadow-dark: var(--charcoal);
+    --blue-a: #7cf1f1;
+    --light-blue: #61aaaa;
+    --purple-a: #bb62fa;
+    --light-purple: #9256bd;
 }
 
 .profile-section {
@@ -280,7 +277,7 @@
 }
 
 .history-log-item:hover {
-    background-color: var(--light-slate-a);
+    background-color: var(--light-slate-dark);
     box-shadow: 6px 6px 0px var(--rich-black);
 }
 

@@ -421,6 +421,13 @@
     padding: 10% 4%;
 
     background-color: var(--charcoal);
+    background-image: linear-gradient(
+            90deg,
+            var(--light-slate) 1px,
+            transparent 1px
+        ),
+        linear-gradient(var(--light-slate) 1px, transparent 1px);
+    background-size: 200px 200px;
     box-shadow: inset 0px 12px 0px var(--rich-black);
 }
 
@@ -452,6 +459,8 @@
     color: var(--light-slate);
     letter-spacing: 2px;
     text-shadow: 4px 2px 0px var(--rich-black);
+
+    cursor: pointer;
 }
 
 .title-description-container {
@@ -471,6 +480,8 @@
     font-family: 'Jersey 25', sans-serif;
     font-size: 1.7rem;
     color: var(--light-slate);
+
+    cursor: pointer;
 }
 
 .card-container {
@@ -649,6 +660,13 @@
     padding: 5%;
 
     background-color: var(--dark-charcoal);
+    background-image: linear-gradient(
+            90deg,
+            var(--light-slate) 1px,
+            transparent 1px
+        ),
+        linear-gradient(var(--light-slate) 1px, transparent 1px);
+    background-size: 200px 200px;
     border: 1px solid var(--light-slate);
     box-shadow: inset 15px 8px 0px var(--black);
 
@@ -659,11 +677,7 @@
     padding: 5%;
     margin-bottom: 5vh;
 
-    background-color: var(--charcoal);
     border: 1px solid var(--light-slate);
-    box-shadow: 8px 8px 0px var(--charcoal);
-
-    color: var(--light-slate);
 }
 
 .types-personalities-container h3 {
@@ -675,7 +689,7 @@
 
     background-color: var(--charcoal);
     border: 1px solid var(--light-slate);
-    box-shadow: 8px 8px 0px var(--charcoal);
+    box-shadow: 8px 8px 0px var(--light-slate);
 
     font-size: 5rem;
     font-family: 'Jersey 25', monospace;
@@ -753,18 +767,10 @@
     color: var(--blue-a);
 }
 
-.card-front,
-.card-back {
-    background-color: #4a6b3a;
-    color: #1d3514;
-}
-
 .card-name,
 .card-brief-description,
 .card-img,
 .card-full-description {
-    background-color: #87a96b;
-    border: 2px solid #2e5a1c;
     box-shadow: inset 1px 1px 0px var(--black);
 }
 
@@ -790,6 +796,9 @@
 #reformer-fulldesc {
     background-color: #2c2c2c;
     color: #a09e9e;
+}
+#reformer-fulldesc {
+    box-shadow: 8px 8px 0px #a09e9e;
 }
 #type-one h3 {
     color: var(--light-slate);
@@ -851,6 +860,9 @@
     background-color: #2e2222;
     color: #997272;
 }
+#helper-fulldesc {
+    box-shadow: 8px 8px 0px #997272;
+}
 #type-two h3 {
     color: var(--light-slate);
 }
@@ -911,6 +923,9 @@
     background-color: #323525;
     color: #cecc7c;
 }
+#achiever-fulldesc {
+    box-shadow: 8px 8px 0px #cecc7c;
+}
 #type-three h3 {
     color: var(--light-slate);
 }
@@ -969,6 +984,9 @@
     background-color: #312530;
     color: #a086a8;
 }
+#individualist-fulldesc {
+    box-shadow: 8px 8px 0px #a086a8;
+}
 #type-four h3 {
     color: var(--light-slate);
 }
@@ -1026,6 +1044,9 @@
 #investigator-fulldesc {
     background-color: #211c2b;
     color: #8d86a8;
+}
+#investigator-fulldesc {
+    box-shadow: 8px 8px 0px #8d86a8;
 }
 #type-five h3 {
     color: var(--light-slate);
@@ -1087,6 +1108,9 @@
     background-color: #323525;
     color: #cecc7c;
 }
+#loyalist-fulldesc {
+    box-shadow: 8px 8px 0px #cecc7c;
+}
 #type-six h3 {
     color: var(--light-slate);
 }
@@ -1143,6 +1167,9 @@
 #enthusiast-fulldesc {
     background-color: #1c1c2b;
     color: #869ea8;
+}
+#enthusiast-fulldesc {
+    box-shadow: 8px 8px 0px #869ea8;
 }
 #type-seven h3 {
     color: var(--light-slate);
@@ -1202,6 +1229,9 @@
     background-color: #2b1c1f;
     color: #be8888;
 }
+#challenger-fulldesc {
+    box-shadow: 8px 8px 0px #be8888;
+}
 #type-eight h3 {
     color: var(--light-slate);
 }
@@ -1258,6 +1288,9 @@
 #peacemaker-fulldesc {
     background-color: #1c2b24;
     color: #95be88;
+}
+#peacemaker-fulldesc {
+    box-shadow: 8px 8px 0px #95be88;
 }
 #type-nine h3 {
     color: var(--light-slate);
@@ -1362,85 +1395,5 @@
     }
     to {
         transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-/*desktop*/
-@media (max-width: 1536px) {
-    .types-container-info {
-        height: 1450px;
-        width: 100%;
-        padding: 7%;
-    }
-
-    .enneagram-full-information-container {
-        width: 100%;
-        max-width: 1920px;
-        height: 106%;
-        padding: 5%;
-        border-radius: 2px;
-    }
-
-    .enneagram-full-information-container h3 {
-        width: 100%;
-
-        font-size: 8.5rem;
-        line-height: 1;
-    }
-
-    .enneagram-full-information-container p {
-        width: 100%;
-
-        font-size: 2.6rem;
-        line-height: 1.5;
-    }
-
-    .types-ct-information {
-        height: 1170px;
-        width: 100%;
-
-        padding: 8%;
-    }
-
-    .types-container-text-box h3 {
-        width: 100%;
-
-        font-size: 8.5rem;
-        line-height: 1;
-    }
-
-    .types-container-text-box p {
-        width: 100%;
-
-        font-size: 2.8rem;
-        line-height: 1.4;
-    }
-
-    .text-box h3 {
-        width: 100%;
-
-        font-size: 5.5rem;
-        line-height: 1;
-    }
-
-    .text-box p {
-        width: 100%;
-
-        font-size: 2.6rem;
-        line-height: 1.6;
-    }
-
-    .types-subtypes-information {
-        height: 3150px;
-    }
-
-    .subtype-text-box h4 {
-        font-size: 4;
-        line-height: 1;
-    }
-
-    .subtype-text-box p {
-        font-size: 4.9;
-        line-height: 1.9;
     }
 }

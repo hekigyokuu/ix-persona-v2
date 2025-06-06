@@ -235,7 +235,7 @@ const types = [
                 briefDesc:
                     'Focuses on the need to be satisfied with their groups and communities.',
                 fullDesc:
-                    'Prioritizes group needs and aims to be of service, often downplaying their personal desires. They may feel conflicted between helping others and pursuing their own freedom. Their helpfulness and service-oriented mindset can loo a lot like Type 2.',
+                    'Prioritizes group needs and aims to be of service, often downplaying their personal desires. They may feel conflicted between helping others and pursuing their own freedom. Their helpfulness and service-oriented mindset can look a lot like Type 2.',
             },
             {
                 type: 'SX',

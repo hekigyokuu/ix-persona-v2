@@ -25,6 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    typesNavigationToFullDescriptionRoutes.forEach(({ selector, url }) => {
+        const typesNavigation = document.querySelector(selector);
+        if (typesNavigation) {
+            typesNavigation?.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = `#${url}`;
+            });
+        }
+    });
+
     setupTypeButton('btn-to-one', 'type-one');
     setupTypeButton('btn-to-two', 'type-two');
     setupTypeButton('btn-to-three', 'type-three');
@@ -113,6 +123,71 @@ const buttonNavigationRoutes = [
     { selector: 'go-test', url: '/enneagram-test' },
     { selector: 'go-home', url: '/homepage' },
     { selector: 'go-profile', url: '/profile' },
+];
+
+const typesNavigationToFullDescriptionRoutes = [
+    // Type One - The Reformer
+    { selector: '#type-one h3', url: 'reformer-fulldesc' },
+    {
+        selector: '#type-one .title-description-container',
+        url: 'reformer-fulldesc',
+    },
+
+    // Type Two - The Helper
+    { selector: '#type-two h3', url: 'helper-fulldesc' },
+    {
+        selector: '#type-two .title-description-container',
+        url: 'helper-fulldesc',
+    },
+
+    // Type Three - The Achiever
+    { selector: '#type-three h3', url: 'achiever-fulldesc' },
+    {
+        selector: '#type-three .title-description-container',
+        url: 'achiever-fulldesc',
+    },
+
+    // Type Four - The Individualist
+    { selector: '#type-four h3', url: 'individualist-fulldesc' },
+    {
+        selector: '#type-four .title-description-container',
+        url: 'individualist-fulldesc',
+    },
+
+    // Type Five - The Investigator
+    { selector: '#type-five h3', url: 'investigator-fulldesc' },
+    {
+        selector: '#type-five .title-description-container',
+        url: 'investigator-fulldesc',
+    },
+
+    // Type Six - The Loyalist
+    { selector: '#type-six h3', url: 'loyalist-fulldesc' },
+    {
+        selector: '#type-six .title-description-container',
+        url: 'loyalist-fulldesc',
+    },
+
+    // Type Seven - The Enthusiast
+    { selector: '#type-seven h3', url: 'enthusiast-fulldesc' },
+    {
+        selector: '#type-seven .title-description-container',
+        url: 'enthusiast-fulldesc',
+    },
+
+    // Type Eight - The Challenger
+    { selector: '#type-eight h3', url: 'challenger-fulldesc' },
+    {
+        selector: '#type-eight .title-description-container',
+        url: 'challenger-fulldesc',
+    },
+
+    // Type Nine - The Peacemaker
+    { selector: '#type-nine h3', url: 'peacemaker-fulldesc' },
+    {
+        selector: '#type-nine .title-description-container',
+        url: 'peacemaker-fulldesc',
+    },
 ];
 
 const setupTypeButton = (buttonId, typeHash) => {

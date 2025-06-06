@@ -1,0 +1,37 @@
+section {
+    height: auto;
+    padding: 10%;
+
+    background-color: var(--light-slate);
+
+    font-family: 'Jersey 25', monospace;
+    color: var(--charcoal);
+}
+
+section h1 {
+    font-size: 4rem;
+    text-shadow: 4px 2px 0px var(--rich-black);
+}
+
+section h2 {
+    margin-top: 5vh;
+    font-size: 3rem;
+    text-shadow: 2px 2px 0px var(--rich-black);
+}
+
+section p {
+    line-height: 2;
+    margin-left: 2%;
+    font-size: 2rem;
+    text-shadow: 1px 1px 0px var(--rich-black);
+}
+
+section ul {
+    margin-left: 5%;
+    list-style: square;
+}
+
+section ul li {
+    line-height: 2;
+    font-size: 2rem;
+}

@@ -58,4 +58,14 @@ router.get('/enneagram-types', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'html', 'types.html'));
 });
 
+router.get('/terms', (req, res) => {
+    console.log('\x1b[34m>> Status Code: 200 - GET /terms');
+    res.sendFile(path.join(__dirname, '..', 'public', 'html', 'terms.html'));
+});
+
+router.get('/privacy', (req, res) => {
+    console.log('\x1b[34m>> Status Code: 200 - GET /privacy');
+    res.sendFile(path.join(__dirname, '..', 'public', 'html', 'privacy.html'));
+});
+
 module.exports = router;
