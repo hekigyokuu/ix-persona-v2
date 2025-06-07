@@ -4,7 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>IXpersona - Signup</title>
+        <title>Signup | IXpersona</title>
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="../svg/ixpersona-icon.svg"
+        />
 
         <link rel="stylesheet" href="../css/global.css" />
         <link rel="stylesheet" href="../css/signup.css" />
@@ -35,7 +40,7 @@
                         type="text"
                         name="username"
                         id="signup-username"
-                        placeholder="username"
+                        placeholder="username | required"
                     />
                     <br /><br />
                     <label for="password">Password</label>
@@ -45,7 +50,7 @@
                         id="signup-password"
                         name="password"
                         class="styled-input"
-                        placeholder="password"
+                        placeholder="password | required"
                     />
                     <br /><br />
                     <label for="password">Confirm Password</label>
@@ -55,11 +60,13 @@
                         id="confirm-signup-password"
                         name="confirm-password"
                         class="styled-input"
-                        placeholder="confirm-password"
+                        placeholder="confirm-password | required"
                     />
                     <br /><br />
                     <select name="age" id="age" class="styled-input">
-                        <option value="" disabled selected>Age</option>
+                        <option value="" disabled selected>
+                            Age | required
+                        </option>
                     </select>
                     <br /><br />
                     <select id="gender" name="gender" class="styled-input">
