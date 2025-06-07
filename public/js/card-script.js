@@ -2,7 +2,7 @@
 // << GENERATING CARD'S CONTAINER PER TYPE - the function was called createType(@param typeData) for each types (9 types === 9 container) and appending a content and tags based on its properties >>
 // << GENERATING CARDS CONTAINER PER CONTAINER - the function was called createCard(@param cardData) 3 cards that generates an HTML structure of cards containing its properties >>
 
-const types = [
+const enneagramTypesDetails = [
     {
         id: 'type-one',
         title: 'Type 1: The Reformer',
@@ -320,7 +320,7 @@ const types = [
     },
 ];
 
-function createCard(cardData) {
+const createCard = (cardData) => {
     const card = document.createElement('div');
     card.className = 'card';
 
@@ -340,9 +340,9 @@ function createCard(cardData) {
     </div>
   `;
     return card;
-}
+};
 
-function createType(typeData) {
+const createType = (typeData) => {
     const typeDiv = document.createElement('div');
     typeDiv.id = typeData.id;
     typeDiv.className = 'type';
@@ -374,15 +374,15 @@ function createType(typeData) {
     typeDiv.appendChild(typeBottom);
 
     return typeDiv;
-}
+};
 
 const typesContainerPersonalities = document.getElementById(
     'types-container-personalities'
 );
 
-types.forEach((typeData) => {
+enneagramTypesDetails.forEach((typeData) => {
     const typeElement = createType(typeData);
-    typesContainerPersonalities.appendChild(typeElement);
+    typesContainerPersonalities.append(typeElement);
 });
 
 document.querySelectorAll('.card').forEach((card) => {

@@ -16,6 +16,7 @@ const svgInformationTypesTwoContainer = document.getElementById(
 const svgInformationTypesThreeContainer = document.getElementById(
     'types-ct-information-container'
 );
+const svgNotFound = document.getElementById('not-found-container');
 
 const svgIndexPoster = `<svg
                     viewBox="0 0 613 732"
@@ -2845,4 +2846,8 @@ if (svgInformationTypesOneContainer) {
 
 if (svgInformationTypesTwoContainer) {
     svgInformationTypesTwoContainer.innerHTML += svgLoyalist;
+}
+
+if (svgNotFound) {
+    svgNotFound.innerHTML += svgChallenger;
 }

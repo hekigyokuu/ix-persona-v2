@@ -1,6 +1,20 @@
 let isMuted = false;
-// << TEST INSTRUCTION - popup that provide a detailed instruction that can be skip after 3 seconds >>
 
+const clickSFX = () => {
+    if (isMuted) return;
+
+    const clickAudio = new Audio('sfx/click.wav');
+    clickAudio.play().then(() => clickAudio.remove());
+};
+
+const toggleTestMute = () => {
+    isMuted = !isMuted;
+    const testMuteButton = document.getElementById('test-mute-toggle');
+    testMuteButton.innerHTML = isMuted ? svgMuted : svgUnmuted;
+    testMuteButton.classList.toggle('active', isMuted);
+};
+
+// << TEST INSTRUCTION - popup that provide a detailed instruction that can be skip after 3 seconds >>
 // << TEST INSTRUCTION POPUP >>
 let instructionButtonTimeLeft = 3;
 const skipInstruction = document.getElementById('skip-instruction');
@@ -105,7 +119,6 @@ const showQuestion = (index) => {
 
 // << SCORING LOGIC - based on the weight of answer it is multiplied and the type point where distributed to specific personality >>
 let answerHistory = [];
-
 const handleAnswer = (choice) => {
     console.log(scores);
     clickSFX();
@@ -361,13 +374,6 @@ const getTypeSVG = (topType) => {
     return svgMap[topType] || '';
 };
 
-const clickSFX = () => {
-    if (isMuted) return;
-
-    const clickAudio = new Audio('sfx/click.wav');
-    clickAudio.play().then(() => clickAudio.remove());
-};
-
 // << KEYBOARD LISTENER - the user can answer the test with key (1-5) based on the weight answer >>
 const keyboardOption = () => {
     if (keyboardEventListener) {
@@ -398,13 +404,6 @@ const enableKeyboard = () => {
     if (!keyboardEventListener) {
         keyboardOption();
     }
-};
-
-const toggleTestMute = () => {
-    isMuted = !isMuted;
-    const testMuteButton = document.getElementById('test-mute-toggle');
-    testMuteButton.innerHTML = isMuted ? svgMuted : svgUnmuted;
-    testMuteButton.classList.toggle('active', isMuted);
 };
 
 showQuestion(currentQuestion);
